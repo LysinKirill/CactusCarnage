@@ -7,22 +7,25 @@ namespace Core
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [FormerlySerializedAs("_jumpStrength")]
         [SerializeField]
         private float jumpStrength;
-
-        [FormerlySerializedAs("_walkSpeed")]
+        
         [SerializeField]
         private float walkSpeed;
-        
+
+        private Animator _animator;
+        private bool _isGrounded = true;
         
         private Rigidbody2D _body;
         private PlayerInputActions _playerInputActions;
+        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
             _playerInputActions = new PlayerInputActions();
             _playerInputActions.Player.Enable();
+            _animator = GetComponent<Animator>();
         }
 
         
@@ -43,12 +46,24 @@ namespace Core
                 var newXVelocity = Mathf.Lerp(_body.velocity.x, 0, 0.05f);
                 _body.velocity = new Vector2(newXVelocity, _body.velocity.y);
             }
+            
+            _animator.SetBool(IsWalking, input.x != 0);
         }
 
         public void Jump(InputAction.CallbackContext context)
         {
-            if(context.performed)
+            if (context.performed && _isGrounded)
+            {
                 _body.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
+                _isGrounded = false;
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("Ground"))
+                _isGrounded = true;
+                
         }
     }
 }
