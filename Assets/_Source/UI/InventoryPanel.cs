@@ -73,6 +73,7 @@ namespace UI
                 return;
 
             OnItemSwap?.Invoke(_currentlyDraggedId, itemToSwapToIndex);
+            HandleItemSelection(inventoryItem);
         }
 
         private void HandleBeginDrag(InventoryItem inventoryItem)
