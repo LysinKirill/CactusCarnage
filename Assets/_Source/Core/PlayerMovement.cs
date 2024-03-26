@@ -32,7 +32,6 @@ namespace Core
         private void FixedUpdate()
         {
             Vector2 input = _playerInputActions.Player.Movement.ReadValue<Vector2>();
-            //_body.AddForce(new Vector2(input.x * walkSpeed, 0), ForceMode2D.Impulse);
             if(input.x != 0)
             {
                 var newXVelocity = Mathf.Lerp(_body.velocity.x, input.x * walkSpeed, 0.15f);

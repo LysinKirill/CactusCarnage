@@ -50,7 +50,7 @@ namespace Core
 
         private void HandleItemActionRequest(int index)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         private void HandleDragging(int index)

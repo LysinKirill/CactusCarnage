@@ -57,6 +57,8 @@ namespace ScriptableObjects
 
         public void SwapItems(int firstItemIndex, int secondItemIndex)
         {
+            if(firstItemIndex == - 1 || secondItemIndex == - 1)
+                return;
             (inventoryItems[firstItemIndex], inventoryItems[secondItemIndex]) = (inventoryItems[secondItemIndex], inventoryItems[firstItemIndex]);
             NotifyAboutUpdate();
         }
