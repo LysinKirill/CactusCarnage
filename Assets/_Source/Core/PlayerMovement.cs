@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
+
 
 namespace Core
 {
@@ -13,56 +12,74 @@ namespace Core
         [SerializeField]
         private float walkSpeed;
 
-        private Animator _animator;
-        private bool _isGrounded = true;
+        public LayerMask groundLayer;
+
+        public BoxCollider2D groundCheck;
+
+        private float horizontal;
+        private bool isFacingRight = true;
+
+        public bool isGrounded;
         
         private Rigidbody2D _body;
         private PlayerInputActions _playerInputActions;
-        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+
+        private const float DragCoefficient = 0.1f;
 
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
             _playerInputActions = new PlayerInputActions();
             _playerInputActions.Player.Enable();
-            _animator = GetComponent<Animator>();
         }
-
         
         private void FixedUpdate()
         {
-            Vector2 input = _playerInputActions.Player.Movement.ReadValue<Vector2>();
-            if(input.x != 0)
-            {
-                var newXVelocity = Mathf.Lerp(_body.velocity.x, input.x * walkSpeed, 0.15f);
-                var velocity = _body.velocity;
-                velocity = new Vector2(newXVelocity, velocity.y);
-                _body.velocity = velocity;
-                transform.localScale = new Vector3(velocity.x >= 0 ? 1 : -1, 1, 1);
-            }
-            else
-            {
-                var newXVelocity = Mathf.Lerp(_body.velocity.x, 0, 0.05f);
-                _body.velocity = new Vector2(newXVelocity, _body.velocity.y);
-            }
+            CheckGround();
+            var velocity = _body.velocity;
             
-            _animator.SetBool(IsWalking, input.x != 0);
+            if (isGrounded)
+            {
+                velocity.x *= DragCoefficient;
+                _body.velocity = velocity;
+            }
+
+            if (horizontal != 0)
+                _body.velocity = new Vector2(horizontal * walkSpeed, _body.velocity.y);
+            
+            if (!isFacingRight && horizontal > 0 || isFacingRight && horizontal < 0)
+                Flip();
         }
+        
 
         public void Jump(InputAction.CallbackContext context)
         {
-            if (context.performed && _isGrounded)
-            {
-                _body.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
-                _isGrounded = false;
-            }
+            if (context.performed && isGrounded)
+                _body.velocity = new Vector2(_body.velocity.x, jumpStrength);
+
+            var velocity = _body.velocity;
+            if (context.canceled && _body.velocity.y > 0)
+                _body.velocity = new Vector2(velocity.x, velocity.y * 0.5f);
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        public void Move(InputAction.CallbackContext context)
         {
-            if (other.gameObject.CompareTag("Ground"))
-                _isGrounded = true;
-                
+            horizontal = context.ReadValue<Vector2>().x;
+        }
+
+
+        void CheckGround()
+        {
+            var bounds = groundCheck.bounds;
+            isGrounded = Physics2D.OverlapAreaAll(bounds.min, bounds.max, groundLayer).Length > 0;
+        }
+
+        private void Flip()
+        {
+            isFacingRight = !isFacingRight;
+            var localScale = transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
         }
     }
 }
