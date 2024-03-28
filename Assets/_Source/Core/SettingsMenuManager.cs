@@ -18,6 +18,9 @@ namespace Core
         private void Start()
         {
             ChangeMasterVolume();
+            ChangeMusicVolume();
+            ChangeGraphicsQuality();
+            ChangeSfxVolume();
         }
 
         public void ChangeGraphicsQuality()
