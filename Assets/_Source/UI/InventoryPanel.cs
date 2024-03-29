@@ -8,14 +8,10 @@ namespace UI
 {
     public class InventoryPanel : MonoBehaviour
     {
-        [SerializeField]
-        private InventoryItem itemPrefab;
-        [SerializeField]
-        private RectTransform panel;
-        [SerializeField]
-        private ItemDescription itemDescription;
-        [SerializeField]
-        private ItemDragHandler dragHandler;
+        [SerializeField] private InventoryItem itemPrefab;
+        [SerializeField] private RectTransform panel;
+        [SerializeField] private ItemDescription itemDescription;
+        [SerializeField] private ItemDragHandler dragHandler;
 
         private readonly List<InventoryItem> _menuItems = new List<InventoryItem>();
 
@@ -40,6 +36,7 @@ namespace UI
             {
                 InventoryItem newItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
                 newItem.transform.SetParent(panel);
+                newItem.transform.localScale = Vector3.one;
                 _menuItems.Add(newItem);
                 SubscribeItem(newItem);
             }
