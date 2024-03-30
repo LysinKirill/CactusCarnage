@@ -1,4 +1,5 @@
 ﻿using Core;
+using Core.Player;
 using Model.ItemModifiers;
 using UnityEngine;
 
