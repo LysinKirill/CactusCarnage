@@ -10,6 +10,8 @@ namespace Core.PickUpSystem
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (!collision.isActiveAndEnabled)
+                return;
             PickableItem item = collision.GetComponent<PickableItem>();
             if (item == null)
                 return;

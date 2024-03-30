@@ -23,21 +23,14 @@ namespace ScriptableObjects
                 inventoryItems.Add(InventoryItemModel.Empty);
         }
 
-        public int AddItem(ItemAsset itemAsset, int quantity)
+        public int AddItem(ItemAsset itemAsset, int quantity, List<ItemParameter> itemState = null)
         {
             if (!itemAsset.IsStackable)
             {
-                for (int i = 0; i < inventoryItems.Count; ++i)
-                {
-                    while (quantity > 0 && !IsInventoryFull())
-                    {
-                        quantity -= AddItemToFirstEmptySlot(itemAsset, 1);
-                    }
-
-                    NotifyAboutUpdate();
-                    return quantity;
-                }
-
+                while (quantity > 0 && !IsInventoryFull())
+                    quantity -= AddItemToFirstEmptySlot(itemAsset, 1, itemState);
+                NotifyAboutUpdate();
+                return quantity;
             }
 
             quantity = AddStackableItem(itemAsset, quantity);
@@ -45,12 +38,13 @@ namespace ScriptableObjects
             return quantity;
         }
 
-        private int AddItemToFirstEmptySlot(ItemAsset itemAsset, int quantity)
+        private int AddItemToFirstEmptySlot(ItemAsset itemAsset, int quantity, List<ItemParameter> itemState = null)
         {
             InventoryItemModel newItem = new InventoryItemModel
             {
                 quantity = quantity,
                 item = itemAsset,
+                itemState = new List<ItemParameter>(itemState ?? itemAsset.DefaultParameterList),
             };
 
             for (int i = 0; i < inventoryItems.Count; ++i)
@@ -131,5 +125,24 @@ namespace ScriptableObjects
         }
 
         private void NotifyAboutUpdate() => OnInventoryUpdated?.Invoke(CurrentInventory);
+
+        public void RemoveItem(int index, int amountToRemove)
+        {
+            if (inventoryItems.Count <= index || inventoryItems[index].IsEmpty)
+                return;
+
+            int remainder = inventoryItems[index].quantity - amountToRemove;
+            if (remainder <= 0)
+                inventoryItems[index] = InventoryItemModel.Empty;
+            else
+                inventoryItems[index] = new InventoryItemModel
+                {
+                    quantity = remainder,
+                    item = inventoryItems[index].item,
+                    itemState = inventoryItems[index].itemState,
+                };
+
+            NotifyAboutUpdate();
+        }
     }
 }
