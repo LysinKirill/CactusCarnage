@@ -5171,6 +5171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1832698140}
+  brightnessSettings: {fileID: 480776484}
 --- !u!4 &1458550298
 Transform:
   m_ObjectHideFlags: 0

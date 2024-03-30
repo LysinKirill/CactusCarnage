@@ -1,4 +1,5 @@
 using Core.Player;
+using Settings;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,7 @@ namespace Core.Controllers
         private float _brightnessValue;
 
         [SerializeField] private PlayerHealth playerHealth;
+        [SerializeField] private BrightnessSettings brightnessSettings;
 
         private void Awake()
         {
@@ -24,6 +26,7 @@ namespace Core.Controllers
         private void Subscribe()
         {
             playerHealth.OnUpdateHealth += CheckLooseCondition;
+            brightnessSettings.OnBrightnessChanged += UpdateBrightness;
         }
 
         private void CheckLooseCondition(int health)
@@ -35,15 +38,20 @@ namespace Core.Controllers
         private void SetUpLevelVisuals()
         {
             LoadBrightness();
-            _postProcessVolume = GetComponentInChildren<PostProcessVolume>();
-            var profile = _postProcessVolume.profile;
-            if (profile.TryGetSettings(out _autoExposure))
-                _autoExposure.keyValue.value = _brightnessValue;
+            UpdateBrightness(_brightnessValue);
         }
 
         private void LoadBrightness()
         {
             _brightnessValue = PlayerPrefs.GetFloat(BrightnessKey, 1);
+        }
+        
+        private void UpdateBrightness(float brightnessValue)
+        {
+            _postProcessVolume = GetComponentInChildren<PostProcessVolume>();
+            var profile = _postProcessVolume.profile;
+            if (profile.TryGetSettings(out _autoExposure))
+                _autoExposure.keyValue.value = brightnessValue;
         }
     }
 }
