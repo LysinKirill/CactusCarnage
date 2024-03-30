@@ -1,22 +1,17 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 
 namespace UI
 {
     public class InventoryPanel : MonoBehaviour
     {
-        [SerializeField]
-        private InventoryItem itemPrefab;
-        [SerializeField]
-        private RectTransform panel;
-        [SerializeField]
-        private ItemDescription itemDescription;
-        [SerializeField]
-        private ItemDragHandler dragHandler;
-
+        [SerializeField] private InventoryItem itemPrefab;
+        [SerializeField] private RectTransform panel;
+        [SerializeField] private ItemDescription itemDescription;
+        [SerializeField] private ItemDragHandler dragHandler;
+        [SerializeField] private ItemActionPanel actionPanel;
+        
         private readonly List<InventoryItem> _menuItems = new List<InventoryItem>();
 
         public event Action<int> OnDescriptionRequested;
@@ -39,7 +34,9 @@ namespace UI
             for (int i = 0; i < inventorySize; ++i)
             {
                 InventoryItem newItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
-                newItem.transform.SetParent(panel);
+                Transform transform1;
+                (transform1 = newItem.transform).SetParent(panel);
+                transform1.localScale = Vector3.one;
                 _menuItems.Add(newItem);
                 SubscribeItem(newItem);
             }
@@ -61,7 +58,10 @@ namespace UI
 
         private void HandleShowItemActions(InventoryItem inventoryItem)
         {
-            throw new NotImplementedException();
+            int itemIndex = _menuItems.IndexOf(inventoryItem);
+            if (itemIndex == -1)
+                return;
+            OnItemActionRequested?.Invoke(itemIndex);
         }
 
         private void HandleEndDrag(InventoryItem inventoryItem) => dragHandler.ExitFollower();
@@ -95,6 +95,16 @@ namespace UI
             OnDescriptionRequested?.Invoke(selectedItemId);
         }
 
+        public void AddAction(string actionName, Action performAction)
+        {
+            actionPanel.AddButton(actionName, performAction);
+        }
+
+        public void ShowItemAction(int itemIndex)
+        {
+            actionPanel.Toggle(true);
+            actionPanel.transform.position = _menuItems[itemIndex].transform.position;
+        }
 
         public void ShowInventory()
         {
@@ -103,14 +113,16 @@ namespace UI
             DeselectAll();
         }
 
-        private void DeselectAll()
+        public void DeselectAll()
         {
             itemDescription.ResetDescription();
             _menuItems.ForEach(item => item.Deselect());
+            actionPanel.Toggle(false);
         }
 
         public void CloseInventory()
         {
+            actionPanel.Toggle(false);
             gameObject.SetActive(false);
             ResetDraggedItem();
         }
