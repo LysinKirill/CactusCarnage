@@ -13,6 +13,7 @@ namespace Settings
         {
             if((_brightnessSlider = GetComponentInChildren<Slider>()) is not null)
             {
+                _brightnessSlider.value = PlayerPrefs.GetFloat(BrightnessKey);
                 _brightnessSlider.onValueChanged.AddListener(ChangeBrightness);
                 ChangeBrightness(_brightnessSlider.value);
             }
