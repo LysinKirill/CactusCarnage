@@ -21,10 +21,10 @@ namespace Core.PickUpSystem
         public void DestroyItem()
         {
             GetComponent<Collider2D>().enabled = false;
-            StartCoroutine(AnimateItemPickup());
+            StartCoroutine(AnimateItemPickUp());
         }
 
-        private IEnumerator AnimateItemPickup()
+        private IEnumerator AnimateItemPickUp()
         {
             audioSource.Play();
             var startScale = transform.localScale;

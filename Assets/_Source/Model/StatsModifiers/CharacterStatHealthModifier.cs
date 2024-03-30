@@ -1,15 +1,15 @@
 ﻿using Core;
-using System;
+using Model.ItemModifiers;
 using UnityEngine;
 
-namespace Model.ItemModifiers
+namespace Model.StatsModifiers
 {
     [CreateAssetMenu(fileName = "HealthModifier", menuName = "SO/newHealthModifier")]
     public class CharacterStatHealthModifier : CharacterStatModifierAsset
     {
         public override void AffectCharacter(GameObject character, float val)
         {
-            PlayerData playerData = character.GetComponent<PlayerData>();
+            PlayerHealth playerData = character.GetComponent<PlayerHealth>();
             if(playerData != null)
                 playerData.AddHealth((int)val);
         }
