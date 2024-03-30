@@ -307,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514ad5c192ebbed449f363c6b55ab621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 1
   hp: 3
   maxHp: 3
 --- !u!61 &6884103172037427989
