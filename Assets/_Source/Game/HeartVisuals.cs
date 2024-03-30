@@ -1,52 +1,97 @@
+using Core;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Core;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game
 {
     public class HeartVisuals : MonoBehaviour
     {
-        [SerializeField] private GameObject heart1;
-        [SerializeField] private GameObject heart2;
-        [SerializeField] private GameObject heart3;
-        [FormerlySerializedAs("playerData")]
+        [SerializeField] private GameObject heartPrefab;
         [SerializeField] private PlayerHealth playerHealth;
+        [SerializeField] private float activateHeartDuration = 1f;
+
+        private int _currentHealth;
+        private List<GameObject> Hearts { get; set; } = new List<GameObject>();
+
+        private void Awake()
+        {
+            playerHealth.OnUpdateHealth += HandleHealthUpdate;
+            playerHealth.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
+        }
+        
 
         void Start()
         {
-            heart1.SetActive(true);
-            heart2.SetActive(false);
-            heart3.SetActive(false);
+            _currentHealth = playerHealth.HealthPoints;
+            for (int i = 0; i < playerHealth.MaximumHealth; ++i)
+            {
+                var heart = Instantiate(heartPrefab, transform, false);
+                heart.transform.SetSiblingIndex(i);
+                Hearts.Add(heart);
+                if(i >= _currentHealth)
+                    heart.gameObject.SetActive(false);
+            }
         }
 
-        void Update()
+        private void HandleHealthUpdate(int newHealth)
         {
-            if (playerHealth.HealthPoints <= 0)
+            while (newHealth > _currentHealth && _currentHealth < playerHealth.MaximumHealth)
             {
-                heart1.SetActive(false);
-                heart2.SetActive(false);
-                heart3.SetActive(false);
+                ++_currentHealth;
+                ActivateHeart();
             }
-            if (playerHealth.HealthPoints == 1)
+
+            while (newHealth < _currentHealth && _currentHealth > 0)
             {
-                heart1.SetActive(true);
-                heart2.SetActive(false);
-                heart3.SetActive(false);
+                --_currentHealth;
+                DeactivateHeart();
             }
-            if (playerHealth.HealthPoints == 2)
+        }
+
+
+
+        private void HandleMaxHealthUpdate(int obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ActivateHeart()
+        {
+            var firstInactiveHeart = Hearts.First(heart => !heart.activeInHierarchy);
+            firstInactiveHeart.SetActive(true);
+            StartCoroutine(AnimateHeartActivation(firstInactiveHeart, activateHeartDuration));
+        }
+        private void DeactivateHeart()
+        {
+            var lastActiveHeart = Hearts[_currentHealth];
+            StartCoroutine(AnimateHeartDeactivation(lastActiveHeart, activateHeartDuration));
+        }
+        private IEnumerator AnimateHeartActivation(GameObject heart, float duration)
+        {
+            float currentTime = 0;
+            while (currentTime < duration)
             {
-                heart1.SetActive(true);
-                heart2.SetActive(true);
-                heart3.SetActive(false);
+                currentTime += Time.deltaTime;
+                heart.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, currentTime / duration);
+                yield return null;
             }
-            if (playerHealth.HealthPoints == 3)
+            heart.transform.localScale = Vector3.one;
+        }
+        
+        private IEnumerator AnimateHeartDeactivation(GameObject heart, float duration)
+        {
+            float currentTime = 0;
+            while (currentTime < duration)
             {
-                heart1.SetActive(true);
-                heart2.SetActive(true);
-                heart3.SetActive(true);
+                currentTime += Time.deltaTime;
+                heart.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, currentTime / duration);
+                yield return null;
             }
+            heart.transform.localScale = Vector3.zero;
+            heart.SetActive(false);
         }
     }
 }

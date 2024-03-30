@@ -91,12 +91,12 @@ GameObject:
   - component: {fileID: 5096398601572271101}
   - component: {fileID: 4329486311355163971}
   - component: {fileID: 4522234228098572213}
-  - component: {fileID: 4304934837226413945}
   - component: {fileID: 6884103172037427989}
   - component: {fileID: 2423784670248680754}
   - component: {fileID: 1173442146482211485}
   - component: {fileID: 1869128923393646543}
   - component: {fileID: 1832282092749843657}
+  - component: {fileID: 1771428595641021206}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -309,20 +309,6 @@ MonoBehaviour:
   - quantity: 1
     item: {fileID: 11400000, guid: 2a0da9dba10773b45851b0d69f5aa3ba, type: 2}
     itemState: []
---- !u!114 &4304934837226413945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5096398601572271102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514ad5c192ebbed449f363c6b55ab621, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  maxHp: 3
 --- !u!61 &6884103172037427989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -390,7 +376,7 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckCollider: {fileID: 4645167702649618150}
   wallCheckCollider: {fileID: 6768582414005785061}
-  _isTouchingWall: 0
+  isTouchingWall: 0
 --- !u!82 &1173442146482211485
 AudioSource:
   m_ObjectHideFlags: 0
@@ -516,6 +502,20 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 1ef7dc96f350a0d4da84be19189d6b59, type: 2}
   parametersToModify: []
   currentItemState: []
+--- !u!114 &1771428595641021206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096398601572271102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c405565ece4d5298619b823179529d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 1
+  <MaximumHealth>k__BackingField: 3
 --- !u!1 &5966213023158938362
 GameObject:
   m_ObjectHideFlags: 0

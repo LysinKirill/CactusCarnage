@@ -21,9 +21,9 @@ namespace Core.Environment
         {
             if (!_isActive || (1 << other.gameObject.layer &  playerLayer) == 0)
                 return;
-            GameObject parent = other.transform.parent.gameObject;
+            GameObject player = other.transform.gameObject;
 
-            if (parent == null || !parent.TryGetComponent(out PlayerHealth playerHealth))
+            if (player == null || !player.TryGetComponent(out PlayerHealth playerHealth))
                 return;
 
             playerHealth.TakeDamage(damage);

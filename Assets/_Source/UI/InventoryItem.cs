@@ -34,6 +34,12 @@ namespace UI
             Deselect();
         }
 
+        private void OnDestroy()
+        {
+            image = null;
+            frame = null;
+        }
+
         public void Select()
         {
             frame.enabled = true;
@@ -42,11 +48,15 @@ namespace UI
 
         public void Deselect()
         {
+            if(frame.IsDestroyed())
+                return;
             frame.enabled = false;
         }
 
         public void Reset()
         {
+            if(image.IsDestroyed())
+                return;
             image.gameObject.SetActive(false);
             _isEmpty = true;
         }
