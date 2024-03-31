@@ -35,14 +35,6 @@ namespace Settings
             sfxVolumeSlider.value = PlayerPrefs.GetFloat(SfxVolumeKey);
         }
 
-        private void InitSliders()
-        {
-            graphicsDropdown.value = PlayerPrefs.GetInt(QualityLevelKey);
-            masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey);
-            musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey);
-            sfxVolumeSlider.value = PlayerPrefs.GetFloat(SfxVolumeKey);
-        }
-
         public void ChangeGraphicsQuality()
         {
             QualitySettings.SetQualityLevel(graphicsDropdown.value);
