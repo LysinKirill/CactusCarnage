@@ -18,7 +18,7 @@ namespace Core.Enemies.RollingCactus
 
         private void Awake()
         {
-            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
         }
 
         private void Update()

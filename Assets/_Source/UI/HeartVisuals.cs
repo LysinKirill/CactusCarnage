@@ -19,7 +19,7 @@ namespace UI
 
         private void Awake()
         {
-            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
             playerHealth.OnUpdateHealth += HandleHealthUpdate;
             playerHealth.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
         }

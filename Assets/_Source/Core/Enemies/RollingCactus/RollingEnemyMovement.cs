@@ -14,7 +14,7 @@ namespace Core.Enemies.RollingCactus
         {
             _body = GetComponent<Rigidbody2D>();
             asset.OnRotationChange += SetOrientation;
-            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
         }
 
         private void Start()

@@ -73,6 +73,8 @@ namespace UI
         
         public void SetData(Sprite sprite, int itemQuantity = 1)
         {
+            if (image.IsDestroyed())
+                return;
             image.gameObject.SetActive(true);
             image.sprite = sprite;
             quantity.text = itemQuantity.ToString();

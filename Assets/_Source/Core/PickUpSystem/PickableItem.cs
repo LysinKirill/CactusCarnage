@@ -17,7 +17,7 @@ namespace Core.PickUpSystem
 
         private void Awake()
         {
-            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
         }
 
         private void Start()

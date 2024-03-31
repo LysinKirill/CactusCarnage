@@ -30,7 +30,7 @@ namespace Core.Player
         private void Awake()
         {
             ClearFollowers();
-            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
