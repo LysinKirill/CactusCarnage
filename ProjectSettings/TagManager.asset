@@ -17,8 +17,8 @@ TagManager:
   - GroundLayer
   - PostProcessing
   - CameraBorders
-  - 
-  - 
+  - Enemies
+  - Obstacles
   - 
   - 
   - 

@@ -1,5 +1,6 @@
 using Model;
 using ScriptableObjects;
+using ScriptableObjects.Items;
 using System.Collections.Generic;
 using System.Text;
 using UI;
@@ -86,7 +87,7 @@ namespace Core.Controllers
             if (itemAction != null)
             {
                 itemAction.PerformAction(gameObject, inventoryItem.itemState);
-                audioSource.PlayOneShot(itemAction.actionSFX);
+                audioSource.PlayOneShot(itemAction.ActionSfx);
                 if (inventoryData.GetItemAt(index).IsEmpty)
                 {
                     inventoryPanel.DeselectAll();
@@ -148,7 +149,7 @@ namespace Core.Controllers
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (!inventoryPanel.isActiveAndEnabled)
                 {
@@ -167,6 +168,8 @@ namespace Core.Controllers
                     inventoryPanel.CloseInventory();
                 }
             }
+            if(Input.GetKeyDown(KeyCode.Escape))
+                inventoryPanel.CloseInventory();
         }
     }
 }

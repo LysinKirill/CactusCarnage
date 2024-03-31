@@ -34,11 +34,11 @@ namespace UI
             Deselect();
         }
 
-        private void OnDestroy()
-        {
-            image = null;
-            frame = null;
-        }
+        // private void OnDestroy()
+        // {
+        //     image = null;
+        //     frame = null;
+        // }
 
         public void Select()
         {

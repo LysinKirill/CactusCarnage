@@ -1,9 +1,8 @@
-﻿using Core;
-using Core.Controllers;
+﻿using Core.Controllers;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ScriptableObjects
+namespace ScriptableObjects.Items
 {
     [CreateAssetMenu(menuName = "SO/newEquippableItem")]
     public class EquippableItemAsset : 
@@ -12,7 +11,7 @@ namespace ScriptableObjects
         IItemAction
     {
 
-        [field: SerializeField] public AudioClip actionSFX { get; private set; }
+        [field: SerializeField] public AudioClip ActionSfx { get; private set; }
         public string ActionName => "Equip";
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {
