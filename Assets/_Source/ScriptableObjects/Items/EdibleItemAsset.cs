@@ -1,4 +1,4 @@
-﻿using Model.ItemModifiers;
+﻿using Model.StatsModifiers;
 using System;
 using System.Collections.Generic;
 using UnityEngine;

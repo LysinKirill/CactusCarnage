@@ -12,8 +12,8 @@ namespace ScriptableObjects.Enemies
             set
             {
                 _playerDetected = value;
-                if (_playerDetected)
-                    OnPlayerSpotted?.Invoke();
+                //if (_playerDetected)
+                //    OnPlayerSpotted?.Invoke();
             }
         }
 
@@ -22,6 +22,6 @@ namespace ScriptableObjects.Enemies
 
         private bool _playerDetected = false;
 
-        public event Action OnPlayerSpotted;
+        //public event Action OnPlayerSpotted;
     }
 }

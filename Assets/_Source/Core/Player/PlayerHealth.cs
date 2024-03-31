@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Core.Player
 {
@@ -28,7 +29,20 @@ namespace Core.Player
 
         private void Awake()
         {
+            ClearFollowers();
+            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        private void OnDestroy()
+        {
+            ClearFollowers();
+        }
+
+        private void ClearFollowers()
+        {
+            OnUpdateHealth = null;
+            OnUpdateMaximumHealth = null;
         }
 
         public void AddHealth(int amount)

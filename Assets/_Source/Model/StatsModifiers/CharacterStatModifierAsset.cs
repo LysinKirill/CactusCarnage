@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Model.ItemModifiers
+namespace Model.StatsModifiers
 {
     public abstract class CharacterStatModifierAsset : ScriptableObject
     {

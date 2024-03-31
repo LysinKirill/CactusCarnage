@@ -22,6 +22,16 @@ namespace UI
 
         private int _currentlyDraggedId = -1;
 
+        private void Awake()
+        {
+            RemoveFollowers();
+        }
+
+        private void OnDestroy()
+        {
+            RemoveFollowers();
+        }
+
         private void Start()
         {
             CloseInventory();
@@ -154,6 +164,14 @@ namespace UI
                 item.Reset();
                 item.Deselect();
             }
+        }
+        
+        private void RemoveFollowers()
+        {
+            OnDescriptionRequested = null;
+            OnItemActionRequested = null;
+            OnStartDrag = null;
+            OnItemActionRequested = null;
         }
     }
 }

@@ -14,6 +14,16 @@ namespace ScriptableObjects.Items
 
         public event Action<Dictionary<int, InventoryItemModel>> OnInventoryUpdated;
 
+        public void Awake()
+        {
+            OnInventoryUpdated = null;
+        }
+
+        private void OnDestroy()
+        {
+            OnInventoryUpdated = null;
+        }
+
         public void Init()
         {
             inventoryItems = new List<InventoryItemModel>();

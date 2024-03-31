@@ -30,15 +30,24 @@ namespace UI
 
         private void Awake()
         {
+            ClearFollowers();
             Reset();
             Deselect();
         }
 
-        // private void OnDestroy()
-        // {
-        //     image = null;
-        //     frame = null;
-        // }
+        private void ClearFollowers()
+        {
+            OnItemClicked = null;
+            OnItemBeginDrag = null;
+            OnItemEndDrag = null;
+            OnItemDroppedOn = null;
+            OnRightMouseBtnClick = null;
+        }
+
+        private void OnDestroy()
+        {
+            ClearFollowers();
+        }
 
         public void Select()
         {

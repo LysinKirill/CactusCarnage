@@ -1,6 +1,7 @@
 using ScriptableObjects.Enemies;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = System.Random;
 
 namespace Core.Enemies.BasicCactus
@@ -28,8 +29,10 @@ namespace Core.Enemies.BasicCactus
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
+            SceneManager.sceneUnloaded += scene => StopAllCoroutines();
         }
-
+        
+        
         private void Wander()
         {
             var calmWalkingSpeed = speed / 2;

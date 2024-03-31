@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -18,12 +19,13 @@ namespace UI
 
         private void Awake()
         {
+            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
             playerHealth.OnUpdateHealth += HandleHealthUpdate;
             playerHealth.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
         }
-        
 
-        void Start()
+
+        private void Start()
         {
             _currentHealth = playerHealth.HealthPoints;
             for (int i = 0; i < playerHealth.MaximumHealth; ++i)

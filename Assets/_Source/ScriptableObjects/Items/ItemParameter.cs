@@ -20,7 +20,7 @@ namespace ScriptableObjects.Items
 
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            return (int)value * itemParameter.ParameterName.GetHashCode();
         }
     }
 }

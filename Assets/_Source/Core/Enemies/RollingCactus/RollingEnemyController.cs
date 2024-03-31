@@ -52,15 +52,8 @@ namespace Core.Enemies.RollingCactus
         {
             asset.ChangeState(RollingEnemyState.Rolling);
             asset.ChangeRotation(Rotation.Counterclockwise);
-            
-            //StartCoroutine(RollCounterClockwise());
         }
-
-        // private IEnumerator RollCounterClockwise()
-        // {
-        //     StartRollingCounterClockwise();
-        // }
-
+        
         private void StartRollingClockwise()
         {
             asset.ChangeState(RollingEnemyState.Rolling);

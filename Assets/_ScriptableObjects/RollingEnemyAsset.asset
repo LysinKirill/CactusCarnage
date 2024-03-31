@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f1445658a473641ad12a4f1c02a5da, type: 3}
   m_Name: RollingEnemyAsset
   m_EditorClassIdentifier: 
-  <PlayerDetectionDistance>k__BackingField: 10
+  <PlayerDetectionDistance>k__BackingField: 5
   <Speed>k__BackingField: 8
   <AirTossPower>k__BackingField: 10
   <Damage>k__BackingField: 1
   <AttackDelay>k__BackingField: 3
-  <State>k__BackingField: 1
+  <State>k__BackingField: 0
   <Rotation>k__BackingField: 1

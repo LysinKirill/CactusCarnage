@@ -12,6 +12,7 @@ namespace Settings
 
         private void Awake()
         {
+            OnBrightnessChanged = null;
             if((_brightnessSlider = GetComponentInChildren<Slider>()) is not null)
             {
                 _brightnessSlider.value = PlayerPrefs.GetFloat(BrightnessKey);
@@ -19,6 +20,7 @@ namespace Settings
                 ChangeBrightness(_brightnessSlider.value);
             }
         }
+        
     
         public void ChangeBrightness(float brightnessValue)
         {
@@ -28,6 +30,7 @@ namespace Settings
 
         private void OnDestroy()
         {
+            OnBrightnessChanged = null;
             PlayerPrefs.Save();
         }
     }

@@ -1,6 +1,8 @@
 ﻿using Core.Player;
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Core.Enemies
 {
@@ -11,7 +13,12 @@ namespace Core.Enemies
         [SerializeField] private int damage = 1;
         [SerializeField] private BoxCollider2D attackBoxCollider;
         private bool _canAttack = true;
-        
+
+
+        private void Awake()
+        {
+            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+        }
 
         private void Update()
         {

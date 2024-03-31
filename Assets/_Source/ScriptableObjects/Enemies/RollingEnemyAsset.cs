@@ -13,14 +13,21 @@ namespace ScriptableObjects.Enemies
         [field: SerializeField] public int Damage { get; private set; }
         [field: SerializeField] public float AttackDelay { get; private set; }
         [field: SerializeField] public RollingEnemyState State { get; private set; }
-
         [field: SerializeField] public Rotation Rotation { get; private set; }
-
-        
         
         public event Action<RollingEnemyState> OnStateChange;
         public event Action<Rotation> OnRotationChange;
-        
+
+        public void Awake()
+        {
+            ClearFollowers();
+        }
+
+        private void OnDestroy()
+        {
+            ClearFollowers();
+        }
+
         public void ChangeState(RollingEnemyState newState)
         {
             State = newState;
@@ -31,6 +38,12 @@ namespace ScriptableObjects.Enemies
         {
             Rotation = rotation;
             OnRotationChange?.Invoke(Rotation);
+        }
+        
+        private void ClearFollowers()
+        {
+            OnStateChange = null;
+            OnRotationChange = null;
         }
     }
     

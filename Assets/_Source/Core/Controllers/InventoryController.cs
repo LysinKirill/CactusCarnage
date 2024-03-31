@@ -47,6 +47,11 @@ namespace Core.Controllers
         private void SetUpController()
         {
             inventoryPanel.InitUI(inventoryData.Size);
+            Subscribe();
+        }
+
+        private void Subscribe()
+        {
             inventoryPanel.OnDescriptionRequested += HandleDescriptionRequested;
             inventoryPanel.OnItemSwap += HandleItemSwap;
             inventoryPanel.OnStartDrag += HandleDragging;

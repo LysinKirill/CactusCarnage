@@ -1,7 +1,9 @@
 ﻿using ScriptableObjects;
 using ScriptableObjects.Items;
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Core.PickUpSystem
 {
@@ -13,6 +15,10 @@ namespace Core.PickUpSystem
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private float duration = 0.3f;
 
+        private void Awake()
+        {
+            SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+        }
 
         private void Start()
         {

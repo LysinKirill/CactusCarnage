@@ -1,6 +1,4 @@
-﻿using Core;
-using Core.Player;
-using Model.ItemModifiers;
+﻿using Core.Player;
 using UnityEngine;
 
 namespace Model.StatsModifiers

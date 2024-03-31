@@ -254,7 +254,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9f44ace3fcfa83a4fab95c0b3c33e4d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -404,6 +404,10 @@ PrefabInstance:
     - target: {fileID: 2114978769937970172, guid: 8b417e7a6a1c51340a904c5e25f17c97, type: 3}
       propertyPath: m_Name
       value: PatrolCactus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745067125236812261, guid: 8b417e7a6a1c51340a904c5e25f17c97, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7691667470103291715, guid: 8b417e7a6a1c51340a904c5e25f17c97, type: 3}
       propertyPath: m_LocalPosition.x
