@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 4712460927699998717}
   - component: {fileID: 4257099762898842413}
   - component: {fileID: 6087104785016703819}
-  - component: {fileID: 956694649801060889}
   - component: {fileID: 4164913509425433197}
   - component: {fileID: 6988780353801728495}
+  - component: {fileID: 8590873147962165698}
   m_Layer: 0
-  m_Name: BasicCactusEnemy
+  m_Name: BasicCactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,24 +168,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4628577, y: 0.9644623}
   m_EdgeRadius: 0
---- !u!114 &956694649801060889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095705998280961051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90317db437c3e3c479ae4940623f5c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDelay: 1
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  damage: 1
-  attackBoxCollider: {fileID: 8939472192220779091}
 --- !u!114 &4164913509425433197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,11 +206,24 @@ MonoBehaviour:
   speed: 5
   maxWanderDistance: 10
   player: {fileID: 0}
-  _walkTargetX: 0
-  _isGrounded: 1
-  _isTouchingWall: 0
-  _isFacingRight: 1
-  PlayerDetected: 0
+--- !u!114 &8590873147962165698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095705998280961051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086189373bdf4b3e9b75532cba096cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  damage: 1
+  attackBoxCollider: {fileID: 8939472192220779091}
 --- !u!1 &1912210833017823184
 GameObject:
   m_ObjectHideFlags: 0

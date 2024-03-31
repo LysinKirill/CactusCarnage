@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ScriptableObjects
+namespace ScriptableObjects.Enemies
 {
     [CreateAssetMenu(fileName = "PlayerDetectionAsset", menuName = "SO/newPlayerDetectionAsset")]
     public class PlayerDetectionAsset : ScriptableObject

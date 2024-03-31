@@ -1,4 +1,5 @@
 using ScriptableObjects;
+using ScriptableObjects.Enemies;
 using System;
 using UnityEngine;
 

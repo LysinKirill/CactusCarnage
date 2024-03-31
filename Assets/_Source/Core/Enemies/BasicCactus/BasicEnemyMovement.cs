@@ -1,4 +1,4 @@
-using ScriptableObjects;
+using ScriptableObjects.Enemies;
 using System.Collections;
 using UnityEngine;
 using Random = System.Random;
@@ -15,15 +15,14 @@ namespace Core.Enemies.BasicCactus
         [SerializeField] private float maxWanderDistance;
         [SerializeField] private GameObject player;
         private Rigidbody2D _body;
-        public float _walkTargetX = 0;
+        private float _walkTargetX;
 
-        public bool _isGrounded = true;
-        public bool _isTouchingWall = false;
-        public bool _isFacingRight = true;
+        private bool _isGrounded = true;
+        private bool _isTouchingWall;
+        private bool _isFacingRight = true;
+        
 
-        public bool PlayerDetected = false;
-
-        private bool _isResting = false;
+        private bool _isResting;
         
         private Random _random = new Random();
         private void Awake()
@@ -51,7 +50,7 @@ namespace Core.Enemies.BasicCactus
         {
             if (_isResting)
                 return;
-            PlayerDetected = playerDetection.PlayerDetected;
+            
             CheckGround();
             CheckWalls();
             UpdateWalkingTarget();
@@ -62,7 +61,7 @@ namespace Core.Enemies.BasicCactus
             
             if (!_isGrounded || _isTouchingWall)
             {
-                var restTime = (float)_random.NextDouble() * 2 + 0.5f;
+                var restTime = (float)_random.NextDouble() * 0.5f + 0.5f;
                 StartCoroutine(RestOnTarget(restTime));
                 SetNewWalkingTarget();
             }
@@ -95,7 +94,7 @@ namespace Core.Enemies.BasicCactus
                 _walkTargetX = player.transform.position.x;
             else if (Mathf.Abs(_walkTargetX - transform.position.x) < 0.1f)
             {
-                var restTime = (float)_random.NextDouble() * 2 + 0.5f;
+                var restTime = (float)_random.NextDouble() * 0.5f + 0.5f;
                 StartCoroutine(RestOnTarget(restTime));
                 SetNewWalkingTarget();
             }

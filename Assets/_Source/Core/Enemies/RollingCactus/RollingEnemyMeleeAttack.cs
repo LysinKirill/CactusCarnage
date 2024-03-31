@@ -1,4 +1,5 @@
 using Core.Player;
+using ScriptableObjects.Enemies;
 using System.Collections;
 using UnityEngine;
 
@@ -6,27 +7,31 @@ namespace Core.Enemies.RollingCactus
 {
     public class RollingEnemyMeleeAttack : MonoBehaviour
     {
-        [SerializeField] private float attackDelay = 1f;
+        [SerializeField] private RollingEnemyAsset asset;
         [SerializeField] private LayerMask playerLayer;
-        [SerializeField] private int damage = 1;
         [SerializeField] private BoxCollider2D attackBoxCollider;
-        private bool _canAttack = true;
+        [SerializeField] private GameObject player;
         
+        private bool _canAttack = true;
 
         private void Update()
         {
-            if(!_canAttack || !PlayerInAttackBox(out _))
+            if(!_canAttack || !PlayerInAttackCollider(out _))
                 return;
-            AttackPlayer(damage);
+            AttackPlayer(asset.Damage);
         }
 
 
         private void AttackPlayer(int enemyDamage)
         {
-            PlayAttackAnimation();
-            if(PlayerInAttackBox(out PlayerHealth playerHealth))
+            if(asset.State == RollingEnemyState.Rolling)
+                ThrowPlayerInTheAir();
+            
+            if(PlayerInAttackCollider(out PlayerHealth playerHealth))
                 playerHealth.TakeDamage(enemyDamage);
-            StartCoroutine(StartAttackDelay(attackDelay));
+            asset.ChangeState(RollingEnemyState.Static);
+            
+            StartCoroutine(StartAttackDelay(asset.AttackDelay));
         }
 
         private IEnumerator StartAttackDelay(float delay)
@@ -36,7 +41,7 @@ namespace Core.Enemies.RollingCactus
             _canAttack = true;
         }
 
-        private bool PlayerInAttackBox(out PlayerHealth playerHealth)
+        private bool PlayerInAttackCollider(out PlayerHealth playerHealth)
         {
             playerHealth = null;
             var bounds = attackBoxCollider.bounds;
@@ -53,39 +58,21 @@ namespace Core.Enemies.RollingCactus
         {
             if(attackBoxCollider == null)
                 return;
+            
             var bounds = attackBoxCollider.bounds;
             var center = new Vector2(bounds.center.x, bounds.center.y);
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(center, bounds.size);
         }
 
-        private void PlayAttackAnimation()
+        private void ThrowPlayerInTheAir()
         {
-            StartCoroutine(StartAttackAnimation(1f));
-        }
+            if (!player.TryGetComponent(out Rigidbody2D body))
+                return;
 
-        private IEnumerator StartAttackAnimation(float duration)
-        {
-            var position = transform.position;
-            var startPosition = position;
-            var newPosition = position - Vector3.right;
-            float currentTime = 0;
-
-            while (currentTime < duration / 2)
-            {
-                currentTime += Time.deltaTime;
-                transform.position = Vector3.Lerp(startPosition, newPosition, currentTime * 2 / duration);
-                yield return null;
-            }
-
-            while (currentTime < duration)
-            {
-                currentTime += Time.deltaTime;
-                transform.position = Vector3.Lerp(newPosition, startPosition, (currentTime - duration / 2) * 2 / duration);
-                yield return null;
-            }
-
-            transform.position = startPosition;
+            var newVelocity = body.velocity;
+            newVelocity.y = asset.AirTossPower;
+            body.velocity = newVelocity;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Model.ItemParameters;
 using System;
 
-namespace ScriptableObjects
+namespace ScriptableObjects.Items
 {
     [Serializable]
     public struct ItemParameter : IEquatable<ItemParameter>

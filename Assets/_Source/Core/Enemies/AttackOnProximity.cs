@@ -1,10 +1,10 @@
-using Core.Player;
+﻿using Core.Player;
 using System.Collections;
 using UnityEngine;
 
-namespace Core.Enemies.BasicCactus
+namespace Core.Enemies
 {
-    public class BasicEnemyMeleeAttack : MonoBehaviour
+    public class AttackOnProximity : MonoBehaviour
     {
         [SerializeField] private float attackDelay = 1f;
         [SerializeField] private LayerMask playerLayer;

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ScriptableObjects
+namespace ScriptableObjects.Items
 {
     [CreateAssetMenu(fileName = "EdibleItem", menuName = "SO/newEdibleItem")]
     public class EdibleItemAsset :
@@ -12,7 +12,7 @@ namespace ScriptableObjects
         IItemAction
     {
         [SerializeField] private List<ModifierData> modifiersData = new List<ModifierData>();
-        [field: SerializeField] public AudioClip actionSFX { get; private set; }
+        [field: SerializeField] public AudioClip ActionSfx { get; private set; }
         
         public string ActionName => "Consume";
         

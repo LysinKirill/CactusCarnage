@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ScriptableObjects
+namespace ScriptableObjects.Items
 {
     public abstract class ItemAsset : ScriptableObject
     {
