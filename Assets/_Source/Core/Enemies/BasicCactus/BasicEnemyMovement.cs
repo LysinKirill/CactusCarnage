@@ -29,7 +29,6 @@ namespace Core.Enemies.BasicCactus
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
-            SceneManager.sceneUnloaded += scene => StopAllCoroutines();
         }
         
         
