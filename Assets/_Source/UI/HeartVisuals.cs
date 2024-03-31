@@ -66,6 +66,7 @@ namespace UI
         }
         private void DeactivateHeart()
         {
+            if (!gameObject.activeInHierarchy) return;
             var lastActiveHeart = Hearts[_currentHealth];
             StartCoroutine(AnimateHeartDeactivation(lastActiveHeart, activateHeartDuration));
         }

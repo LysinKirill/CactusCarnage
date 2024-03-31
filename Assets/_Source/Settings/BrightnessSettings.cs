@@ -8,6 +8,7 @@ namespace Settings
     {
         private const string BrightnessKey = "Brightness";
         private Slider _brightnessSlider;
+        public event Action<float> OnBrightnessChanged; 
 
         private void Awake()
         {
@@ -21,6 +22,7 @@ namespace Settings
     
         public void ChangeBrightness(float brightnessValue)
         {
+            OnBrightnessChanged?.Invoke(brightnessValue);
             PlayerPrefs.SetFloat(BrightnessKey, brightnessValue);
         }
 

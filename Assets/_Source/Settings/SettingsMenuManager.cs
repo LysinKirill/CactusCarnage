@@ -24,6 +24,15 @@ namespace Settings
             ChangeMusicVolume();
             ChangeGraphicsQuality();
             ChangeSfxVolume();
+            gameObject.SetActive(false);
+        }
+
+        private void InitSliders()
+        {
+            graphicsDropdown.value = PlayerPrefs.GetInt(QualityLevelKey);
+            masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey);
+            musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey);
+            sfxVolumeSlider.value = PlayerPrefs.GetFloat(SfxVolumeKey);
         }
 
         private void InitSliders()
