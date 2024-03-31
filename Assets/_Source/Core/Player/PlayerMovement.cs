@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,6 +23,8 @@ namespace Core.Player
         private PlayerInputActions _playerInputActions;
 
         private const float DragCoefficient = 0.1f;
+        
+        public Animator animator;
 
         private void Awake()
         {
@@ -47,6 +50,17 @@ namespace Core.Player
             
             if (!_isFacingRight && _horizontal > 0 || _isFacingRight && _horizontal < 0)
                 Flip();
+            
+            animator.SetFloat("HorizontalMove", Math.Abs(_body.velocity.x));
+
+            if (!_isGrounded)
+            {
+                animator.SetBool("Jumping", true);
+            }
+            else
+            {
+                animator.SetBool("Jumping", false);
+            }
         }
         
 
