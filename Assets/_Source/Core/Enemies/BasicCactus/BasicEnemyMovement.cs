@@ -1,5 +1,6 @@
 using ScriptableObjects.Enemies;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
@@ -50,6 +51,8 @@ namespace Core.Enemies.BasicCactus
         
         private void FixedUpdate()
         {
+            if(transform.IsDestroyed())
+                return;
             if (_isResting)
                 return;
             

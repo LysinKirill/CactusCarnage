@@ -10,12 +10,14 @@ namespace Core.Enemies.RollingCactus
     {
         [SerializeField] private RollingEnemyAsset asset;
         private Rigidbody2D _body;
+        private Rotation _currentRotation;
+        
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
-            asset.OnRotationChange += SetOrientation;
-            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
+            _currentRotation = asset.Rotation;
         }
+        
 
         private void Start()
         {
@@ -26,6 +28,10 @@ namespace Core.Enemies.RollingCactus
         {
             if(transform.IsDestroyed())
                 return;
+            
+            if(_currentRotation != asset.Rotation)
+                SetOrientation(asset.Rotation);
+            
             if (asset.State == RollingEnemyState.Sleeping || asset.State == RollingEnemyState.Static)
             {
                 var vector2 = _body.velocity;
@@ -40,8 +46,9 @@ namespace Core.Enemies.RollingCactus
         
         private void SetOrientation(Rotation rotation)
         {
-            if(transform.IsDestroyed())
+            if(gameObject.IsDestroyed())
                 return;
+            _currentRotation = rotation;
             var localScale = transform.localScale;
             localScale.x = rotation == Rotation.Clockwise ? 1 : -1;
             transform.localScale = localScale;

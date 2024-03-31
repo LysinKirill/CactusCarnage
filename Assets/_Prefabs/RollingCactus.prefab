@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3650269966964237133}
   - component: {fileID: 4712460927699998717}
   - component: {fileID: 4257099762898842413}
-  - component: {fileID: 3570007798564990032}
   - component: {fileID: 4116682611936628074}
   - component: {fileID: 6194577225598315844}
   - component: {fileID: 3213110164497775772}
+  - component: {fileID: 5928586363066672573}
   m_Layer: 9
   m_Name: RollingCactus
   m_TagString: Untagged
@@ -122,19 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &3570007798564990032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095705998280961051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8faa0f7a94444b72a2975341e3bf8f54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asset: {fileID: 11400000, guid: 8fe051ac35ba3ad498272b78d5536a96, type: 2}
 --- !u!114 &4116682611936628074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +177,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5928586363066672573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095705998280961051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faa0f7a94444b72a2975341e3bf8f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: 8fe051ac35ba3ad498272b78d5536a96, type: 2}
 --- !u!1 &5034653262586737051
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0013638139, y: 0.0068187267}
