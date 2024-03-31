@@ -148,7 +148,7 @@ namespace Core.Controllers
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (!inventoryPanel.isActiveAndEnabled)
                 {
@@ -167,6 +167,8 @@ namespace Core.Controllers
                     inventoryPanel.CloseInventory();
                 }
             }
+            if(Input.GetKeyDown(KeyCode.Escape))
+                inventoryPanel.CloseInventory();
         }
     }
 }

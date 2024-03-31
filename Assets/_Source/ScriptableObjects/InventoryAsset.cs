@@ -9,9 +9,7 @@ namespace ScriptableObjects
     [CreateAssetMenu(fileName = "Item", menuName = "SO/newInventory")]
     public class InventoryAsset : ScriptableObject
     {
-        [SerializeField]
-        private List<InventoryItemModel> inventoryItems;
-
+        [SerializeField] private List<InventoryItemModel> inventoryItems;
         [field: SerializeField] public int Size { get; private set; } = 10;
 
         public event Action<Dictionary<int, InventoryItemModel>> OnInventoryUpdated;

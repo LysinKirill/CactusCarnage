@@ -11,11 +11,12 @@ namespace Core.Environment
         [SerializeField] private float damageDelay = 1f;
         [SerializeField] private LayerMask playerLayer;
 
+        private TilemapCollider2D _tileMapCollider;
         private bool _isActive = true;
 
         private void Awake()
         {
-            GetComponent<TilemapCollider2D>();
+            _tileMapCollider = GetComponent<TilemapCollider2D>();
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -34,12 +35,16 @@ namespace Core.Environment
         private IEnumerator DamageDelay(float delayDuration)
         {
             _isActive = false;
+            _tileMapCollider.enabled = false;
+            
             float currentTime = 0;
             while (currentTime < delayDuration)
             {
                 currentTime += Time.deltaTime;
                 yield return null;
             }
+
+            _tileMapCollider.enabled = true;
             _isActive = true;
         }
     }

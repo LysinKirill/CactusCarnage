@@ -16,7 +16,7 @@ namespace Core.Player
         private bool _isFacingRight = true;
 
         private bool _isGrounded;
-        public bool isTouchingWall;
+        private bool _isTouchingWall;
         
         private Rigidbody2D _body;
         private PlayerInputActions _playerInputActions;
@@ -42,7 +42,7 @@ namespace Core.Player
                 _body.velocity = velocity;
             }
 
-            if (_horizontal != 0 && (!isTouchingWall || _isGrounded))
+            if (_horizontal != 0 && (!_isTouchingWall || _isGrounded))
                 _body.velocity = new Vector2(_horizontal * walkSpeed, _body.velocity.y);
             
             if (!_isFacingRight && _horizontal > 0 || _isFacingRight && _horizontal < 0)
@@ -75,7 +75,7 @@ namespace Core.Player
         void CheckWalls()
         {
             var bounds = wallCheckCollider.bounds;
-            isTouchingWall = Physics2D.OverlapAreaAll(bounds.min, bounds.max, wallsLayer).Length > 0;
+            _isTouchingWall = Physics2D.OverlapAreaAll(bounds.min, bounds.max, wallsLayer).Length > 0;
         }
 
         private void Flip()
