@@ -40,8 +40,8 @@ namespace Core.Player
         {
             if(damage < 0)
                 return;
-            AddHealth(-damage);
             StartCoroutine(AnimateTakeDamage(takeDamageAnimationDuration));
+            AddHealth(-damage);
         }
 
         private IEnumerator AnimateTakeDamage(float duration)

@@ -1,3 +1,4 @@
+using System;
 using Core.Player;
 using Settings;
 using UnityEngine;
@@ -13,19 +14,27 @@ namespace Core.Controllers
         
         private const string BrightnessKey = "Brightness";
         private float _brightnessValue;
+        private PlayerHealth _playerHealth;
 
-        [SerializeField] private PlayerHealth playerHealth;
+        [SerializeField] private GameObject player;
         [SerializeField] private BrightnessSettings brightnessSettings;
+        [SerializeField] private GameObject defeatPanel;
+        [SerializeField] private GameObject canvas;
 
+        private void Start()
+        {
+            defeatPanel.SetActive(false);
+        }
         private void Awake()
         {
+            _playerHealth = player.GetComponent<PlayerHealth>();
             SetUpLevelVisuals();
             Subscribe();
         }
 
         private void Subscribe()
         {
-            playerHealth.OnUpdateHealth += CheckLooseCondition;
+            _playerHealth.OnUpdateHealth += CheckLooseCondition;
             brightnessSettings.OnBrightnessChanged += UpdateBrightness;
         }
 
@@ -33,7 +42,13 @@ namespace Core.Controllers
         {
             if (health != 0)
                 return;
-            SceneManager.LoadScene(0);
+            foreach (var children in canvas.GetComponentsInChildren<Transform>())
+            {
+                children.gameObject.SetActive(false);
+            }
+            canvas.SetActive(true);
+            defeatPanel.SetActive(true);
+            player.SetActive(false);
         }
         private void SetUpLevelVisuals()
         {
@@ -53,5 +68,6 @@ namespace Core.Controllers
             if (profile.TryGetSettings(out _autoExposure))
                 _autoExposure.keyValue.value = brightnessValue;
         }
+        
     }
 }
