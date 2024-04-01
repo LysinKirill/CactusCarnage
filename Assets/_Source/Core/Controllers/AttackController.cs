@@ -15,6 +15,8 @@ namespace Core.Controllers
         [SerializeField] private float baseAttackCooldown;
         [SerializeField] private LayerMask enemyLayerMask;
         [SerializeField] private GameObject inventory;
+        [SerializeField] private float ultimateDamageBoost = 1f;
+        
         private PlayerState _playerState;
         
         
@@ -22,6 +24,9 @@ namespace Core.Controllers
         private WeaponController _weaponController;
         private bool _rangedAttackReady;
         private Coroutine _preparationCoroutine;
+
+        private float UltimateMultiplier => _playerState.IsUltimateActive ? ultimateDamageBoost : 1;
+        
         private void Awake()
         {
             _weaponController = GetComponent<WeaponController>();
@@ -125,7 +130,9 @@ namespace Core.Controllers
             
             var projectile = Instantiate(rangedWeapon.ProjectilePrefab, transform.position, Quaternion.identity);
             if (projectile.TryGetComponent(out Projectile proj))
-                proj.SetDamage(rangedWeapon.ProjectileDamage);
+            {
+                proj.SetDamage(rangedWeapon.ProjectileDamage * UltimateMultiplier);
+            }
 
             if (projectile.TryGetComponent(out Rigidbody2D projectileBody))
             {
@@ -144,7 +151,7 @@ namespace Core.Controllers
             if (IsEnemyInAttackBox(weapon.AttackRange, out GameObject enemy))
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
                 {
-                    enemyHealth.TakeDamage(weapon.Damage);
+                    enemyHealth.TakeDamage(weapon.Damage * UltimateMultiplier);
                     _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
                 }
 
@@ -156,7 +163,7 @@ namespace Core.Controllers
             if (IsEnemyInAttackBox(baseReachDistance, out GameObject enemy))
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
                 {
-                    enemyHealth.TakeDamage(baseDamage);
+                    enemyHealth.TakeDamage(baseDamage * UltimateMultiplier);
                     _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
                 }
 

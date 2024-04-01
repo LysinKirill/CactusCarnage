@@ -10,14 +10,22 @@ namespace Core.Player
         [SerializeField] private float takeDamageAnimationDuration = 0.2f;
         [SerializeField] private int healthPoints;
         [SerializeField] private Slider ultimateSlider;
+        [SerializeField] private GameObject sliderHandle;
         [SerializeField] private float ultimateGainOnReceiveDamage;
         [field: SerializeField] public float UltimateGainOnDealDamage { get; private set; }
         
         [field: SerializeField] public int MaximumHealth { get; private set; }
+        [field: SerializeField] public float UltimateDuration { get; private set; } = 1f;
+
+        public bool IsUltimateActive { get; private set; } = false;
+        public bool IsUltimateReady
+        {
+            get { return _ultimateProgress >= 0; }
+        }
         
         private float _ultimateProgress;
-
-        public bool IsUltimateReady => _ultimateProgress >= 1;
+        
+        
         public event Action<int> OnUpdateHealth;
         public event Action<int> OnUpdateMaximumHealth;
 
@@ -45,6 +53,12 @@ namespace Core.Player
             ClearFollowers();
         }
 
+        private void Update()
+        {
+            if (IsUltimateReady && Input.GetKeyDown(KeyCode.X))
+                UseUltimate();
+        }
+
         public void AddUltimateProgress(float progress)
         {
             _ultimateProgress = Mathf.Clamp(progress + _ultimateProgress, 0, 1);
@@ -56,6 +70,28 @@ namespace Core.Player
             OnUpdateHealth = null;
             OnUpdateMaximumHealth = null;
         }
+
+        public void UseUltimate()
+        {
+            IsUltimateActive = true;
+            StartCoroutine(ResetUltimate(UltimateDuration));
+        }
+
+        private IEnumerator ResetUltimate(float ultimateDuration)
+        {
+            sliderHandle.SetActive(true);
+            float currentTime = 0;
+            while (currentTime < ultimateDuration)
+            {
+                currentTime += Time.deltaTime;
+                ultimateSlider.value = Mathf.Lerp(1, 0, currentTime / ultimateDuration);
+                yield return null;
+            }
+            IsUltimateActive = false;
+            sliderHandle.SetActive(false);
+        }
+
+
 
         public void AddHealth(int amount)
         {

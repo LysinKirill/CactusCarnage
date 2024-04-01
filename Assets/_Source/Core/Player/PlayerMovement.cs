@@ -12,7 +12,10 @@ namespace Core.Player
         [SerializeField] private LayerMask wallsLayer;
         [SerializeField] private BoxCollider2D groundCheckCollider;
         [SerializeField] private BoxCollider2D wallCheckCollider;
-
+        [SerializeField] private float ultimateSpeedBoost = 1f;
+        
+        private float UltimateMultiplier => _playerState.IsUltimateActive ? ultimateSpeedBoost : 1f;
+        
         private float _horizontal;
         private bool _isFacingRight = true;
 
@@ -21,6 +24,7 @@ namespace Core.Player
         
         private Rigidbody2D _body;
         private PlayerInputActions _playerInputActions;
+        private PlayerState _playerState;
 
         private const float DragCoefficient = 0.1f;
         
@@ -31,6 +35,7 @@ namespace Core.Player
             _body = GetComponent<Rigidbody2D>();
             _playerInputActions = new PlayerInputActions();
             _playerInputActions.Player.Enable();
+            _playerState = GetComponent<PlayerState>();
         }
         
         private void FixedUpdate()
@@ -46,28 +51,21 @@ namespace Core.Player
             }
 
             if (_horizontal != 0 && (!_isTouchingWall || _isGrounded))
-                _body.velocity = new Vector2(_horizontal * walkSpeed, _body.velocity.y);
+                _body.velocity = new Vector2(_horizontal * walkSpeed * UltimateMultiplier, _body.velocity.y);
             
             if (!_isFacingRight && _horizontal > 0 || _isFacingRight && _horizontal < 0)
                 Flip();
             
             animator.SetFloat("HorizontalMove", Math.Abs(_body.velocity.x));
 
-            if (!_isGrounded)
-            {
-                animator.SetBool("Jumping", true);
-            }
-            else
-            {
-                animator.SetBool("Jumping", false);
-            }
+            animator.SetBool("Jumping", !_isGrounded);
         }
         
 
         public void Jump(InputAction.CallbackContext context)
         {
             if (context.performed && _isGrounded)
-                _body.velocity = new Vector2(_body.velocity.x, jumpStrength);
+                _body.velocity = new Vector2(_body.velocity.x, jumpStrength * UltimateMultiplier);
 
             var velocity = _body.velocity;
             if (context.canceled && _body.velocity.y > 0)
