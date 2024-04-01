@@ -34,7 +34,7 @@ namespace Core.Enemies.RollingCactus
             if(asset.State == RollingEnemyState.Rolling)
                 ThrowPlayerInTheAir();
             
-            if(PlayerInAttackCollider(out PlayerHealth playerHealth))
+            if(PlayerInAttackCollider(out PlayerState playerHealth))
                 playerHealth.TakeDamage(enemyDamage);
             asset.ChangeState(RollingEnemyState.Static);
             
@@ -48,16 +48,16 @@ namespace Core.Enemies.RollingCactus
             _canAttack = true;
         }
 
-        private bool PlayerInAttackCollider(out PlayerHealth playerHealth)
+        private bool PlayerInAttackCollider(out PlayerState playerState)
         {
-            playerHealth = null;
+            playerState = null;
             var bounds = attackBoxCollider.bounds;
             var center = new Vector2(bounds.center.x, bounds.center.y);
             RaycastHit2D[] hits =
                 Physics2D.BoxCastAll(center, bounds.size, 0, Vector2.right, 0, playerLayer);
 
             foreach (var hit in hits)
-                if (hit.collider.gameObject.TryGetComponent(out playerHealth))
+                if (hit.collider.gameObject.TryGetComponent(out playerState))
                     return true;
             
             return false;

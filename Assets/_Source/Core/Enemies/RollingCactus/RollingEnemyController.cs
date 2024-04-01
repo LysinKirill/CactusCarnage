@@ -1,8 +1,5 @@
 using Core.Player;
-using ScriptableObjects;
 using ScriptableObjects.Enemies;
-using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Core.Enemies.RollingCactus
@@ -28,7 +25,7 @@ namespace Core.Enemies.RollingCactus
             RaycastHit2D[] forwardRayHits = Physics2D.RaycastAll(transform.position, Vector2.right, asset.PlayerDetectionDistance, obstaclesPlayerLayerMask);
             foreach (var hit in forwardRayHits)
             {
-                if (hit.collider.gameObject.TryGetComponent(out PlayerHealth _))
+                if (hit.collider.gameObject.TryGetComponent(out PlayerState _))
                 {
                     StartRollingClockwise();
                     return;
@@ -38,7 +35,7 @@ namespace Core.Enemies.RollingCactus
             RaycastHit2D[] backwardRayHits = Physics2D.RaycastAll(transform.position, Vector2.left, asset.PlayerDetectionDistance, obstaclesPlayerLayerMask);
             foreach (var hit in backwardRayHits)
             {
-                if (hit.collider.gameObject.TryGetComponent(out PlayerHealth _))
+                if (hit.collider.gameObject.TryGetComponent(out PlayerState _))
                 {
                     StartRollingCounterClockwise();
                     return;
