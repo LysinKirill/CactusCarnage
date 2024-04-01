@@ -5,13 +5,11 @@ namespace UI
     public class ItemDragHandler : MonoBehaviour
     {
         private Canvas _canvas;
-        private Camera _camera;
         private InventoryItem _item;
 
         private void Awake()
         {
             _canvas = GetComponentInParent<Canvas>();
-            _camera = Camera.main;
             _item = GetComponentInChildren<InventoryItem>();
         }
 

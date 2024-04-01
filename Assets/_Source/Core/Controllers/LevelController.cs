@@ -14,7 +14,7 @@ namespace Core.Controllers
         
         private const string BrightnessKey = "Brightness";
         private float _brightnessValue;
-        private PlayerHealth _playerHealth;
+        private PlayerState _playerHealth;
 
         [SerializeField] private GameObject player;
         [SerializeField] private BrightnessSettings brightnessSettings;
@@ -27,7 +27,7 @@ namespace Core.Controllers
         }
         private void Awake()
         {
-            _playerHealth = player.GetComponent<PlayerHealth>();
+            _playerHealth = player.GetComponent<PlayerState>();
             SetUpLevelVisuals();
             Subscribe();
         }

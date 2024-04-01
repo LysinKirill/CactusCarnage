@@ -31,7 +31,7 @@ namespace Core.Enemies
         private void AttackPlayer(int enemyDamage)
         {
             PlayAttackAnimation();
-            if (PlayerInAttackBox(out PlayerHealth playerHealth))
+            if (PlayerInAttackBox(out PlayerState playerHealth))
                 playerHealth.TakeDamage(enemyDamage);
             StartCoroutine(StartAttackDelay(attackDelay));
         }
@@ -43,16 +43,16 @@ namespace Core.Enemies
             _canAttack = true;
         }
 
-        private bool PlayerInAttackBox(out PlayerHealth playerHealth)
+        private bool PlayerInAttackBox(out PlayerState playerState)
         {
-            playerHealth = null;
+            playerState = null;
             var bounds = attackBoxCollider.bounds;
             var center = new Vector2(bounds.center.x, bounds.center.y);
             RaycastHit2D[] hits =
                 Physics2D.BoxCastAll(center, bounds.size, 0, Vector2.right, 0, playerLayer);
 
             foreach (var hit in hits) 
-                if (hit.collider.gameObject.TryGetComponent(out playerHealth))
+                if (hit.collider.gameObject.TryGetComponent(out playerState))
                     return true;
             
             return false;

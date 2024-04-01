@@ -5,13 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace UI
 {
     public class HeartVisuals : MonoBehaviour
     {
         [SerializeField] private GameObject heartPrefab;
-        [SerializeField] private PlayerHealth playerHealth;
+        [FormerlySerializedAs("playerHealth")]
+        [SerializeField] private PlayerState playerState;
         [SerializeField] private float activateHeartDuration = 1f;
 
         private int _currentHealth;
@@ -20,15 +22,15 @@ namespace UI
         private void Awake()
         {
             //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
-            playerHealth.OnUpdateHealth += HandleHealthUpdate;
-            playerHealth.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
+            playerState.OnUpdateHealth += HandleHealthUpdate;
+            playerState.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
         }
 
 
         private void Start()
         {
-            _currentHealth = playerHealth.HealthPoints;
-            for (int i = 0; i < playerHealth.MaximumHealth; ++i)
+            _currentHealth = playerState.HealthPoints;
+            for (int i = 0; i < playerState.MaximumHealth; ++i)
             {
                 var heart = Instantiate(heartPrefab, transform, false);
                 heart.transform.SetSiblingIndex(i);
@@ -40,7 +42,7 @@ namespace UI
 
         private void HandleHealthUpdate(int newHealth)
         {
-            while (newHealth > _currentHealth && _currentHealth < playerHealth.MaximumHealth)
+            while (newHealth > _currentHealth && _currentHealth < playerState.MaximumHealth)
             {
                 ++_currentHealth;
                 ActivateHeart();
