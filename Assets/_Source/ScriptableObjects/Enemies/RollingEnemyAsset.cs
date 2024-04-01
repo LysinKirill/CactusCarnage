@@ -1,7 +1,5 @@
 using Core.Enemies.RollingCactus;
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace ScriptableObjects.Enemies
 {
@@ -16,24 +14,10 @@ namespace ScriptableObjects.Enemies
         [field: SerializeField] public RollingEnemyState State { get; private set; }
         [field: SerializeField] public Rotation Rotation { get; private set; }
         
-        //public event Action<RollingEnemyState> OnStateChange;
-        //public event Action<Rotation> OnRotationChange;
         
+        public void ChangeState(RollingEnemyState newState) => State = newState;
+        public void ChangeRotation(Rotation rotation) => Rotation = rotation;
 
-        
-
-        public void ChangeState(RollingEnemyState newState)
-        {
-            State = newState;
-            //OnStateChange?.Invoke(State);
-        }
-
-        public void ChangeRotation(Rotation rotation)
-        {
-            Rotation = rotation;
-            //OnRotationChange?.Invoke(Rotation);
-        }
-        
     }
     
     public enum Rotation

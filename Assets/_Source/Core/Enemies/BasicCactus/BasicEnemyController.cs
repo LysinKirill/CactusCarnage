@@ -1,6 +1,4 @@
-using ScriptableObjects;
 using ScriptableObjects.Enemies;
-using System;
 using UnityEngine;
 
 namespace Core.Enemies.BasicCactus

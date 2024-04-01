@@ -14,11 +14,7 @@ namespace Core.Enemies
         [SerializeField] private BoxCollider2D attackBoxCollider;
         private bool _canAttack = true;
 
-
-        private void Awake()
-        {
-            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
-        }
+        
 
         private void Update()
         {

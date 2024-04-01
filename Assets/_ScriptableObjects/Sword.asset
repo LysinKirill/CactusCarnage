@@ -9,15 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fceb55dbddfb412e87d67eca4affe017, type: 3}
+  m_Script: {fileID: 11500000, guid: e856f690807d4998b06be604f86aea38, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
   <StackSize>k__BackingField: 1
   <Name>k__BackingField: Sword
   <Sprite>k__BackingField: {fileID: 21300000, guid: 722457268bcad2f4ebb4c3ee499643b3, type: 3}
-  <Description>k__BackingField: Close range melee weapon
-  <DefaultParameterList>k__BackingField:
-  - itemParameter: {fileID: 11400000, guid: 4838a27b861c5324fbb97f5277cc6c57, type: 2}
-    value: 100
-  <ActionSfx>k__BackingField: {fileID: 8300000, guid: ca1ce2d1f76bad34ba3817524dceb71e, type: 3}
+  <Description>k__BackingField: 'Close range melee weapon
+
+    2 damage'
+  <DefaultParameterList>k__BackingField: []
+  <ActionSfx>k__BackingField: {fileID: 0}
+  <AttackDelay>k__BackingField: 0.5
+  <AttackRange>k__BackingField: 4
+  <Damage>k__BackingField: 2
