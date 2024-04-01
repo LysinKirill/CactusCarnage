@@ -98,6 +98,8 @@ namespace Core.Controllers
                     inventoryPanel.DeselectAll();
                 }
             }
+
+
         }
 
         private void DropItem(int index, int quantity)
