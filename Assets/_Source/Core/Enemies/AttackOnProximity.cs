@@ -8,17 +8,21 @@ namespace Core.Enemies
 {
     public class AttackOnProximity : MonoBehaviour
     {
-        [SerializeField] private float attackDelay = 1f;
-        [SerializeField] private LayerMask playerLayer;
-        [SerializeField] private int damage = 1;
-        [SerializeField] private BoxCollider2D attackBoxCollider;
+        [SerializeField]
+        private float attackDelay = 1f;
+        [SerializeField]
+        private LayerMask playerLayer;
+        [SerializeField]
+        private int damage = 1;
+        [SerializeField]
+        private BoxCollider2D attackBoxCollider;
         private bool _canAttack = true;
 
-        
+
 
         private void Update()
         {
-            if(!_canAttack || !PlayerInAttackBox(out _))
+            if (!_canAttack || !PlayerInAttackBox(out _))
                 return;
             AttackPlayer(damage);
         }
@@ -27,7 +31,7 @@ namespace Core.Enemies
         private void AttackPlayer(int enemyDamage)
         {
             PlayAttackAnimation();
-            if(PlayerInAttackBox(out PlayerHealth playerHealth))
+            if (PlayerInAttackBox(out PlayerHealth playerHealth))
                 playerHealth.TakeDamage(enemyDamage);
             StartCoroutine(StartAttackDelay(attackDelay));
         }
@@ -44,17 +48,19 @@ namespace Core.Enemies
             playerHealth = null;
             var bounds = attackBoxCollider.bounds;
             var center = new Vector2(bounds.center.x, bounds.center.y);
-            RaycastHit2D hit =
-                Physics2D.BoxCast(center, bounds.size, 0, Vector2.right, 0, playerLayer);
-            if (hit.collider == null)
-                return false;
-            hit.collider.gameObject.TryGetComponent(out playerHealth);
-            return true;
+            RaycastHit2D[] hits =
+                Physics2D.BoxCastAll(center, bounds.size, 0, Vector2.right, 0, playerLayer);
+
+            foreach (var hit in hits) 
+                if (hit.collider.gameObject.TryGetComponent(out playerHealth))
+                    return true;
+            
+            return false;
         }
 
         private void OnDrawGizmos()
         {
-            if(attackBoxCollider == null)
+            if (attackBoxCollider == null)
                 return;
             var bounds = attackBoxCollider.bounds;
             var center = new Vector2(bounds.center.x, bounds.center.y);

@@ -15,6 +15,7 @@ namespace Core.Controllers
         [SerializeField] private float baseAttackCooldown;
         [SerializeField] private LayerMask enemyLayerMask;
         [SerializeField] private GameObject inventory;
+        [SerializeField] private Canvas canvas;
         
         private bool _canAttack = true;
         private WeaponController _weaponController;
@@ -37,17 +38,27 @@ namespace Core.Controllers
             
             if (Input.GetMouseButtonDown((int)MouseButton.RightMouse))
                 HandleRightMouseButtonDown();
-            
+
             if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
                 HandleLeftMouseButtonDown();
-            
+
             if(Input.GetMouseButtonUp((int)MouseButton.RightMouse))
                 HandleRightMouseButtonUp();
-                
+
+            if (aimBox.activeInHierarchy)
+                AimBoxFollowMouse();
+        }
+
+        private void AimBoxFollowMouse()
+        {
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 newAimBoxPosition = new Vector3(mouseWorldPosition.x, mouseWorldPosition.y, aimBox.transform.position.z);
+            aimBox.transform.position = newAimBoxPosition;
         }
 
         private void HandleRightMouseButtonUp()
         {
+            aimBox.SetActive(false);
             CancelWeaponPreparation();
         }
 
@@ -55,7 +66,6 @@ namespace Core.Controllers
         {
             if(_preparationCoroutine == null)
                 return;
-            Debug.Log("Cancel weapon preparation");
             StopCoroutine(_preparationCoroutine);
             _rangedAttackReady = false;
             aimBox.SetActive(false);
@@ -69,7 +79,8 @@ namespace Core.Controllers
             var rangedWeapon = currentWeapon as RangedWeaponAsset;
             if (rangedWeapon == null)
                 return;
-
+            
+            aimBox.SetActive(true);
             _preparationCoroutine = StartCoroutine(PrepareWeapon(rangedWeapon.PreparationTime));
         }
 
@@ -85,12 +96,11 @@ namespace Core.Controllers
 
         private void Attack()
         {
-            Debug.Log("Attack");
             var currentWeapon = _weaponController.CurrentWeapon;
 
             if (currentWeapon == null)
             {
-                BareHandedAttack(baseDamage);
+                BareHandedAttack();
                 return;
             }
             
@@ -108,15 +118,20 @@ namespace Core.Controllers
 
         private void AttackRanged(RangedWeaponAsset rangedWeapon)
         {
-            Debug.Log("Ranged attack");
             if (!_rangedAttackReady || !aimBox.activeInHierarchy)
                 return;
             
-            var projectile = Instantiate(rangedWeapon.ProjectilePrefab);
+            var projectile = Instantiate(rangedWeapon.ProjectilePrefab, transform.position, Quaternion.identity);
+            if (projectile.TryGetComponent(out Projectile proj))
+                proj.SetDamage(rangedWeapon.ProjectileDamage);
+
             if (projectile.TryGetComponent(out Rigidbody2D projectileBody))
             {
                 var shootDirection = aimBox.transform.position - transform.position;
                 projectileBody.velocity = shootDirection.normalized * rangedWeapon.ProjectileSpeed;
+                
+                float angle = Mathf.Atan2(projectileBody.velocity.y, projectileBody.velocity.x) * Mathf.Rad2Deg;
+                projectileBody.gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             }
             _weaponController.AddProjectile(projectile);
             StartCoroutine(AttackCooldown(rangedWeapon.AttackDelay));
@@ -124,32 +139,22 @@ namespace Core.Controllers
 
         private void AttackMelee(MeleeWeaponAsset weapon)
         {
-            Debug.Log("Melee attack");
             if (IsEnemyInAttackBox(weapon.AttackRange, out GameObject enemy))
             {
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
                 {
                     enemyHealth.TakeDamage(weapon.Damage);
-                    Debug.Log($"Deal {weapon.Damage} damage to enemy");
                 }
-                //throw new NotImplementedException();
-                // enemy.TakeDamage(weapon.Damage);
             }
 
             StartCoroutine(AttackCooldown(weapon.AttackDelay));
         }
         
-        private void BareHandedAttack(float damage)
+        private void BareHandedAttack()
         {
-            Debug.Log("Bare-handed attack");
             if (IsEnemyInAttackBox(baseReachDistance, out GameObject enemy))
-            {
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
-                {
                     enemyHealth.TakeDamage(baseDamage);
-                    Debug.Log($"Deal {baseDamage} damage to enemy with hands");
-                }
-            }
 
             StartCoroutine(AttackCooldown(baseAttackCooldown));
         }
@@ -157,18 +162,23 @@ namespace Core.Controllers
         private bool IsEnemyInAttackBox(float attackBoxSize, out GameObject enemy)
         {
             enemy = null;
-            Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-            var center = new Vector2(transform.position.x, transform.position.y);
-            var attackBox = new Vector3(attackBoxSize, attackBoxSize, attackBoxSize);
+            Vector3 direction = transform.localScale.x > 0 ? Vector3.right : Vector3.left;
+            var center = transform.position + direction * attackBoxSize / 2f;
+            var attackBox = new Vector3(attackBoxSize, transform.localScale.y, attackBoxSize);
             
+            RaycastHit2D[] hits =
+                Physics2D.BoxCastAll(center, attackBox, 0f, Vector2.zero, 0f, enemyLayerMask);
             
-            RaycastHit2D hit =
-                Physics2D.BoxCast(center, attackBox, 0, direction, 0, enemyLayerMask);
-            if (hit.collider == null)
-                return false;
-
-            enemy = hit.collider.gameObject;
-            return true;
+            foreach (var hit in hits)
+            {
+                if (hit.collider.gameObject.TryGetComponent(out EnemyHealth _))
+                {
+                    enemy = hit.collider.gameObject;
+                    return true;
+                }
+            }
+            
+            return false;
         }
 
         private void OnDrawGizmos()
@@ -179,25 +189,19 @@ namespace Core.Controllers
             if (weapon == null)
                 return;
             
-            Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-            var center = new Vector2(transform.position.x, transform.position.y);
-            
-            
-            
-            
+            Vector3 direction = transform.localScale.x > 0 ? Vector3.right : Vector3.left;
             if(weapon is MeleeWeaponAsset meleeWeapon)
             {
                 var attackBoxSize = meleeWeapon.AttackRange;
-                var attackBox = new Vector3(attackBoxSize, attackBoxSize, attackBoxSize);
-                
+                var center = transform.position + direction * attackBoxSize / 2f;
+                var attackBox = new Vector3(attackBoxSize, transform.localScale.y, attackBoxSize);
+                Gizmos.color = Color.red;
                 Gizmos.DrawWireCube(center, attackBox);
             }
-            
         }
 
         private IEnumerator PrepareWeapon(float preparationTime)
         {
-            Debug.Log("Start preparing weapon");
             _rangedAttackReady = false;
             yield return new WaitForSecondsRealtime(preparationTime);
             // Play preparation animation

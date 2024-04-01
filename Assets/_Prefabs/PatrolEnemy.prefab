@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3245109726008174558}
   - component: {fileID: 4494657054958513903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9012175399193465501}
   - component: {fileID: 203059918398384736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

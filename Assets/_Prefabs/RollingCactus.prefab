@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8300190020325660073}
   - component: {fileID: 5997136880147523664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7346579241007249108}
   - component: {fileID: 2060702279989813001}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

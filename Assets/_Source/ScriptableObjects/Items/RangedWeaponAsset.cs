@@ -8,5 +8,6 @@ namespace ScriptableObjects.Items
         [field: SerializeField] public float PreparationTime { get; private set; }
         [field: SerializeField] public float ProjectileSpeed { get; private set; }
         [field: SerializeField] public GameObject ProjectilePrefab { get; private set; }
+        [field: SerializeField] public float ProjectileDamage { get; private set; } = 1;
     }
 }

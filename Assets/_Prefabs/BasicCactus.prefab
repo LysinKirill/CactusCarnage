@@ -273,7 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486784076532663793}
   - component: {fileID: 6159905533300303058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8557125294694175238}
   - component: {fileID: 6561308505416793839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CheckWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 2852383790142563273}
   - component: {fileID: 8939472192220779091}
   - component: {fileID: 2986719594962793665}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
