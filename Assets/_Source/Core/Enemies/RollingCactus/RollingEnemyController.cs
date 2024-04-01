@@ -25,17 +25,24 @@ namespace Core.Enemies.RollingCactus
 
         private void AttemptToDetectPlayer()
         {
-            RaycastHit2D forwardRay = Physics2D.Raycast(transform.position, Vector2.right, asset.PlayerDetectionDistance, obstaclesPlayerLayerMask);
-            if (forwardRay.collider != null && forwardRay.collider.TryGetComponent(out PlayerHealth _))
+            RaycastHit2D[] forwardRayHits = Physics2D.RaycastAll(transform.position, Vector2.right, asset.PlayerDetectionDistance, obstaclesPlayerLayerMask);
+            foreach (var hit in forwardRayHits)
             {
-                StartRollingClockwise();
-                return;
+                if (hit.collider.gameObject.TryGetComponent(out PlayerHealth _))
+                {
+                    StartRollingClockwise();
+                    return;
+                }
             }
             
-            RaycastHit2D backwardRay = Physics2D.Raycast(transform.position, Vector2.left, asset.PlayerDetectionDistance, obstaclesPlayerLayerMask);
-            if (backwardRay.collider != null && backwardRay.collider.TryGetComponent(out PlayerHealth _))
+            RaycastHit2D[] backwardRayHits = Physics2D.RaycastAll(transform.position, Vector2.left, asset.PlayerDetectionDistance, obstaclesPlayerLayerMask);
+            foreach (var hit in backwardRayHits)
             {
-                StartRollingCounterClockwise();
+                if (hit.collider.gameObject.TryGetComponent(out PlayerHealth _))
+                {
+                    StartRollingCounterClockwise();
+                    return;
+                }
             }
         }
 

@@ -123,6 +123,14 @@ namespace UI
             DeselectAll();
         }
 
+        public void ToggleInventory()
+        {
+            if(gameObject.activeInHierarchy)
+                CloseInventory();
+            else
+                ShowInventory();
+        }
+
         public void DeselectAll()
         {
             itemDescription.ResetDescription();

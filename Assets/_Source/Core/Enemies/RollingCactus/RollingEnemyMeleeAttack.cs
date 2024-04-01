@@ -53,12 +53,14 @@ namespace Core.Enemies.RollingCactus
             playerHealth = null;
             var bounds = attackBoxCollider.bounds;
             var center = new Vector2(bounds.center.x, bounds.center.y);
-            RaycastHit2D hit =
-                Physics2D.BoxCast(center, bounds.size, 0, Vector2.right, 0, playerLayer);
-            if (hit.collider == null)
-                return false;
-            hit.collider.gameObject.TryGetComponent(out playerHealth);
-            return true;
+            RaycastHit2D[] hits =
+                Physics2D.BoxCastAll(center, bounds.size, 0, Vector2.right, 0, playerLayer);
+
+            foreach (var hit in hits)
+                if (hit.collider.gameObject.TryGetComponent(out playerHealth))
+                    return true;
+            
+            return false;
         }
 
         private void OnDrawGizmos()
