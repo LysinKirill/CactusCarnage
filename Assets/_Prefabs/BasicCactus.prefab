@@ -185,7 +185,7 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  player: {fileID: 0}
+  player: {fileID: 5096398601572271102, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
 --- !u!114 &6988780353801728495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
     m_Bits: 64
   speed: 5
   maxWanderDistance: 10
-  player: {fileID: 0}
+  player: {fileID: 5096398601572271102, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
 --- !u!114 &8590873147962165698
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017582804, y: -0.59268427}
+  m_Offset: {x: 0.037958324, y: -0.59268427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.69118124, y: 0.03192711}
+  m_Size: {x: 0.53239286, y: 0.03192711}
   m_EdgeRadius: 0
 --- !u!1 &5096398601572271102
 GameObject:
@@ -253,7 +253,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016693562, y: 0.011610746}
+  m_Offset: {x: 0.016693562, y: 0.019678354}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -264,7 +264,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67057973, y: 1.4383264}
+  m_Size: {x: 0.67057973, y: 1.4221911}
   m_EdgeRadius: 0
 --- !u!82 &1173442146482211485
 AudioSource:
@@ -510,8 +510,6 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckCollider: {fileID: 4645167702649618150}
   wallCheckCollider: {fileID: 6768582414005785061}
-  _isGrounded: 0
-  _isTouchingWall: 0
   animator: {fileID: 5096398601572271098}
 --- !u!1 &5966213023158938362
 GameObject:

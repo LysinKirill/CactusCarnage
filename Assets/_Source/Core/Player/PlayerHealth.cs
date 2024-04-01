@@ -49,7 +49,7 @@ namespace Core.Player
         {
             HealthPoints = Mathf.Clamp(HealthPoints + amount, 0, MaximumHealth);
         }
-
+        
         public void TakeDamage(int damage)
         {
             if(damage < 0)
