@@ -557,7 +557,8 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 1ef7dc96f350a0d4da84be19189d6b59, type: 2}
   parametersToModify: []
   currentItemState: []
-  _weaponRenderer: {fileID: 77763148415537819}
+  weaponRenderer: {fileID: 0}
+  activeWeaponSlot: {fileID: 0}
 --- !u!114 &1771428595641021206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +573,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   takeDamageAnimationDuration: 0.2
   healthPoints: 3
+  ultimateSlider: {fileID: 0}
+  ultimateGainOnReceiveDamage: 0
+  <UltimateGainOnDealDamage>k__BackingField: 0
   <MaximumHealth>k__BackingField: 3
 --- !u!114 &2423784670248680754
 MonoBehaviour:
@@ -616,7 +620,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   inventory: {fileID: 0}
-  canvas: {fileID: 0}
 --- !u!1 &5966213023158938362
 GameObject:
   m_ObjectHideFlags: 0
