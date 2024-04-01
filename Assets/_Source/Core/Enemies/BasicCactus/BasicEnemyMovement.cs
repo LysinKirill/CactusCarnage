@@ -2,7 +2,6 @@ using ScriptableObjects.Enemies;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Random = System.Random;
 
 namespace Core.Enemies.BasicCactus
@@ -16,22 +15,23 @@ namespace Core.Enemies.BasicCactus
         [SerializeField] private float speed;
         [SerializeField] private float maxWanderDistance;
         [SerializeField] private GameObject player;
+        
         private Rigidbody2D _body;
         private float _walkTargetX;
 
         private bool _isGrounded = true;
         private bool _isTouchingWall;
         private bool _isFacingRight = true;
-        
 
         private bool _isResting;
-        
+
         private Random _random = new Random();
+
         private void Awake()
         {
+            playerDetection.Init();
             _body = GetComponent<Rigidbody2D>();
         }
-        
         
         private void Wander()
         {
@@ -45,41 +45,56 @@ namespace Core.Enemies.BasicCactus
                 return;
             var playerToTheRight = _walkTargetX > transform.position.x;
             
-            
             _body.velocity = new Vector2((playerToTheRight ? 1 : -1) * speed, _body.velocity.y);
         }
-        
+
         private void FixedUpdate()
         {
-            if(transform.IsDestroyed())
+            if (!playerDetection.PlayerDetected && CheckPlayer())
+                playerDetection.SetPlayerDetected(true);
+            
+            if (transform.IsDestroyed())
                 return;
             if (_isResting)
                 return;
-            
+
             CheckGround();
             CheckWalls();
             UpdateWalkingTarget();
-            
-            if((_walkTargetX > transform.position.x && !_isFacingRight) 
-               || (_walkTargetX < transform.position.x && _isFacingRight))
+
+            if (_walkTargetX > transform.position.x && !_isFacingRight
+                || _walkTargetX < transform.position.x && _isFacingRight)
                 Flip();
-            
+
             if (!_isGrounded || _isTouchingWall)
             {
-                var restTime = (float)_random.NextDouble() * 0.5f + 0.5f;
-                StartCoroutine(RestOnTarget(restTime));
-                SetNewWalkingTarget();
+                if (playerDetection.PlayerDetected)
+                    return;
+                StartMovingToOppositeDirection();
+                return;
             }
-            
+
             if (!playerDetection.PlayerDetected)
             {
                 Wander();
                 return;
             }
-            
+
             FollowPlayer();
         }
 
+        private void StartMovingToOppositeDirection()
+        {
+            if (!_isGrounded || _isTouchingWall)
+                Flip();
+            
+            if (_isFacingRight)
+                _walkTargetX = (float)_random.NextDouble() * maxWanderDistance * 0.5f + maxWanderDistance * 0.5f;
+            else
+                _walkTargetX = -(float)_random.NextDouble() * maxWanderDistance * 0.5f - maxWanderDistance * 0.5f;
+
+            _walkTargetX += transform.position.x;
+        }
 
         private void CheckWalls()
         {
@@ -95,7 +110,7 @@ namespace Core.Enemies.BasicCactus
 
         private void UpdateWalkingTarget()
         {
-            if (playerDetection.PlayerDetected) 
+            if (playerDetection.PlayerDetected)
                 _walkTargetX = player.transform.position.x;
             else if (Mathf.Abs(_walkTargetX - transform.position.x) < 0.1f)
             {
@@ -121,13 +136,54 @@ namespace Core.Enemies.BasicCactus
                 transform.position.x + newTargetShift;
         }
 
-        
+
         private void Flip()
         {
             _isFacingRight = !_isFacingRight;
             var localScale = transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
+        }
+        
+        private bool CheckPlayer()
+        {
+            if (playerDetection.LineOfSightRequired && LineOfSightObstructed())
+                return false;
+
+            var distance = Vector3.Distance(transform.position, player.transform.position);
+            return distance <= playerDetection.DetectionRadius;
+        }
+
+        private bool LineOfSightObstructed()
+        {
+            var startPosition = transform.position;
+
+            var direction = (Vector2)(player.transform.position - startPosition);
+            RaycastHit2D hit = Physics2D.Raycast(
+                startPosition,
+                direction,
+                direction.magnitude,
+                obstacleLayerMask
+            );
+            if (hit.collider != null)
+                return true;
+
+            return Vector2.Distance(startPosition, player.transform.position) >= playerDetection.DetectionRadius;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            var startPosition = transform.position;
+            var direction = (Vector2)(player.transform.position - startPosition);
+            
+            Gizmos.DrawRay(startPosition, direction);
+            RaycastHit2D hit = Physics2D.Raycast(
+                startPosition,
+                direction,
+                direction.magnitude,
+                obstacleLayerMask
+            );
         }
     }
 }

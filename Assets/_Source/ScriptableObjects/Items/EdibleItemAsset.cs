@@ -14,7 +14,7 @@ namespace ScriptableObjects.Items
         [SerializeField] private List<ModifierData> modifiersData = new List<ModifierData>();
         [field: SerializeField] public AudioClip ActionSfx { get; private set; }
         
-        public string ActionName => "Consume";
+        public string ActionName => "Drink";
         
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {

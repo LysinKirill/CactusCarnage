@@ -58,11 +58,11 @@ namespace Settings
         public void ChangeSfxVolume()
         {
             var volume = ConvertToVolume(sfxVolumeSlider.value);
-            mainAudioMixer.SetFloat(SfxVolumeKey, sfxVolumeSlider.value);
+            mainAudioMixer.SetFloat(SfxVolumeKey, volume);
             PlayerPrefs.SetFloat(SfxVolumeKey, sfxVolumeSlider.value);
         }
 
-        private float ConvertToVolume(float sliderPosition)
+        private static float ConvertToVolume(float sliderPosition)
         {
             float x = Mathf.Pow(sliderPosition, 0.2f);
             return Mathf.Lerp(-80, 0, x);

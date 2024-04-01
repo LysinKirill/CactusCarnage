@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +10,7 @@ namespace UI
         [SerializeField] private TMP_Text title;
         [SerializeField] private TMP_Text description;
 
-        private void Awake()
-        {
-            ResetDescription();
-        }
+        private void Awake() => ResetDescription();
 
         public void ResetDescription()
         {

@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace ScriptableObjects.Items
 {
-    //[CreateAssetMenu(menuName = "SO/newEquippableItem")]
     public abstract class WeaponAsset : 
         ItemAsset,
         IDestroyableItem,

@@ -1,9 +1,7 @@
 using Core.Player;
 using ScriptableObjects.Enemies;
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Core.Enemies.RollingCactus
 {
@@ -15,11 +13,7 @@ namespace Core.Enemies.RollingCactus
         [SerializeField] private GameObject player;
         
         private bool _canAttack = true;
-
-        private void Awake()
-        {
-            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
-        }
+        
 
         private void Update()
         {

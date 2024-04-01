@@ -22,15 +22,9 @@ namespace UI
 
         private int _currentlyDraggedId = -1;
 
-        private void Awake()
-        {
-            RemoveFollowers();
-        }
+        private void Awake() => RemoveFollowers();
 
-        private void OnDestroy()
-        {
-            RemoveFollowers();
-        }
+        private void OnDestroy() => RemoveFollowers();
 
         private void Start()
         {

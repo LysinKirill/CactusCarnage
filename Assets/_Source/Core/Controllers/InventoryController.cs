@@ -1,5 +1,4 @@
 using Model;
-using ScriptableObjects;
 using ScriptableObjects.Items;
 using System.Collections.Generic;
 using System.Text;
@@ -63,16 +62,14 @@ namespace Core.Controllers
             var inventoryItem = inventoryData.GetItemAt(index);
             if (inventoryItem.IsEmpty)
                 return;
-            
-            IItemAction itemAction = inventoryItem.item as IItemAction;
-            if (itemAction != null)
+
+            if (inventoryItem.item is IItemAction itemAction)
             {
                 inventoryPanel.ShowItemAction(index);
                 inventoryPanel.AddAction(itemAction.ActionName, () => PerformAction(index));
             }
 
-            IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
-            if (destroyableItem != null)
+            if (inventoryItem.item is IDestroyableItem)
                 inventoryPanel.AddAction("Drop", () => DropItem(index, inventoryItem.quantity));
             
         }

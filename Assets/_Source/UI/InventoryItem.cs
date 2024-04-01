@@ -57,16 +57,8 @@ namespace UI
             OnRightMouseBtnClick = null;
         }
 
-        private void OnDestroy()
-        {
-            ClearFollowers();
-        }
-
-        public void Select()
-        {
-            Frame.enabled = true;
-        }
-        
+        private void OnDestroy() => ClearFollowers();
+        public void Select() => Frame.enabled = true;
 
         public void Deselect()
         {

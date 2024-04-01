@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Core.Enemies.PatrolCactus
@@ -26,9 +25,11 @@ namespace Core.Enemies.PatrolCactus
             CheckDestinationReached();
             UpdateFacingDirection();
             var directionMultiplier = _destination.transform.position.x > transform.position.x ? 1 : -1;
-            float y = _body.velocity.y;
-            _body.velocity = Vector2.right * (speed * directionMultiplier);
-            _body.velocity = new Vector2(_body.velocity.x, y);
+            var velocity = _body.velocity;
+            float y = velocity.y;
+            velocity = Vector2.right * (speed * directionMultiplier);
+            velocity = new Vector2(velocity.x, y);
+            _body.velocity = velocity;
         }
 
         private void CheckDestinationReached()

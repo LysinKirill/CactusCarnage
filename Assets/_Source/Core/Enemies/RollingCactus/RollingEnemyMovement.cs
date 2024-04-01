@@ -1,8 +1,6 @@
 ﻿using ScriptableObjects.Enemies;
-using System;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Core.Enemies.RollingCactus
 {

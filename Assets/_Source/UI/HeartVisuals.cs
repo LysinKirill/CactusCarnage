@@ -1,18 +1,14 @@
 using Core.Player;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace UI
 {
     public class HeartVisuals : MonoBehaviour
     {
         [SerializeField] private GameObject heartPrefab;
-        [FormerlySerializedAs("playerHealth")]
         [SerializeField] private PlayerState playerState;
         [SerializeField] private float activateHeartDuration = 1f;
 
@@ -21,7 +17,6 @@ namespace UI
 
         private void Awake()
         {
-            //SceneManager.sceneUnloaded += _ => StopAllCoroutines();
             playerState.OnUpdateHealth += HandleHealthUpdate;
             playerState.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
         }
@@ -55,11 +50,10 @@ namespace UI
             }
         }
 
-
-
+        
         private void HandleMaxHealthUpdate(int obj)
         {
-            throw new NotImplementedException();
+            // TODO 
         }
 
         private void ActivateHeart()

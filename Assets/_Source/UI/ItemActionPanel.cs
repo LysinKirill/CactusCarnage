@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +9,11 @@ namespace UI
         [SerializeField]
         private GameObject buttonPrefab;
 
-        public void AddButton(string name, Action onClickAction)
+        public void AddButton(string buttonText, Action onClickAction)
         {
             GameObject button = Instantiate(buttonPrefab, transform);
             button.GetComponent<Button>().onClick.AddListener(() => onClickAction());
-            button.GetComponentInChildren<TMPro.TMP_Text>().text = name;
+            button.GetComponentInChildren<TMPro.TMP_Text>().text = buttonText;
         }
 
         public void Toggle(bool isActive)
