@@ -26,7 +26,9 @@ namespace Core.Enemies.PatrolCactus
             CheckDestinationReached();
             UpdateFacingDirection();
             var directionMultiplier = _destination.transform.position.x > transform.position.x ? 1 : -1;
+            float y = _body.velocity.y;
             _body.velocity = Vector2.right * (speed * directionMultiplier);
+            _body.velocity = new Vector2(_body.velocity.x, y);
         }
 
         private void CheckDestinationReached()

@@ -20,7 +20,7 @@ MonoBehaviour:
 
     2 damage'
   <DefaultParameterList>k__BackingField: []
-  <ActionSfx>k__BackingField: {fileID: 0}
+  <ActionSfx>k__BackingField: {fileID: 8300000, guid: ca1ce2d1f76bad34ba3817524dceb71e, type: 3}
   <AttackDelay>k__BackingField: 0.5
   <AttackRange>k__BackingField: 2
   <Damage>k__BackingField: 2
