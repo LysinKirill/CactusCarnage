@@ -8,7 +8,7 @@ namespace Core.Environment
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.TryGetComponent(out PlayerHealth playerHealth))
+            if (!other.TryGetComponent(out PlayerState playerHealth))
                 return;
             playerHealth.TakeDamage(Int32.MaxValue);
         }

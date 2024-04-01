@@ -179,7 +179,6 @@ namespace UI
             OnDescriptionRequested = null;
             OnItemActionRequested = null;
             OnStartDrag = null;
-            OnItemActionRequested = null;
         }
     }
 }

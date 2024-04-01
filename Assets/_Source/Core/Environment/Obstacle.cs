@@ -25,7 +25,7 @@ namespace Core.Environment
                 return;
             GameObject player = other.transform.gameObject;
 
-            if (player == null || !player.TryGetComponent(out PlayerHealth playerHealth))
+            if (player == null || !player.TryGetComponent(out PlayerState playerHealth))
                 return;
 
             playerHealth.TakeDamage(damage);

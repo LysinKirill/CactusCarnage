@@ -1,6 +1,6 @@
 using Core.Enemies;
+using Core.Player;
 using ScriptableObjects.Items;
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -15,7 +15,8 @@ namespace Core.Controllers
         [SerializeField] private float baseAttackCooldown;
         [SerializeField] private LayerMask enemyLayerMask;
         [SerializeField] private GameObject inventory;
-        [SerializeField] private Canvas canvas;
+        private PlayerState _playerState;
+        
         
         private bool _canAttack = true;
         private WeaponController _weaponController;
@@ -24,6 +25,7 @@ namespace Core.Controllers
         private void Awake()
         {
             _weaponController = GetComponent<WeaponController>();
+            _playerState = GetComponent<PlayerState>();
         }
 
         private void Start()
@@ -133,19 +135,18 @@ namespace Core.Controllers
                 float angle = Mathf.Atan2(projectileBody.velocity.y, projectileBody.velocity.x) * Mathf.Rad2Deg;
                 projectileBody.gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             }
-            _weaponController.AddProjectile(projectile);
+            
             StartCoroutine(AttackCooldown(rangedWeapon.AttackDelay));
         }
 
         private void AttackMelee(MeleeWeaponAsset weapon)
         {
             if (IsEnemyInAttackBox(weapon.AttackRange, out GameObject enemy))
-            {
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
                 {
                     enemyHealth.TakeDamage(weapon.Damage);
+                    _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
                 }
-            }
 
             StartCoroutine(AttackCooldown(weapon.AttackDelay));
         }
@@ -154,7 +155,10 @@ namespace Core.Controllers
         {
             if (IsEnemyInAttackBox(baseReachDistance, out GameObject enemy))
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
+                {
                     enemyHealth.TakeDamage(baseDamage);
+                    _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
+                }
 
             StartCoroutine(AttackCooldown(baseAttackCooldown));
         }

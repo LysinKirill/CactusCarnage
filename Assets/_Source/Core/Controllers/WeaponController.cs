@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Core.Controllers
 {
@@ -11,14 +13,19 @@ namespace Core.Controllers
         [SerializeField] private InventoryAsset inventory;
         [SerializeField] private List<ItemParameter> parametersToModify;
         [SerializeField] private List<ItemParameter> currentItemState;
-        [SerializeField] private SpriteRenderer _weaponRenderer;
-        private List<GameObject> _projectiles = new List<GameObject>();
+        [SerializeField] private SpriteRenderer weaponRenderer;
+        [SerializeField] private GameObject activeWeaponSlot;
         public WeaponAsset CurrentWeapon
         {
             get { return weapon; }
         }
-        
 
+        private void Awake()
+        {
+            UpdateActiveWeaponSlot();
+        }
+
+        
         public void SetWeapon(WeaponAsset weaponItemAsset, List<ItemParameter> itemState)
         {
             if (weapon != null)
@@ -27,8 +34,20 @@ namespace Core.Controllers
             weapon = weaponItemAsset;
             currentItemState = new List<ItemParameter>(itemState);
 
-            _weaponRenderer.sprite = CurrentWeapon.Sprite;
+            weaponRenderer.sprite = CurrentWeapon.Sprite;
+            UpdateActiveWeaponSlot();
             ModifyParameters();
+        }
+
+        public void UpdateActiveWeaponSlot()
+        {
+            if (weapon == null)
+            {
+                activeWeaponSlot.SetActive(false);
+                return;
+            }
+            activeWeaponSlot.SetActive(true);
+            activeWeaponSlot.GetComponent<Image>().sprite = weapon.Sprite;
         }
 
         private void ModifyParameters()
@@ -48,10 +67,6 @@ namespace Core.Controllers
                 };
             }
         }
-
-        public void AddProjectile(GameObject projectile)
-        {
-            _projectiles.Add(projectile);
-        }
+        
     }
 }

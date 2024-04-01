@@ -14,7 +14,7 @@ namespace Core.Enemies
         public float Health { get; private set; }
 
         public event Action<GameObject> OnDeath;
-        //public event OnTakeDamage { }
+        
         private void Awake()
         {
             Health = MaxHealth;

@@ -8,7 +8,7 @@ namespace Model.StatsModifiers
     {
         public override void AffectCharacter(GameObject character, float val)
         {
-            PlayerHealth playerData = character.GetComponent<PlayerHealth>();
+            PlayerState playerData = character.GetComponent<PlayerState>();
             if(playerData != null)
                 playerData.AddHealth((int)val);
         }
