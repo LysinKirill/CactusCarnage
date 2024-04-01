@@ -527,10 +527,7 @@ MonoBehaviour:
   inventoryData: {fileID: 11400000, guid: 1ef7dc96f350a0d4da84be19189d6b59, type: 2}
   dropClip: {fileID: 8300000, guid: ca1ce2d1f76bad34ba3817524dceb71e, type: 3}
   audioSource: {fileID: 1173442146482211485}
-  startingItems:
-  - quantity: 3
-    item: {fileID: 11400000, guid: ead4b93f2b4b90341a1e203b73c268fb, type: 2}
-    itemState: []
+  startingItems: []
 --- !u!114 &1869128923393646543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   takeDamageAnimationDuration: 0.2
-  healthPoints: 2
+  healthPoints: 3
   <MaximumHealth>k__BackingField: 3
 --- !u!114 &2423784670248680754
 MonoBehaviour:
@@ -613,8 +610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimBox: {fileID: 8851144633074066452}
   baseDamage: 1
-  baseReachDistance: 1
-  baseAttackCooldown: 1
+  baseReachDistance: 3
+  baseAttackCooldown: 0.2
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
