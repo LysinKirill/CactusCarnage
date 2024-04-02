@@ -13,7 +13,12 @@ namespace Core.Enemies.RollingCactus
         [SerializeField] private GameObject player;
         
         private bool _canAttack = true;
-        
+        private RollingEnemyController _controller;
+
+        private void Awake()
+        {
+            _controller = GetComponent<RollingEnemyController>();
+        }
 
         private void Update()
         {
@@ -25,12 +30,12 @@ namespace Core.Enemies.RollingCactus
 
         private void AttackPlayer(int enemyDamage)
         {
-            if(asset.State == RollingEnemyState.Rolling)
+            if(_controller.State == RollingEnemyState.Rolling)
                 ThrowPlayerInTheAir();
             
             if(PlayerInAttackCollider(out PlayerState playerHealth))
                 playerHealth.TakeDamage(enemyDamage);
-            asset.ChangeState(RollingEnemyState.Static);
+            _controller.ChangeState(RollingEnemyState.Static) ;
             
             StartCoroutine(StartAttackDelay(asset.AttackDelay));
         }

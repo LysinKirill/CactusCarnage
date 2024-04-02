@@ -7,13 +7,16 @@ namespace Core.Enemies.RollingCactus
     public class RollingEnemyMovement : MonoBehaviour
     {
         [SerializeField] private RollingEnemyAsset asset;
+
+        private RollingEnemyController _controller;
         private Rigidbody2D _body;
         private Rotation _currentRotation;
         
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
-            _currentRotation = asset.Rotation;
+            _currentRotation = Rotation.Clockwise;
+            _controller = GetComponent<RollingEnemyController>();
         }
         
 
@@ -27,10 +30,10 @@ namespace Core.Enemies.RollingCactus
             if(transform.IsDestroyed())
                 return;
             
-            if(_currentRotation != asset.Rotation)
-                SetOrientation(asset.Rotation);
+            if(_currentRotation != _controller.Rotation)
+                SetOrientation(_controller.Rotation);
             
-            if (asset.State == RollingEnemyState.Sleeping || asset.State == RollingEnemyState.Static)
+            if (_controller.State == RollingEnemyState.Sleeping || _controller.State == RollingEnemyState.Static)
             {
                 var vector2 = _body.velocity;
                 vector2.x *= 0.95f;
@@ -38,7 +41,7 @@ namespace Core.Enemies.RollingCactus
                 return;
             }
             
-            var orientationMultiplier = asset.Rotation == Rotation.Clockwise ? 1 : -1;
+            var orientationMultiplier = _currentRotation == Rotation.Clockwise ? 1 : -1;
             _body.velocity = new Vector2(asset.Speed * orientationMultiplier, _body.velocity.y);
         }
         
@@ -51,6 +54,5 @@ namespace Core.Enemies.RollingCactus
             localScale.x = rotation == Rotation.Clockwise ? 1 : -1;
             transform.localScale = localScale;
         }
-        
     }
 }

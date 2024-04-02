@@ -8,14 +8,16 @@ namespace Core.Enemies.RollingCactus
     {
         [SerializeField] private RollingEnemyAsset asset;
         [SerializeField] private LayerMask obstaclesPlayerLayerMask;
-        private void Start()
-        {
-            asset.ChangeState(RollingEnemyState.Sleeping);
-        }
 
+        public Rotation Rotation { get; private set; }
+        
+        public RollingEnemyState State { get; private set; } = RollingEnemyState.Sleeping;
+
+        public void ChangeState(RollingEnemyState newState) => State = newState;
+        
         private void Update()
         {
-            if(asset.State == RollingEnemyState.Sleeping)
+            if(State == RollingEnemyState.Sleeping)
                 AttemptToDetectPlayer();
         }
         
@@ -54,14 +56,14 @@ namespace Core.Enemies.RollingCactus
 
         private void StartRollingCounterClockwise()
         {
-            asset.ChangeState(RollingEnemyState.Rolling);
-            asset.ChangeRotation(Rotation.Counterclockwise);
+            Rotation = Rotation.Counterclockwise;
+            State = RollingEnemyState.Rolling;
         }
         
         private void StartRollingClockwise()
         {
-            asset.ChangeState(RollingEnemyState.Rolling);
-            asset.ChangeRotation(Rotation.Clockwise);
+            State = RollingEnemyState.Rolling;
+            Rotation = Rotation.Clockwise;
         }
     }
 }

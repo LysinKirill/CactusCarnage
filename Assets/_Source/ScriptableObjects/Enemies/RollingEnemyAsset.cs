@@ -11,18 +11,5 @@ namespace ScriptableObjects.Enemies
         [field: SerializeField] public float AirTossPower { get; private set; }
         [field: SerializeField] public int Damage { get; private set; }
         [field: SerializeField] public float AttackDelay { get; private set; }
-        [field: SerializeField] public RollingEnemyState State { get; private set; }
-        [field: SerializeField] public Rotation Rotation { get; private set; }
-        
-        
-        public void ChangeState(RollingEnemyState newState) => State = newState;
-        public void ChangeRotation(Rotation rotation) => Rotation = rotation;
-
-    }
-    
-    public enum Rotation
-    {
-        Clockwise,
-        Counterclockwise,
     }
 }
