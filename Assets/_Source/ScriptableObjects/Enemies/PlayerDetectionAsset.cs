@@ -7,10 +7,5 @@ namespace ScriptableObjects.Enemies
     {
         [field: SerializeField] public bool LineOfSightRequired { get; private set; }
         [field: SerializeField] public float DetectionRadius { get; private set; }
-        [field: SerializeField] public bool PlayerDetected { get; private set; }
-
-
-        public void Init() => PlayerDetected = false;
-        public void SetPlayerDetected(bool value) => PlayerDetected = value;
     }
 }

@@ -25,11 +25,12 @@ namespace Core.Enemies.BasicCactus
 
         private bool _isResting;
 
-        private Random _random = new Random();
+        private readonly Random _random = new Random();
+        private bool _playerDetected;
 
         private void Awake()
         {
-            playerDetection.Init();
+
             _body = GetComponent<Rigidbody2D>();
         }
         
@@ -50,8 +51,8 @@ namespace Core.Enemies.BasicCactus
 
         private void FixedUpdate()
         {
-            if (!playerDetection.PlayerDetected && CheckPlayer())
-                playerDetection.SetPlayerDetected(true);
+            if (!_playerDetected && CheckPlayer())
+                _playerDetected = true;
             
             if (transform.IsDestroyed())
                 return;
@@ -68,13 +69,17 @@ namespace Core.Enemies.BasicCactus
 
             if (!_isGrounded || _isTouchingWall)
             {
-                if (playerDetection.PlayerDetected)
+                if (_playerDetected)
+                {
+                    _body.velocity = Vector2.zero;
                     return;
+                }
+                    
                 StartMovingToOppositeDirection();
                 return;
             }
 
-            if (!playerDetection.PlayerDetected)
+            if (!_playerDetected)
             {
                 Wander();
                 return;
@@ -110,7 +115,7 @@ namespace Core.Enemies.BasicCactus
 
         private void UpdateWalkingTarget()
         {
-            if (playerDetection.PlayerDetected)
+            if (_playerDetected)
                 _walkTargetX = player.transform.position.x;
             else if (Mathf.Abs(_walkTargetX - transform.position.x) < 0.1f)
             {
