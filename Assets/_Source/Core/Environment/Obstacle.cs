@@ -27,7 +27,6 @@ namespace Core.Environment
 
             if (player == null || !player.TryGetComponent(out PlayerState playerHealth))
                 return;
-
             playerHealth.TakeDamage(damage);
             StartCoroutine(DamageDelay(damageDelay));
         }

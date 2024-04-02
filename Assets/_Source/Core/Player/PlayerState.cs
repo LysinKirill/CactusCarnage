@@ -85,6 +85,7 @@ namespace Core.Player
             {
                 currentTime += Time.deltaTime;
                 ultimateSlider.value = Mathf.Lerp(1, 0, currentTime / ultimateDuration);
+                _ultimateProgress = ultimateDuration - currentTime;
                 yield return null;
             }
             IsUltimateActive = false;

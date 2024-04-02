@@ -574,9 +574,11 @@ MonoBehaviour:
   takeDamageAnimationDuration: 0.2
   healthPoints: 3
   ultimateSlider: {fileID: 0}
+  sliderHandle: {fileID: 0}
   ultimateGainOnReceiveDamage: 0
   <UltimateGainOnDealDamage>k__BackingField: 0
   <MaximumHealth>k__BackingField: 3
+  <UltimateDuration>k__BackingField: 5
 --- !u!114 &2423784670248680754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +601,7 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckCollider: {fileID: 4645167702649618150}
   wallCheckCollider: {fileID: 6768582414005785061}
+  ultimateSpeedBoost: 1.25
   animator: {fileID: 5096398601572271098}
 --- !u!114 &2004048465562840781
 MonoBehaviour:
@@ -620,6 +623,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   inventory: {fileID: 0}
+  ultimateDamageBoost: 2
 --- !u!1 &5966213023158938362
 GameObject:
   m_ObjectHideFlags: 0
