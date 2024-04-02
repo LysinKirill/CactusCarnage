@@ -921,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 560324311}
     - target: {fileID: 2004048465562840781, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: baseReachDistance
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2500301808433338760, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: m_Layer
@@ -38047,7 +38047,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.727972, y: -2.4696028, z: -10}
+  m_LocalPosition: {x: 8.735065, y: -2.4696057, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41476,6 +41476,9 @@ MonoBehaviour:
   canvas: {fileID: 367947088}
   winPanel: {fileID: 1779845333}
   player: {fileID: 294870616}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1779845333
 GameObject:
   m_ObjectHideFlags: 0

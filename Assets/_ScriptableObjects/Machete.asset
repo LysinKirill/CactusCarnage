@@ -18,7 +18,12 @@ MonoBehaviour:
   <Sprite>k__BackingField: {fileID: 21300000, guid: dc759ee5a02db0d4f85f33365b3f6da6, type: 3}
   <Description>k__BackingField: 'Close range melee weapon
 
-    2 damage'
+    2 damage
+
+    4 attack
+    range
+
+    0.7 attack delay'
   <DefaultParameterList>k__BackingField: []
   <ActionSfx>k__BackingField: {fileID: 8300000, guid: ca1ce2d1f76bad34ba3817524dceb71e, type: 3}
   <AttackDelay>k__BackingField: 0.7

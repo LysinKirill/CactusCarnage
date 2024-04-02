@@ -1264,7 +1264,7 @@ PrefabInstance:
       objectReference: {fileID: 560324311}
     - target: {fileID: 2004048465562840781, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: baseReachDistance
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2500301808433338760, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: m_Layer
@@ -33355,7 +33355,7 @@ MonoBehaviour:
   damageDelay: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!66 &1622275314
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -36011,7 +36011,7 @@ MonoBehaviour:
   damageDelay: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!66 &1760512482
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -36682,6 +36682,9 @@ MonoBehaviour:
   canvas: {fileID: 367947088}
   winPanel: {fileID: 1779845333}
   player: {fileID: 294870616}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!224 &1772893279 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}

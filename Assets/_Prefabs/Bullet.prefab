@@ -176,4 +176,4 @@ MonoBehaviour:
     m_Bits: 512
   IgnoreColliionMask:
     serializedVersion: 2
-    m_Bits: 2056
+    m_Bits: 3080

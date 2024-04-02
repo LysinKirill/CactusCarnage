@@ -10,18 +10,16 @@ namespace Core.Environment
         [SerializeField] private GameObject canvas;
         [SerializeField] private GameObject winPanel;
         [SerializeField] private GameObject player;
-        private void OnTriggerEnter2D(Collider2D col)
+        [SerializeField] private LayerMask playerLayer;
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            foreach (var children in canvas.GetComponentsInChildren<Transform>())
+            if ((1 << other.gameObject.layer & playerLayer) == 0)
+                return;
+            foreach (Transform child in canvas.transform)
             {
-                children.gameObject.SetActive(false);
+                child.gameObject.SetActive(false);
             }
-            canvas.SetActive(true);
             winPanel.SetActive(true);
-            foreach (var children in winPanel.GetComponentsInChildren<Transform>())
-            {
-                children.gameObject.SetActive(true);
-            }
             player.SetActive(false);
         }
     }

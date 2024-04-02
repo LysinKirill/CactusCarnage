@@ -16,7 +16,7 @@ MonoBehaviour:
   <StackSize>k__BackingField: 4
   <Name>k__BackingField: Healing potion
   <Sprite>k__BackingField: {fileID: 21300000, guid: 81a8bfaeb67f4f045aea83e503b8af99, type: 3}
-  <Description>k__BackingField: Restores health points
+  <Description>k__BackingField: Restores 1 health point
   <DefaultParameterList>k__BackingField: []
   modifiersData:
   - statModifier: {fileID: 11400000, guid: 103dcb57249332a4d87695505225196e, type: 2}

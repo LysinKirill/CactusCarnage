@@ -42,11 +42,10 @@ namespace Core.Controllers
         {
             if (health != 0)
                 return;
-            foreach (var children in canvas.GetComponentsInChildren<Transform>())
+            foreach (Transform child in canvas.transform)
             {
-                children.gameObject.SetActive(false);
+                child.gameObject.SetActive(false);
             }
-            canvas.SetActive(true);
             defeatPanel.SetActive(true);
             player.SetActive(false);
         }
