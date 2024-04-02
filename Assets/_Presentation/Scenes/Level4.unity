@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 13985889}
   - component: {fileID: 13985890}
   m_Layer: 0
-  m_Name: tiles-02_2 (14)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &13985890
 SpriteRenderer:
@@ -232,7 +232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 30194154}
   - component: {fileID: 30194155}
   m_Layer: 0
-  m_Name: tiles-02_1 (1)
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 903509659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &30194155
 SpriteRenderer:
@@ -316,7 +316,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 887732306, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 95646200}
   - component: {fileID: 95646201}
   m_Layer: 0
-  m_Name: tiles-02_1 (2)
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,7 +492,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 903509659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &95646201
 SpriteRenderer:
@@ -534,7 +534,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 887732306, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1212,11 +1212,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (6)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x
@@ -1284,7 +1284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.553256
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1318,7 +1318,7 @@ GameObject:
   - component: {fileID: 202210996}
   - component: {fileID: 202210997}
   m_Layer: 0
-  m_Name: tiles-02_2 (1)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,7 +1337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &202210997
 SpriteRenderer:
@@ -1379,7 +1379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -1477,11 +1477,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (1)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1771,6 +1771,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235647738}
   m_CullTransparentMesh: 1
+--- !u!1 &255313733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255313734}
+  m_Layer: 0
+  m_Name: Skulls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255313734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255313733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 809706969}
+  - {fileID: 202210996}
+  - {fileID: 931754943}
+  - {fileID: 640655201}
+  - {fileID: 498350275}
+  - {fileID: 1411249225}
+  - {fileID: 1514762197}
+  - {fileID: 989860865}
+  - {fileID: 1200737856}
+  - {fileID: 1531617808}
+  - {fileID: 1057739873}
+  - {fileID: 1234616163}
+  - {fileID: 990177402}
+  - {fileID: 1476891723}
+  - {fileID: 13985889}
+  - {fileID: 969210890}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &281576652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
@@ -2078,7 +2125,7 @@ GameObject:
   - component: {fileID: 353420015}
   - component: {fileID: 353420016}
   m_Layer: 0
-  m_Name: tiles-02_39 (1)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2097,7 +2144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 475631390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &353420016
 SpriteRenderer:
@@ -2139,7 +2186,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1091368767, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2672,7 +2719,7 @@ GameObject:
   - component: {fileID: 371581532}
   - component: {fileID: 371581533}
   m_Layer: 0
-  m_Name: tiles-02_41 (6)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2691,7 +2738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &371581533
 SpriteRenderer:
@@ -2733,7 +2780,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2774,29 +2821,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1540052389}
-  - {fileID: 604999484}
-  - {fileID: 672980636}
-  - {fileID: 1491774159}
-  - {fileID: 539083444}
-  - {fileID: 314115492}
-  - {fileID: 914436614}
-  - {fileID: 1428038830}
-  - {fileID: 1450209457}
-  - {fileID: 432354400}
-  - {fileID: 136976177}
-  - {fileID: 1113270089}
-  - {fileID: 1672172460}
-  - {fileID: 1836203178}
-  - {fileID: 1864017298}
-  - {fileID: 1024485634}
-  - {fileID: 1659003253}
-  - {fileID: 281576652}
-  - {fileID: 1969352965}
-  - {fileID: 988842656}
-  - {fileID: 1102549256}
-  - {fileID: 1368834516}
-  - {fileID: 342431413}
+  - {fileID: 1219244253}
+  - {fileID: 971725437}
+  - {fileID: 1901726099}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426469277
@@ -3532,6 +3559,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &475631389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475631390}
+  m_Layer: 0
+  m_Name: Trees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475631390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475631389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1865170789}
+  - {fileID: 353420015}
+  - {fileID: 1520832444}
+  - {fileID: 611423687}
+  - {fileID: 793420162}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479989849
 GameObject:
   m_ObjectHideFlags: 0
@@ -29769,11 +29832,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (1)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x
@@ -29875,7 +29938,7 @@ GameObject:
   - component: {fileID: 498350275}
   - component: {fileID: 498350276}
   m_Layer: 0
-  m_Name: tiles-02_2 (4)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29894,7 +29957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &498350276
 SpriteRenderer:
@@ -29936,7 +29999,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -29948,6 +30011,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &506429741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506429742}
+  m_Layer: 0
+  m_Name: SmallBushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &506429742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506429741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1617084730}
+  - {fileID: 1705179228}
+  - {fileID: 777627445}
+  - {fileID: 658788407}
+  - {fileID: 1541540447}
+  - {fileID: 1330017184}
+  - {fileID: 772706122}
+  - {fileID: 1588815036}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510650567
 GameObject:
   m_ObjectHideFlags: 0
@@ -29959,7 +30061,7 @@ GameObject:
   - component: {fileID: 510650568}
   - component: {fileID: 510650569}
   m_Layer: 0
-  m_Name: tiles-02_41 (8)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29978,7 +30080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &510650569
 SpriteRenderer:
@@ -30020,7 +30122,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30061,10 +30163,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 873831670}
-  - {fileID: 1722083387}
-  - {fileID: 2069952800}
-  - {fileID: 1622737670}
+  - {fileID: 2130838076}
+  - {fileID: 1588958951}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527327034
@@ -30078,7 +30178,7 @@ GameObject:
   - component: {fileID: 527327035}
   - component: {fileID: 527327036}
   m_Layer: 0
-  m_Name: tiles-02_38
+  m_Name: BareTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30097,7 +30197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1202373730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &527327036
 SpriteRenderer:
@@ -30139,7 +30239,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1665630027, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30162,7 +30262,7 @@ GameObject:
   - component: {fileID: 534673724}
   - component: {fileID: 534673725}
   m_Layer: 0
-  m_Name: tiles-02_4 (1)
+  m_Name: Snag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30181,7 +30281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 2015839766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &534673725
 SpriteRenderer:
@@ -30223,7 +30323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2112935173, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30235,11 +30335,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &539083444 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-  m_PrefabInstance: {fileID: 1551208987}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &560324311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 269350309367323035, guid: 5749be9b3ca57f042ba5760e9bee7ebd, type: 3}
@@ -30251,7 +30346,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
@@ -30580,7 +30675,7 @@ GameObject:
   - component: {fileID: 611423687}
   - component: {fileID: 611423688}
   m_Layer: 0
-  m_Name: tiles-02_39 (3)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30599,7 +30694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 475631390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &611423688
 SpriteRenderer:
@@ -30641,7 +30736,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1091368767, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30739,7 +30834,7 @@ GameObject:
   - component: {fileID: 640655201}
   - component: {fileID: 640655202}
   m_Layer: 0
-  m_Name: tiles-02_2 (3)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30758,7 +30853,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &640655202
 SpriteRenderer:
@@ -30800,7 +30895,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30818,11 +30913,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1219244253}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
-      value: BasicCactus (3)
+      value: BasicCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Pivot.x
@@ -30924,7 +31019,7 @@ GameObject:
   - component: {fileID: 658788407}
   - component: {fileID: 658788408}
   m_Layer: 0
-  m_Name: tiles-02_3 (3)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30943,7 +31038,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &658788408
 SpriteRenderer:
@@ -30985,7 +31080,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31003,11 +31098,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (7)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31060,11 +31155,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1219244253}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
-      value: BasicCactus (2)
+      value: BasicCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Pivot.x
@@ -31166,7 +31261,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1219244253}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
@@ -31234,11 +31329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10.431417
+      value: 12.82
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.315
+      value: -9.28
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31297,6 +31392,46 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &685118837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685118838}
+  m_Layer: 0
+  m_Name: BigBushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &685118838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685118837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1828999103}
+  - {fileID: 1175918533}
+  - {fileID: 1627224496}
+  - {fileID: 1500741601}
+  - {fileID: 1493072065}
+  - {fileID: 1908076235}
+  - {fileID: 371581532}
+  - {fileID: 1783457840}
+  - {fileID: 510650568}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702418138
 GameObject:
   m_ObjectHideFlags: 0
@@ -31490,7 +31625,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
@@ -31627,7 +31762,7 @@ GameObject:
   - component: {fileID: 772706122}
   - component: {fileID: 772706123}
   m_Layer: 0
-  m_Name: tiles-02_3 (6)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31646,7 +31781,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &772706123
 SpriteRenderer:
@@ -31688,7 +31823,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31786,7 +31921,7 @@ GameObject:
   - component: {fileID: 777627445}
   - component: {fileID: 777627446}
   m_Layer: 0
-  m_Name: tiles-02_3 (2)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31805,7 +31940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &777627446
 SpriteRenderer:
@@ -31847,7 +31982,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32126,7 +32261,7 @@ GameObject:
   - component: {fileID: 793420162}
   - component: {fileID: 793420163}
   m_Layer: 0
-  m_Name: tiles-02_39 (4)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32145,7 +32280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 475631390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &793420163
 SpriteRenderer:
@@ -32187,7 +32322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1091368767, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32347,7 +32482,7 @@ GameObject:
   - component: {fileID: 809706969}
   - component: {fileID: 809706970}
   m_Layer: 0
-  m_Name: tiles-02_2
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32366,7 +32501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &809706970
 SpriteRenderer:
@@ -32408,7 +32543,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -33973,11 +34108,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (5)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33985,7 +34120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5263824
+      value: -4.437
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34024,6 +34159,40 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+--- !u!1 &903509658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903509659}
+  m_Layer: 0
+  m_Name: Stones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903509659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903509658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1245596780}
+  - {fileID: 30194154}
+  - {fileID: 95646200}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906901801
 GameObject:
   m_ObjectHideFlags: 0
@@ -34209,7 +34378,7 @@ GameObject:
   - component: {fileID: 931754943}
   - component: {fileID: 931754944}
   m_Layer: 0
-  m_Name: tiles-02_2 (2)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34228,7 +34397,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &931754944
 SpriteRenderer:
@@ -34270,7 +34439,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -34316,10 +34485,10 @@ RectTransform:
   - {fileID: 1289077675}
   m_Father: {fileID: 1446496928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.46289408, y: 0.29429662}
-  m_AnchorMax: {x: 0.71000004, y: 0.35651913}
-  m_AnchoredPosition: {x: 223.9088, y: 9.8568}
-  m_SizeDelta: {x: 219.9504, y: 64.4702}
+  m_AnchorMin: {x: 0.5581565, y: 0.06245403}
+  m_AnchorMax: {x: 0.991313, y: 0.81554604}
+  m_AnchoredPosition: {x: 0.40878296, y: -1.1431999}
+  m_SizeDelta: {x: -1.0496063, y: -1.5298004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955166610
 MonoBehaviour:
@@ -34383,7 +34552,7 @@ GameObject:
   - component: {fileID: 969210890}
   - component: {fileID: 969210891}
   m_Layer: 0
-  m_Name: tiles-02_2 (15)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34402,7 +34571,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &969210891
 SpriteRenderer:
@@ -34444,7 +34613,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -34456,6 +34625,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &971725436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971725437}
+  m_Layer: 9
+  m_Name: PatrolCactuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971725437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971725436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 604999484}
+  - {fileID: 672980636}
+  - {fileID: 1491774159}
+  - {fileID: 914436614}
+  - {fileID: 1450209457}
+  - {fileID: 1428038830}
+  - {fileID: 1113270089}
+  - {fileID: 1672172460}
+  - {fileID: 1024485634}
+  - {fileID: 281576652}
+  - {fileID: 1368834516}
+  m_Father: {fileID: 400865654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971890553
 GameObject:
   m_ObjectHideFlags: 0
@@ -34547,7 +34758,7 @@ GameObject:
   - component: {fileID: 989860865}
   - component: {fileID: 989860866}
   m_Layer: 0
-  m_Name: tiles-02_2 (7)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34566,7 +34777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &989860866
 SpriteRenderer:
@@ -34608,7 +34819,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34631,7 +34842,7 @@ GameObject:
   - component: {fileID: 990177402}
   - component: {fileID: 990177403}
   m_Layer: 0
-  m_Name: tiles-02_2 (12)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34650,7 +34861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &990177403
 SpriteRenderer:
@@ -34692,7 +34903,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -34868,7 +35079,7 @@ GameObject:
   - component: {fileID: 1057739873}
   - component: {fileID: 1057739874}
   m_Layer: 0
-  m_Name: tiles-02_2 (10)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34887,7 +35098,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1057739874
 SpriteRenderer:
@@ -34929,7 +35140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34952,11 +35163,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (3)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x
@@ -35126,11 +35337,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (3)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35245,7 +35456,7 @@ GameObject:
   - component: {fileID: 1166428888}
   - component: {fileID: 1166428889}
   m_Layer: 0
-  m_Name: tiles-02_4
+  m_Name: Snag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35264,7 +35475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 2015839766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1166428889
 SpriteRenderer:
@@ -35306,7 +35517,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2112935173, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -35324,11 +35535,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (9)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35386,7 +35597,7 @@ GameObject:
   - component: {fileID: 1175918533}
   - component: {fileID: 1175918534}
   m_Layer: 0
-  m_Name: tiles-02_41 (1)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35405,7 +35616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1175918534
 SpriteRenderer:
@@ -35447,7 +35658,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -35534,6 +35745,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179331553}
   m_CullTransparentMesh: 1
+--- !u!1001 &1181854853
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2130838076}
+    m_Modifications:
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 150.23921
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5820122
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_Name
+      value: HealingPotion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+--- !u!4 &1181854854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+  m_PrefabInstance: {fileID: 1181854853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1199297713
 GameObject:
   m_ObjectHideFlags: 0
@@ -35584,7 +35857,7 @@ GameObject:
   - component: {fileID: 1200737856}
   - component: {fileID: 1200737857}
   m_Layer: 0
-  m_Name: tiles-02_2 (8)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35603,7 +35876,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1200737857
 SpriteRenderer:
@@ -35645,7 +35918,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -35657,6 +35930,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1202373729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202373730}
+  m_Layer: 0
+  m_Name: BareTrees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1202373730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202373729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 527327035}
+  - {fileID: 1913937297}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203829092
 GameObject:
   m_ObjectHideFlags: 0
@@ -35813,6 +36119,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213457130}
   m_CullTransparentMesh: 1
+--- !u!1 &1219244252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219244253}
+  m_Layer: 9
+  m_Name: BasicCactuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1219244253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219244252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1540052389}
+  - {fileID: 1659003253}
+  - {fileID: 988842656}
+  m_Father: {fileID: 400865654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1234616162
 GameObject:
   m_ObjectHideFlags: 0
@@ -35824,7 +36164,7 @@ GameObject:
   - component: {fileID: 1234616163}
   - component: {fileID: 1234616164}
   m_Layer: 0
-  m_Name: tiles-02_2 (11)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35843,7 +36183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1234616164
 SpriteRenderer:
@@ -35885,7 +36225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36041,7 +36381,7 @@ GameObject:
   - component: {fileID: 1245596780}
   - component: {fileID: 1245596781}
   m_Layer: 0
-  m_Name: tiles-02_1
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36060,7 +36400,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 903509659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1245596781
 SpriteRenderer:
@@ -36102,7 +36442,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 887732306, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36220,11 +36560,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (4)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36236,7 +36576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5349963
+      value: -0.443
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.z
@@ -36361,7 +36701,7 @@ GameObject:
   - component: {fileID: 1330017184}
   - component: {fileID: 1330017185}
   m_Layer: 0
-  m_Name: tiles-02_3 (5)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36380,7 +36720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1330017185
 SpriteRenderer:
@@ -36422,7 +36762,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36591,7 +36931,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 2130838076}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36635,7 +36975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_Name
-      value: HealingPotion (2)
+      value: HealingPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36882,7 +37222,7 @@ GameObject:
   - component: {fileID: 1411249225}
   - component: {fileID: 1411249226}
   m_Layer: 0
-  m_Name: tiles-02_2 (5)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36901,7 +37241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1411249226
 SpriteRenderer:
@@ -36943,7 +37283,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -37197,11 +37537,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (8)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37403,11 +37743,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (2)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37707,7 +38047,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.735065, y: -2.4696057, z: -10}
+  m_LocalPosition: {x: 8.727972, y: -2.4696028, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37758,7 +38098,7 @@ GameObject:
   - component: {fileID: 1476891723}
   - component: {fileID: 1476891724}
   m_Layer: 0
-  m_Name: tiles-02_2 (13)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37777,7 +38117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1476891724
 SpriteRenderer:
@@ -37819,7 +38159,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -37847,7 +38187,7 @@ GameObject:
   - component: {fileID: 1493072065}
   - component: {fileID: 1493072066}
   m_Layer: 0
-  m_Name: tiles-02_41 (4)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37866,7 +38206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1493072066
 SpriteRenderer:
@@ -37908,7 +38248,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38006,7 +38346,7 @@ GameObject:
   - component: {fileID: 1500741601}
   - component: {fileID: 1500741602}
   m_Layer: 0
-  m_Name: tiles-02_41 (3)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38025,7 +38365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1500741602
 SpriteRenderer:
@@ -38067,7 +38407,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38090,7 +38430,7 @@ GameObject:
   - component: {fileID: 1514762197}
   - component: {fileID: 1514762198}
   m_Layer: 0
-  m_Name: tiles-02_2 (6)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38109,7 +38449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1514762198
 SpriteRenderer:
@@ -38151,7 +38491,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -38211,7 +38551,7 @@ GameObject:
   - component: {fileID: 1520832444}
   - component: {fileID: 1520832445}
   m_Layer: 0
-  m_Name: tiles-02_39 (2)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38230,7 +38570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 475631390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1520832445
 SpriteRenderer:
@@ -38272,7 +38612,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1091368767, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38470,7 +38810,7 @@ GameObject:
   - component: {fileID: 1531617808}
   - component: {fileID: 1531617809}
   m_Layer: 0
-  m_Name: tiles-02_2 (9)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38489,7 +38829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 255313734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1531617809
 SpriteRenderer:
@@ -38531,7 +38871,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1473982651, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -38693,7 +39033,7 @@ GameObject:
   - component: {fileID: 1541540447}
   - component: {fileID: 1541540448}
   m_Layer: 0
-  m_Name: tiles-02_3 (4)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38712,7 +39052,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1541540448
 SpriteRenderer:
@@ -38754,7 +39094,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38854,107 +39194,6 @@ PolygonCollider2D:
       - {x: 232.51375, y: -13.720734}
       - {x: 232.48157, y: 8.690761}
   m_UseDelaunayMesh: 0
---- !u!1001 &1551208987
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
-    m_Modifications:
-    - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_Name
-      value: BasicCactus (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_Pivot.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 90.56289
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -4.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6988780353801728495, guid: c8d75f1549713574d92f153618828fd9, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 294870616}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c8d75f1549713574d92f153618828fd9, type: 3}
 --- !u!1 &1558937581
 GameObject:
   m_ObjectHideFlags: 0
@@ -39630,7 +39869,7 @@ GameObject:
   - component: {fileID: 1588815036}
   - component: {fileID: 1588815037}
   m_Layer: 0
-  m_Name: tiles-02_3 (7)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39649,7 +39888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1588815037
 SpriteRenderer:
@@ -39691,7 +39930,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -39703,6 +39942,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1588958950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588958951}
+  m_Layer: 11
+  m_Name: Swords
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1588958951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588958950}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1622737670}
+  m_Father: {fileID: 522096989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599159777
 GameObject:
   m_ObjectHideFlags: 0
@@ -39778,6 +40049,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599159777}
   m_CullTransparentMesh: 1
+--- !u!1001 &1611126656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2130838076}
+    m_Modifications:
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 90.70298
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5417533
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+      propertyPath: m_Name
+      value: HealingPotion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+--- !u!4 &1611126657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+  m_PrefabInstance: {fileID: 1611126656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1617084729
 GameObject:
   m_ObjectHideFlags: 0
@@ -39789,7 +40122,7 @@ GameObject:
   - component: {fileID: 1617084730}
   - component: {fileID: 1617084731}
   m_Layer: 0
-  m_Name: tiles-02_3
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39808,7 +40141,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1617084731
 SpriteRenderer:
@@ -39850,7 +40183,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -39981,7 +40314,7 @@ GameObject:
   - component: {fileID: 1627224496}
   - component: {fileID: 1627224497}
   m_Layer: 0
-  m_Name: tiles-02_41 (2)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40000,7 +40333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1627224497
 SpriteRenderer:
@@ -40042,7 +40375,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -40238,11 +40571,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (4)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x
@@ -40339,11 +40672,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (7)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x
@@ -40411,7 +40744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.59
+      value: -3.477
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -40579,11 +40912,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (6)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40793,7 +41126,7 @@ GameObject:
   - component: {fileID: 1705179228}
   - component: {fileID: 1705179229}
   m_Layer: 0
-  m_Name: tiles-02_3 (1)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40812,7 +41145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 506429742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1705179229
 SpriteRenderer:
@@ -40854,7 +41187,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1052264887, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41366,7 +41699,7 @@ GameObject:
   - component: {fileID: 1783457840}
   - component: {fileID: 1783457841}
   m_Layer: 0
-  m_Name: tiles-02_41 (7)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41385,7 +41718,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1783457841
 SpriteRenderer:
@@ -41427,7 +41760,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41525,7 +41858,7 @@ GameObject:
   - component: {fileID: 1828999103}
   - component: {fileID: 1828999104}
   m_Layer: 0
-  m_Name: tiles-02_41
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41544,7 +41877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1828999104
 SpriteRenderer:
@@ -41586,7 +41919,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41811,7 +42144,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 2130838076}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41855,7 +42188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_Name
-      value: HealingPotion (1)
+      value: HealingPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42028,10 +42361,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1446496928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1344701, y: 0.30355504}
-  m_AnchorMax: {x: 0.35900003, y: 0.35651913}
-  m_AnchoredPosition: {x: -79.99988, y: 17.757328}
-  m_SizeDelta: {x: 158.04932, y: 72.43447}
+  m_AnchorMin: {x: 0, y: 0.29429662}
+  m_AnchorMax: {x: 0.28500003, y: 0.95781606}
+  m_AnchoredPosition: {x: 43.500122, y: -10.742672}
+  m_SizeDelta: {x: 87.04932, y: 13.434471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854284635
 MonoBehaviour:
@@ -42225,7 +42558,7 @@ GameObject:
   - component: {fileID: 1865170789}
   - component: {fileID: 1865170790}
   m_Layer: 0
-  m_Name: tiles-02_39
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42244,7 +42577,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 475631390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1865170790
 SpriteRenderer:
@@ -42286,7 +42619,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1091368767, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -42379,7 +42712,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1588958951}
     m_Modifications:
     - target: {fileID: 1417816968300072725, guid: c785185f0fac1c6459c6e53e0a2bfa32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42430,6 +42763,45 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c785185f0fac1c6459c6e53e0a2bfa32, type: 3}
+--- !u!1 &1901726098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901726099}
+  m_Layer: 9
+  m_Name: RollingCactuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901726099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901726098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 314115492}
+  - {fileID: 432354400}
+  - {fileID: 136976177}
+  - {fileID: 1836203178}
+  - {fileID: 1864017298}
+  - {fileID: 1969352965}
+  - {fileID: 1102549256}
+  - {fileID: 342431413}
+  m_Father: {fileID: 400865654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1908076234
 GameObject:
   m_ObjectHideFlags: 0
@@ -42441,7 +42813,7 @@ GameObject:
   - component: {fileID: 1908076235}
   - component: {fileID: 1908076236}
   m_Layer: 0
-  m_Name: tiles-02_41 (5)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42460,7 +42832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 685118838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1908076236
 SpriteRenderer:
@@ -42502,7 +42874,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -936857074, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -42525,7 +42897,7 @@ GameObject:
   - component: {fileID: 1913937297}
   - component: {fileID: 1913937298}
   m_Layer: 0
-  m_Name: tiles-02_38 (1)
+  m_Name: BareTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42544,7 +42916,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1202373730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1913937298
 SpriteRenderer:
@@ -42586,7 +42958,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1665630027, guid: d9c8f8471d02246499a381f82a1a93ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -42934,11 +43306,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (5)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x
@@ -43035,11 +43407,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 971725437}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (10)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43086,6 +43458,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+--- !u!1 &2015839765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015839766}
+  m_Layer: 0
+  m_Name: Snags
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2015839766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015839765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1166428888}
+  - {fileID: 534673724}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018170340
 GameObject:
   m_ObjectHideFlags: 0
@@ -43411,7 +43816,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 2130838076}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43462,6 +43867,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
+--- !u!1 &2130838075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130838076}
+  m_Layer: 11
+  m_Name: HealingPotions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130838076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130838075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 873831670}
+  - {fileID: 1722083387}
+  - {fileID: 2069952800}
+  - {fileID: 1611126657}
+  - {fileID: 1181854854}
+  m_Father: {fileID: 522096989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131319366
 GameObject:
   m_ObjectHideFlags: 0
@@ -43491,51 +43932,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1865170789}
-  - {fileID: 353420015}
-  - {fileID: 1520832444}
-  - {fileID: 611423687}
-  - {fileID: 793420162}
-  - {fileID: 1828999103}
-  - {fileID: 1175918533}
-  - {fileID: 1627224496}
-  - {fileID: 1500741601}
-  - {fileID: 1493072065}
-  - {fileID: 1908076235}
-  - {fileID: 371581532}
-  - {fileID: 1783457840}
-  - {fileID: 809706969}
-  - {fileID: 202210996}
-  - {fileID: 931754943}
-  - {fileID: 640655201}
-  - {fileID: 498350275}
-  - {fileID: 1411249225}
-  - {fileID: 1514762197}
-  - {fileID: 989860865}
-  - {fileID: 1200737856}
-  - {fileID: 1531617808}
-  - {fileID: 1057739873}
-  - {fileID: 1234616163}
-  - {fileID: 990177402}
-  - {fileID: 1476891723}
-  - {fileID: 1617084730}
-  - {fileID: 1705179228}
-  - {fileID: 777627445}
-  - {fileID: 1245596780}
-  - {fileID: 658788407}
-  - {fileID: 1541540447}
-  - {fileID: 30194154}
-  - {fileID: 527327035}
-  - {fileID: 1330017184}
-  - {fileID: 772706122}
-  - {fileID: 95646200}
-  - {fileID: 1913937297}
-  - {fileID: 510650568}
-  - {fileID: 13985889}
-  - {fileID: 1166428888}
-  - {fileID: 534673724}
-  - {fileID: 969210890}
-  - {fileID: 1588815036}
+  - {fileID: 255313734}
+  - {fileID: 506429742}
+  - {fileID: 2015839766}
+  - {fileID: 685118838}
+  - {fileID: 1202373730}
+  - {fileID: 903509659}
+  - {fileID: 475631390}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2133729062
@@ -43544,11 +43947,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1901726099}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Name
-      value: RollingCactus (2)
+      value: RollingCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: 705abf3990ee03844af937ee018841a0, type: 3}
       propertyPath: m_Pivot.x

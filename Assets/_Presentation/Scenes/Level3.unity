@@ -166,7 +166,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -222,6 +222,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
   m_PrefabInstance: {fileID: 18014617}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &24859412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24859413}
+  m_Layer: 0
+  m_Name: BareTrees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24859413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24859412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 71463125}
+  - {fileID: 1314437466}
+  - {fileID: 448397818}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40685500
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +267,7 @@ GameObject:
   - component: {fileID: 40685501}
   - component: {fileID: 40685502}
   m_Layer: 0
-  m_Name: tiles-02_2 (6)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &40685502
 SpriteRenderer:
@@ -451,7 +485,7 @@ GameObject:
   - component: {fileID: 71463125}
   - component: {fileID: 71463126}
   m_Layer: 0
-  m_Name: tiles-02_38
+  m_Name: BareTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,7 +504,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 24859413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &71463126
 SpriteRenderer:
@@ -535,7 +569,7 @@ GameObject:
   - component: {fileID: 72490610}
   - component: {fileID: 72490611}
   m_Layer: 0
-  m_Name: tiles-02_41 (9)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,7 +588,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &72490611
 SpriteRenderer:
@@ -614,11 +648,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (5)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -684,7 +718,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1127239519}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
@@ -785,11 +819,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (1)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1809,7 +1843,7 @@ GameObject:
   - component: {fileID: 174227989}
   - component: {fileID: 174227990}
   m_Layer: 0
-  m_Name: tiles-02_2 (5)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1828,7 +1862,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &174227990
 SpriteRenderer:
@@ -1882,6 +1916,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &176560547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176560548}
+  m_Layer: 0
+  m_Name: SmallBushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176560548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176560547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1831282534}
+  - {fileID: 178930312}
+  - {fileID: 517335836}
+  - {fileID: 1275082184}
+  - {fileID: 2081555175}
+  - {fileID: 2064156934}
+  - {fileID: 219238796}
+  - {fileID: 1683531128}
+  - {fileID: 2110939960}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176786160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +2042,7 @@ GameObject:
   - component: {fileID: 178930312}
   - component: {fileID: 178930313}
   m_Layer: 0
-  m_Name: tiles-02_3 (1)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,7 +2061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &178930313
 SpriteRenderer:
@@ -2383,7 +2457,7 @@ GameObject:
   - component: {fileID: 205545288}
   - component: {fileID: 205545289}
   m_Layer: 0
-  m_Name: tiles-02_39 (5)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2402,7 +2476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 908477415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &205545289
 SpriteRenderer:
@@ -2547,7 +2621,7 @@ GameObject:
   - component: {fileID: 219238796}
   - component: {fileID: 219238797}
   m_Layer: 0
-  m_Name: tiles-02_3 (6)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2566,7 +2640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &219238797
 SpriteRenderer:
@@ -2874,7 +2948,7 @@ GameObject:
   - component: {fileID: 256247664}
   - component: {fileID: 256247665}
   m_Layer: 0
-  m_Name: tiles-02_2
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2893,7 +2967,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &256247665
 SpriteRenderer:
@@ -2958,7 +3032,7 @@ GameObject:
   - component: {fileID: 259160832}
   - component: {fileID: 259160833}
   m_Layer: 0
-  m_Name: tiles-02_41 (7)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2977,7 +3051,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &259160833
 SpriteRenderer:
@@ -3042,7 +3116,7 @@ GameObject:
   - component: {fileID: 266048373}
   - component: {fileID: 266048374}
   m_Layer: 0
-  m_Name: tiles-02_41 (4)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3061,7 +3135,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &266048374
 SpriteRenderer:
@@ -3126,7 +3200,7 @@ GameObject:
   - component: {fileID: 279128626}
   - component: {fileID: 279128627}
   m_Layer: 0
-  m_Name: tiles-02_22
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3145,7 +3219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 774002643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &279128627
 SpriteRenderer:
@@ -3310,17 +3384,63 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &336743626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336743627}
+  m_Layer: 0
+  m_Name: Skulls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &336743627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336743626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 256247664}
+  - {fileID: 1193537538}
+  - {fileID: 1821138244}
+  - {fileID: 1303387805}
+  - {fileID: 1847049676}
+  - {fileID: 174227989}
+  - {fileID: 40685501}
+  - {fileID: 1326294430}
+  - {fileID: 1925635702}
+  - {fileID: 1295591031}
+  - {fileID: 1755789956}
+  - {fileID: 742603370}
+  - {fileID: 1793877213}
+  - {fileID: 628254625}
+  - {fileID: 1300335957}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &341702044
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (2)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3821,7 +3941,7 @@ GameObject:
   - component: {fileID: 357562313}
   - component: {fileID: 357562314}
   m_Layer: 0
-  m_Name: tiles-02_41
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3840,7 +3960,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &357562314
 SpriteRenderer:
@@ -4145,7 +4265,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
@@ -4196,6 +4316,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+--- !u!1 &387157172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387157173}
+  m_Layer: 11
+  m_Name: Swords
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387157173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387157172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1264738439}
+  m_Father: {fileID: 522096989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400865653
 GameObject:
   m_ObjectHideFlags: 0
@@ -4225,21 +4377,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2141083466}
-  - {fileID: 1688758912}
-  - {fileID: 1598811936}
-  - {fileID: 1266168857}
-  - {fileID: 1739905620}
-  - {fileID: 1130965801}
-  - {fileID: 578553919}
-  - {fileID: 1308533756}
-  - {fileID: 843159968}
-  - {fileID: 993882237}
-  - {fileID: 852167034}
-  - {fileID: 106474661}
-  - {fileID: 1498229914}
-  - {fileID: 1365067076}
-  - {fileID: 1145226771}
+  - {fileID: 1127239519}
+  - {fileID: 717388118}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412418691
@@ -4253,7 +4392,7 @@ GameObject:
   - component: {fileID: 412418692}
   - component: {fileID: 412418693}
   m_Layer: 0
-  m_Name: tiles-02_39 (1)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4272,7 +4411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 908477415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &412418693
 SpriteRenderer:
@@ -4476,7 +4615,7 @@ GameObject:
   - component: {fileID: 440170938}
   - component: {fileID: 440170939}
   m_Layer: 0
-  m_Name: tiles-02_41 (1)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4495,7 +4634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &440170939
 SpriteRenderer:
@@ -4699,7 +4838,7 @@ GameObject:
   - component: {fileID: 448397818}
   - component: {fileID: 448397819}
   m_Layer: 0
-  m_Name: tiles-02_38 (2)
+  m_Name: BareTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4718,7 +4857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 24859413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &448397819
 SpriteRenderer:
@@ -4885,7 +5024,7 @@ GameObject:
   - component: {fileID: 506456058}
   - component: {fileID: 506456059}
   m_Layer: 0
-  m_Name: tiles-02_41 (8)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4904,7 +5043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &506456059
 SpriteRenderer:
@@ -4969,7 +5108,7 @@ GameObject:
   - component: {fileID: 517335836}
   - component: {fileID: 517335837}
   m_Layer: 0
-  m_Name: tiles-02_3 (2)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4988,7 +5127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &517335837
 SpriteRenderer:
@@ -5071,14 +5210,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1264738439}
-  - {fileID: 1487582571}
-  - {fileID: 1327032037}
-  - {fileID: 447677988}
-  - {fileID: 417997963}
-  - {fileID: 898286835}
-  - {fileID: 84135715}
-  - {fileID: 18014618}
+  - {fileID: 387157173}
+  - {fileID: 1549163844}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547366846
@@ -5092,7 +5225,7 @@ GameObject:
   - component: {fileID: 547366847}
   - component: {fileID: 547366848}
   m_Layer: 0
-  m_Name: tiles-02_22 (2)
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5111,7 +5244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 774002643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &547366848
 SpriteRenderer:
@@ -5399,11 +5532,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (8)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5544,7 +5677,7 @@ GameObject:
   - component: {fileID: 628254625}
   - component: {fileID: 628254626}
   m_Layer: 0
-  m_Name: tiles-02_2 (13)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5563,7 +5696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &628254626
 SpriteRenderer:
@@ -5628,7 +5761,7 @@ GameObject:
   - component: {fileID: 637434095}
   - component: {fileID: 637434096}
   m_Layer: 0
-  m_Name: tiles-02_39
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5647,7 +5780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 908477415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &637434096
 SpriteRenderer:
@@ -5849,6 +5982,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713470626}
   m_CullTransparentMesh: 1
+--- !u!1 &717388117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717388118}
+  m_Layer: 9
+  m_Name: PatrolCactuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717388118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717388117}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1688758912}
+  - {fileID: 1598811936}
+  - {fileID: 1266168857}
+  - {fileID: 1130965801}
+  - {fileID: 578553919}
+  - {fileID: 1308533756}
+  - {fileID: 843159968}
+  - {fileID: 993882237}
+  - {fileID: 852167034}
+  - {fileID: 1498229914}
+  - {fileID: 1365067076}
+  - {fileID: 1145226771}
+  m_Father: {fileID: 400865654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728833231
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,7 +6111,7 @@ GameObject:
   - component: {fileID: 742603370}
   - component: {fileID: 742603371}
   m_Layer: 0
-  m_Name: tiles-02_2 (11)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5954,7 +6130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &742603371
 SpriteRenderer:
@@ -6014,7 +6190,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6140,6 +6316,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772245256}
   m_CullTransparentMesh: 1
+--- !u!1 &774002642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774002643}
+  m_Layer: 0
+  m_Name: Cactuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774002643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774002642}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 279128626}
+  - {fileID: 1938435973}
+  - {fileID: 547366847}
+  - {fileID: 1954736390}
+  - {fileID: 1983743579}
+  - {fileID: 1258496157}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776976289
 GameObject:
   m_ObjectHideFlags: 0
@@ -6830,11 +7043,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (7)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6928,7 +7141,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6972,7 +7185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_Name
-      value: HealingPotion (3)
+      value: HealingPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7020,17 +7233,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &908477414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 908477415}
+  m_Layer: 0
+  m_Name: Trees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &908477415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908477414}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 637434095}
+  - {fileID: 412418692}
+  - {fileID: 1854100680}
+  - {fileID: 1319989964}
+  - {fileID: 1264021031}
+  - {fileID: 205545288}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &915926095
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (6)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22297,7 +22547,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
@@ -22390,10 +22640,10 @@ RectTransform:
   - {fileID: 1289077675}
   m_Father: {fileID: 1446496928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.46289408, y: 0.29429662}
-  m_AnchorMax: {x: 0.71000004, y: 0.35651913}
-  m_AnchoredPosition: {x: 223.9088, y: 9.8568}
-  m_SizeDelta: {x: 219.9504, y: 64.4702}
+  m_AnchorMin: {x: 0.56, y: 0.07382184}
+  m_AnchorMax: {x: 0.98915654, y: 0.805546}
+  m_AnchoredPosition: {x: 0.90878296, y: -1.1431999}
+  m_SizeDelta: {x: 3.9503937, y: 0.47019958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955166610
 MonoBehaviour:
@@ -22527,11 +22777,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1127239519}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
-      value: BasicCactus (1)
+      value: BasicCactus
       objectReference: {fileID: 0}
     - target: {fileID: 3650269966964237133, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Pivot.x
@@ -22638,7 +22888,7 @@ GameObject:
   - component: {fileID: 996027224}
   - component: {fileID: 996027225}
   m_Layer: 0
-  m_Name: tiles-02_41 (6)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22657,7 +22907,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &996027225
 SpriteRenderer:
@@ -22870,7 +23120,7 @@ GameObject:
   - component: {fileID: 1053581394}
   - component: {fileID: 1053581395}
   m_Layer: 0
-  m_Name: tiles-02_41 (5)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22889,7 +23139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1053581395
 SpriteRenderer:
@@ -22949,7 +23199,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22993,7 +23243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_Name
-      value: HealingPotion (2)
+      value: HealingPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23067,6 +23317,40 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1127239518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127239519}
+  m_Layer: 9
+  m_Name: BasicCactuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127239519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127239518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2141083466}
+  - {fileID: 1739905620}
+  - {fileID: 106474661}
+  m_Father: {fileID: 400865654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1130965801 stripped
 Transform:
@@ -23213,7 +23497,7 @@ GameObject:
   - component: {fileID: 1193537538}
   - component: {fileID: 1193537539}
   m_Layer: 0
-  m_Name: tiles-02_2 (1)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23232,7 +23516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1193537539
 SpriteRenderer:
@@ -23620,7 +23904,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23682,7 +23966,7 @@ GameObject:
   - component: {fileID: 1258496157}
   - component: {fileID: 1258496158}
   m_Layer: 0
-  m_Name: tiles-02_22 (5)
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23701,7 +23985,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 774002643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1258496158
 SpriteRenderer:
@@ -23766,7 +24050,7 @@ GameObject:
   - component: {fileID: 1258709719}
   - component: {fileID: 1258709720}
   m_Layer: 0
-  m_Name: tiles-02_41 (2)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23785,7 +24069,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1258709720
 SpriteRenderer:
@@ -23850,7 +24134,7 @@ GameObject:
   - component: {fileID: 1264021031}
   - component: {fileID: 1264021032}
   m_Layer: 0
-  m_Name: tiles-02_39 (4)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23869,7 +24153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 908477415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1264021032
 SpriteRenderer:
@@ -24008,7 +24292,7 @@ GameObject:
   - component: {fileID: 1275082184}
   - component: {fileID: 1275082185}
   m_Layer: 0
-  m_Name: tiles-02_3 (3)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24027,7 +24311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1275082185
 SpriteRenderer:
@@ -24128,7 +24412,7 @@ GameObject:
   - component: {fileID: 1295591031}
   - component: {fileID: 1295591032}
   m_Layer: 0
-  m_Name: tiles-02_2 (9)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24147,7 +24431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1295591032
 SpriteRenderer:
@@ -24212,7 +24496,7 @@ GameObject:
   - component: {fileID: 1300335957}
   - component: {fileID: 1300335958}
   m_Layer: 0
-  m_Name: tiles-02_2 (14)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24231,7 +24515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1300335958
 SpriteRenderer:
@@ -24296,7 +24580,7 @@ GameObject:
   - component: {fileID: 1303387805}
   - component: {fileID: 1303387806}
   m_Layer: 0
-  m_Name: tiles-02_2 (3)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24315,7 +24599,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1303387806
 SpriteRenderer:
@@ -24385,7 +24669,7 @@ GameObject:
   - component: {fileID: 1314437466}
   - component: {fileID: 1314437467}
   m_Layer: 0
-  m_Name: tiles-02_38 (1)
+  m_Name: BareTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24404,7 +24688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 24859413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1314437467
 SpriteRenderer:
@@ -24464,11 +24748,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (1)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24526,7 +24810,7 @@ GameObject:
   - component: {fileID: 1319989964}
   - component: {fileID: 1319989965}
   m_Layer: 0
-  m_Name: tiles-02_39 (3)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24545,7 +24829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 908477415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1319989965
 SpriteRenderer:
@@ -24610,7 +24894,7 @@ GameObject:
   - component: {fileID: 1326294430}
   - component: {fileID: 1326294431}
   m_Layer: 0
-  m_Name: tiles-02_2 (7)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24629,7 +24913,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1326294431
 SpriteRenderer:
@@ -25036,11 +25320,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (4)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25139,7 +25423,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 387157173}
     m_Modifications:
     - target: {fileID: 1417816968300072725, guid: c785185f0fac1c6459c6e53e0a2bfa32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25271,7 +25555,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
@@ -25428,7 +25712,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25472,7 +25756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4334144866765061772, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_Name
-      value: HealingPotion (1)
+      value: HealingPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25665,7 +25949,7 @@ GameObject:
   - component: {fileID: 1461766519}
   - component: {fileID: 1461766520}
   m_Layer: 0
-  m_Name: tiles-02_41 (3)
+  m_Name: BigBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25684,7 +25968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 1865000952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1461766520
 SpriteRenderer:
@@ -26083,7 +26367,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.734908, y: -2.478357, z: -10}
+  m_LocalPosition: {x: 8.726291, y: -2.4783456, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26129,7 +26413,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 522096989}
+    m_TransformParent: {fileID: 1549163844}
     m_Modifications:
     - target: {fileID: 452047109102476703, guid: 42f635432f11a5e4db43d8955cd86dad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26191,11 +26475,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 717388118}
     m_Modifications:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy (3)
+      value: PatrolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26764,6 +27048,44 @@ PolygonCollider2D:
       - {x: 212.83159, y: -10.735273}
       - {x: 212.72084, y: 8.6491165}
   m_UseDelaunayMesh: 0
+--- !u!1 &1549163843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549163844}
+  m_Layer: 11
+  m_Name: HealingPotions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549163844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549163843}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1487582571}
+  - {fileID: 1327032037}
+  - {fileID: 447677988}
+  - {fileID: 417997963}
+  - {fileID: 898286835}
+  - {fileID: 84135715}
+  - {fileID: 18014618}
+  m_Father: {fileID: 522096989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1558937581
 GameObject:
   m_ObjectHideFlags: 0
@@ -27934,7 +28256,7 @@ GameObject:
   - component: {fileID: 1683531128}
   - component: {fileID: 1683531129}
   m_Layer: 0
-  m_Name: tiles-02_3 (7)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27953,7 +28275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1683531129
 SpriteRenderer:
@@ -28293,7 +28615,7 @@ GameObject:
   - component: {fileID: 1755789956}
   - component: {fileID: 1755789957}
   m_Layer: 0
-  m_Name: tiles-02_2 (10)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28312,7 +28634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1755789957
 SpriteRenderer:
@@ -28735,7 +29057,7 @@ GameObject:
   - component: {fileID: 1793877213}
   - component: {fileID: 1793877214}
   m_Layer: 0
-  m_Name: tiles-02_2 (12)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28754,7 +29076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1793877214
 SpriteRenderer:
@@ -28814,7 +29136,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 400865654}
+    m_TransformParent: {fileID: 1127239519}
     m_Modifications:
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
@@ -28920,7 +29242,7 @@ GameObject:
   - component: {fileID: 1821138244}
   - component: {fileID: 1821138245}
   m_Layer: 0
-  m_Name: tiles-02_2 (2)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28939,7 +29261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1821138245
 SpriteRenderer:
@@ -29181,7 +29503,7 @@ GameObject:
   - component: {fileID: 1831282534}
   - component: {fileID: 1831282535}
   m_Layer: 0
-  m_Name: tiles-02_3
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29200,7 +29522,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1831282535
 SpriteRenderer:
@@ -29365,7 +29687,7 @@ GameObject:
   - component: {fileID: 1847049676}
   - component: {fileID: 1847049677}
   m_Layer: 0
-  m_Name: tiles-02_2 (4)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29384,7 +29706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1847049677
 SpriteRenderer:
@@ -29583,7 +29905,7 @@ GameObject:
   - component: {fileID: 1854100680}
   - component: {fileID: 1854100681}
   m_Layer: 0
-  m_Name: tiles-02_39 (2)
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29602,7 +29924,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 908477415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1854100681
 SpriteRenderer:
@@ -29688,10 +30010,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1446496928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1344701, y: 0.30355504}
-  m_AnchorMax: {x: 0.35900003, y: 0.35651913}
-  m_AnchoredPosition: {x: -79.99988, y: 17.757328}
-  m_SizeDelta: {x: 158.04932, y: 72.43447}
+  m_AnchorMin: {x: 0, y: 0.25211272}
+  m_AnchorMax: {x: 0.2866258, y: 0.943}
+  m_AnchoredPosition: {x: 43.000122, y: -7.742672}
+  m_SizeDelta: {x: 84.04932, y: 11.434471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854284635
 MonoBehaviour:
@@ -29869,6 +30191,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863005955}
   m_CullTransparentMesh: 1
+--- !u!1 &1865000951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865000952}
+  m_Layer: 0
+  m_Name: BigBushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865000952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865000951}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 357562313}
+  - {fileID: 440170938}
+  - {fileID: 1258709719}
+  - {fileID: 1461766519}
+  - {fileID: 266048373}
+  - {fileID: 1053581394}
+  - {fileID: 996027224}
+  - {fileID: 259160832}
+  - {fileID: 506456058}
+  - {fileID: 72490610}
+  m_Father: {fileID: 2131319367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1869473861
 GameObject:
   m_ObjectHideFlags: 0
@@ -29955,7 +30318,7 @@ GameObject:
   - component: {fileID: 1925635702}
   - component: {fileID: 1925635703}
   m_Layer: 0
-  m_Name: tiles-02_2 (8)
+  m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29974,7 +30337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 336743627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1925635703
 SpriteRenderer:
@@ -30114,7 +30477,7 @@ GameObject:
   - component: {fileID: 1938435973}
   - component: {fileID: 1938435974}
   m_Layer: 0
-  m_Name: tiles-02_22 (1)
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30133,7 +30496,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 774002643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1938435974
 SpriteRenderer:
@@ -30448,7 +30811,7 @@ GameObject:
   - component: {fileID: 1954736390}
   - component: {fileID: 1954736391}
   m_Layer: 0
-  m_Name: tiles-02_22 (3)
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30467,7 +30830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 774002643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1954736391
 SpriteRenderer:
@@ -30532,7 +30895,7 @@ GameObject:
   - component: {fileID: 1983743579}
   - component: {fileID: 1983743580}
   m_Layer: 0
-  m_Name: tiles-02_22 (4)
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30551,7 +30914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 774002643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1983743580
 SpriteRenderer:
@@ -32286,7 +32649,7 @@ GameObject:
   - component: {fileID: 2064156934}
   - component: {fileID: 2064156935}
   m_Layer: 0
-  m_Name: tiles-02_3 (5)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32305,7 +32668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2064156935
 SpriteRenderer:
@@ -32370,7 +32733,7 @@ GameObject:
   - component: {fileID: 2081555175}
   - component: {fileID: 2081555176}
   m_Layer: 0
-  m_Name: tiles-02_3 (4)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32389,7 +32752,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2081555176
 SpriteRenderer:
@@ -32501,7 +32864,7 @@ GameObject:
   - component: {fileID: 2110939960}
   - component: {fileID: 2110939961}
   m_Layer: 0
-  m_Name: tiles-02_3 (8)
+  m_Name: SmallBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32520,7 +32883,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2131319367}
+  m_Father: {fileID: 176560548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2110939961
 SpriteRenderer:
@@ -32603,55 +32966,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1831282534}
-  - {fileID: 357562313}
-  - {fileID: 637434095}
-  - {fileID: 440170938}
-  - {fileID: 1258709719}
-  - {fileID: 412418692}
-  - {fileID: 256247664}
-  - {fileID: 1461766519}
-  - {fileID: 266048373}
-  - {fileID: 71463125}
-  - {fileID: 178930312}
-  - {fileID: 1193537538}
-  - {fileID: 1314437466}
-  - {fileID: 1821138244}
-  - {fileID: 1303387805}
-  - {fileID: 279128626}
-  - {fileID: 1938435973}
-  - {fileID: 547366847}
-  - {fileID: 1053581394}
-  - {fileID: 1954736390}
-  - {fileID: 1847049676}
-  - {fileID: 174227989}
-  - {fileID: 996027224}
-  - {fileID: 1983743579}
-  - {fileID: 40685501}
-  - {fileID: 517335836}
-  - {fileID: 1275082184}
-  - {fileID: 1854100680}
-  - {fileID: 259160832}
-  - {fileID: 1258496157}
-  - {fileID: 1326294430}
-  - {fileID: 506456058}
-  - {fileID: 1925635702}
-  - {fileID: 1295591031}
-  - {fileID: 1755789956}
-  - {fileID: 2081555175}
-  - {fileID: 2064156934}
-  - {fileID: 1319989964}
-  - {fileID: 72490610}
-  - {fileID: 219238796}
-  - {fileID: 742603370}
-  - {fileID: 448397818}
-  - {fileID: 1793877213}
-  - {fileID: 1683531128}
-  - {fileID: 628254625}
-  - {fileID: 1264021031}
-  - {fileID: 205545288}
-  - {fileID: 1300335957}
-  - {fileID: 2110939960}
+  - {fileID: 336743627}
+  - {fileID: 908477415}
+  - {fileID: 176560548}
+  - {fileID: 24859413}
+  - {fileID: 1865000952}
+  - {fileID: 774002643}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140538415
