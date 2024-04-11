@@ -30707,6 +30707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08a313ca4bc3984eb4df7590ff470a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSettings: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
 --- !u!1 &1448704247
 GameObject:
   m_ObjectHideFlags: 0
@@ -32903,6 +32904,7 @@ MonoBehaviour:
   musicVolumeSlider: {fileID: 1829114283}
   sfxVolumeSlider: {fileID: 1632580720}
   mainAudioMixer: {fileID: 24100000, guid: c0e8df1186dfb3041ba74268fd51916f, type: 2}
+  _defaultSettings: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
 --- !u!114 &1578650010
 MonoBehaviour:
   m_ObjectHideFlags: 0

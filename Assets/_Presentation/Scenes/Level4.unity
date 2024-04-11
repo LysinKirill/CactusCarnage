@@ -3115,7 +3115,7 @@ GameObject:
   - component: {fileID: 459171611}
   - component: {fileID: 459171610}
   m_Layer: 10
-  m_Name: BasicSpikes
+  m_Name: PoweredSpikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3148,7 +3148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183780fb876f82047952e4a3c8b10434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   damageDelay: 1
   playerLayer:
     serializedVersion: 2
@@ -32782,7 +32782,7 @@ GameObject:
   - component: {fileID: 836253387}
   - component: {fileID: 836253386}
   m_Layer: 10
-  m_Name: PoweredSpikes
+  m_Name: BasicSpikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32815,7 +32815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183780fb876f82047952e4a3c8b10434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   damageDelay: 1
   playerLayer:
     serializedVersion: 2
@@ -37450,6 +37450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08a313ca4bc3984eb4df7590ff470a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSettings: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
 --- !u!1 &1448704247
 GameObject:
   m_ObjectHideFlags: 0
@@ -39820,6 +39821,7 @@ MonoBehaviour:
   musicVolumeSlider: {fileID: 1829114283}
   sfxVolumeSlider: {fileID: 1632580720}
   mainAudioMixer: {fileID: 24100000, guid: c0e8df1186dfb3041ba74268fd51916f, type: 2}
+  _defaultSettings: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
 --- !u!114 &1578650010
 MonoBehaviour:
   m_ObjectHideFlags: 0

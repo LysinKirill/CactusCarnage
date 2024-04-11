@@ -1,3 +1,4 @@
+using ScriptableObjects.Settings;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -13,12 +14,15 @@ namespace Settings
         public Slider sfxVolumeSlider;
         public AudioMixer mainAudioMixer;
 
+        [SerializeField] private SettingsAsset _defaultSettings;
+        
         private const string QualityLevelKey = "QualitySettins";
         private const string MasterVolumeKey = "MasterVolume";
         private const string MusicVolumeKey = "MusicVolume";
         private const string SfxVolumeKey = "SFXVolume";
         private void Start()
         {
+            InitPlayerPrefs();
             InitSliders();
             ChangeMasterVolume();
             ChangeMusicVolume();
@@ -33,6 +37,15 @@ namespace Settings
             masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey);
             musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey);
             sfxVolumeSlider.value = PlayerPrefs.GetFloat(SfxVolumeKey);
+        }
+
+        private void InitPlayerPrefs()
+        {
+            if(!PlayerPrefs.HasKey(QualityLevelKey)) PlayerPrefs.SetInt(QualityLevelKey, (int)_defaultSettings.graphicsLevel);
+            if(!PlayerPrefs.HasKey(MasterVolumeKey)) PlayerPrefs.SetFloat(MasterVolumeKey, _defaultSettings.masterVolume);
+            if(!PlayerPrefs.HasKey(MusicVolumeKey)) PlayerPrefs.SetFloat(MusicVolumeKey, _defaultSettings.musicVolume);
+            if(!PlayerPrefs.HasKey(SfxVolumeKey)) PlayerPrefs.SetFloat(SfxVolumeKey, _defaultSettings.sfxVolume);
+            PlayerPrefs.Save();
         }
 
         public void ChangeGraphicsQuality()

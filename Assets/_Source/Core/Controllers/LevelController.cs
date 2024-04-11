@@ -1,9 +1,7 @@
-using System;
 using Core.Player;
 using Settings;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using UnityEngine.SceneManagement;
 
 namespace Core.Controllers
 {
@@ -24,6 +22,7 @@ namespace Core.Controllers
         private void Start()
         {
             defeatPanel.SetActive(false);
+            UpdateBrightness(_brightnessValue);
         }
         private void Awake()
         {
@@ -62,11 +61,11 @@ namespace Core.Controllers
         
         private void UpdateBrightness(float brightnessValue)
         {
+            _brightnessValue = brightnessValue;
             _postProcessVolume = GetComponentInChildren<PostProcessVolume>();
             var profile = _postProcessVolume.profile;
             if (profile.TryGetSettings(out _autoExposure))
                 _autoExposure.keyValue.value = brightnessValue;
         }
-        
     }
 }
