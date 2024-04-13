@@ -834,6 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390ca5f2707a21f498988777b345f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuScene: {fileID: 102900000, guid: b1dfe83234a3b0d45b72c8ddce360092, type: 3}
 --- !u!4 &116928898
 Transform:
   m_ObjectHideFlags: 0
@@ -27563,8 +27564,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 116928897}
         m_TargetAssemblyTypeName: Game.Scenes, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 3
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -29354,10 +29355,10 @@ MonoBehaviour:
       - m_Target: {fileID: 116928897}
         m_TargetAssemblyTypeName: Game.Scenes, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 3
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 102900000, guid: e707ef4746f13bb499f7958ac304a68b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEditor.SceneAsset, UnityEditor.CoreModule
           m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
@@ -39495,8 +39496,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 116928897}
         m_TargetAssemblyTypeName: Game.Scenes, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 3
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
