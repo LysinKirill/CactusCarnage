@@ -21,17 +21,16 @@ namespace Core.Controllers
         [SerializeField] private Sprite completedLevelIcon;
         
         private List<(string LevelName, GameObject Slot)> _levelSlots = new List<(string, GameObject)>();
-        //private Dictionary<string, GameObject> _slotMap = new Dictionary<string, GameObject>();
+
         private void Awake()
         {
             for (int levelId = 0; levelId < levelPack.levels.Count; levelId++)
             {
                 SceneAsset levelScene = levelPack.levels[levelId];
                 var levelSlot = Instantiate(levelSlotPrefab, Vector3.zero, Quaternion.identity);
-                levelSlot.transform.SetParent(gameObject.transform); // Is it done by default ???
+                levelSlot.transform.SetParent(gameObject.transform);
                 levelSlot.transform.localScale = Vector3.one;
                 _levelSlots.Add((levelScene.name, levelSlot));
-                //_slotMap[levelScene.name] = levelSlot;
 
                 var button = levelSlot.GetComponent<Button>();
                 if (button is null)
@@ -121,7 +120,7 @@ namespace Core.Controllers
         {
             var progressManager = PlayerProgressManager.Instance;
 
-            foreach (var (levelName, slot) in _levelSlots)
+            foreach (var (levelName, _) in _levelSlots)
             {
                 if (!progressManager.LevelExists(levelName))
                     continue;
