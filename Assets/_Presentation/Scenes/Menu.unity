@@ -5482,6 +5482,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 1084519931800162284, guid: b2d898e27a8a2954d83d12dbfc49c643, type: 3}
+      propertyPath: unlockedLevelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 302e1c13b218fbe44a2e63475bde0be3, type: 3}
     - target: {fileID: 1112129067248431523, guid: b2d898e27a8a2954d83d12dbfc49c643, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

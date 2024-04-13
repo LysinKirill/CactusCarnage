@@ -1,3 +1,4 @@
+using Core.Controllers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,9 @@ namespace Core.Environment
             }
             winPanel.SetActive(true);
             player.SetActive(false);
+
+            var activeScene = SceneManager.GetActiveScene();
+            PlayerProgressManager.Instance.ChangeLevelStatus(activeScene.name, LevelStatus.Completed);
         }
     }
 }

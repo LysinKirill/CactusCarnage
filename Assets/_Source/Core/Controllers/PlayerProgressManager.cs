@@ -38,25 +38,14 @@ namespace Core.Controllers
 
         private void Awake()
         {
-            if (Instance != null)
-            {
-                Destroy(this);
-                return;
-            }
-
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
             LoadProgress();
         }
 
         private void Start()
         {
-            string levelName = startLevel.name;
-            var levelItem = Levels.FirstOrDefault(x => x.Item1 == levelName);
-            
-            if (levelItem.LevelName == null
-                || levelItem.Status == LevelStatus.Locked)
-                ChangeLevelStatus(levelName, LevelStatus.Unlocked);
+            UpdateUnlockedLevels();
         }
 
         public bool LevelExists(string levelName) => Levels.Any(x => x.LevelName == levelName);
@@ -81,14 +70,37 @@ namespace Core.Controllers
         {
             PlayerPrefs.SetInt(levelName, (int)newLevelStatus);
             PlayerPrefs.Save();
-            var levelItem = Levels.FirstOrDefault(x => x.LevelName == levelName);
+            var levelItemId = Levels.FindIndex(x => x.LevelName == levelName);
 
-            if (levelItem.LevelName == null)
+            if (levelItemId == -1)
                 Levels.Add((levelName, newLevelStatus));
             else
-                levelItem.Status = newLevelStatus;
+                Levels[levelItemId] = (levelName, newLevelStatus);
 
+            UpdateUnlockedLevels();
             OnLevelStatusChanged?.Invoke(levelName, newLevelStatus);
+        }
+
+        public void ResetProgress()
+        {
+            levelPack.levels.ForEach(level =>
+            {
+                ChangeLevelStatus(level.name, LevelStatus.Locked);
+                PlayerPrefs.DeleteKey(level.name);
+            });
+            PlayerPrefs.Save();
+            UpdateUnlockedLevels();
+        }
+
+        private void UpdateUnlockedLevels()
+        {
+            int firstNotCompletedId = Levels.FindIndex(x => x.Status != LevelStatus.Completed);
+            if (firstNotCompletedId == -1)
+                return;
+
+            var updatedLevelItem = (Levels[firstNotCompletedId].LevelName, LevelStatus.Unlocked);
+            Levels[firstNotCompletedId] = updatedLevelItem;
+            OnLevelStatusChanged?.Invoke(Levels[firstNotCompletedId].LevelName, LevelStatus.Unlocked);
         }
     }
 
