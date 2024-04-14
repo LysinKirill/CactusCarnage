@@ -624,6 +624,7 @@ MonoBehaviour:
     m_Bits: 512
   inventory: {fileID: 0}
   ultimateDamageBoost: 2
+  weaponPosition: {fileID: 4389089768468326650}
 --- !u!1 &5966213023158938362
 GameObject:
   m_ObjectHideFlags: 0

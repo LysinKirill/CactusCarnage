@@ -312,6 +312,10 @@ MonoBehaviour:
   pointA: {fileID: 4714613598666225145}
   pointB: {fileID: 2946385658627725609}
   speed: 4
+  groundCheck: {fileID: 4494657054958513903}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &8124870625168132038
 MonoBehaviour:
   m_ObjectHideFlags: 0

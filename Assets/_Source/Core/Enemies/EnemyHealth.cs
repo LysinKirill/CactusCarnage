@@ -14,6 +14,7 @@ namespace Core.Enemies
         public float Health { get; private set; }
 
         public event Action<GameObject> OnDeath;
+        public event Action<float> OnTakeDamage;
         
         private void Awake()
         {
@@ -40,6 +41,8 @@ namespace Core.Enemies
                 return;
 
             Health -= damage;
+            OnTakeDamage?.Invoke(damage);
+            
             if(IsDead())
             {
                 OnDeath?.Invoke(gameObject);

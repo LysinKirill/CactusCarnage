@@ -16,10 +16,9 @@ namespace Core.Controllers
         [SerializeField] private LayerMask enemyLayerMask;
         [SerializeField] private GameObject inventory;
         [SerializeField] private float ultimateDamageBoost = 1f;
+        [SerializeField] private Transform weaponPosition;
         
         private PlayerState _playerState;
-        
-        
         private bool _canAttack = true;
         private WeaponController _weaponController;
         private bool _rangedAttackReady;
@@ -149,14 +148,23 @@ namespace Core.Controllers
         private void AttackMelee(MeleeWeaponAsset weapon)
         {
             if (IsEnemyInAttackBox(weapon.AttackRange, out GameObject enemy))
+            {
                 if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
                 {
                     enemyHealth.TakeDamage(weapon.Damage * UltimateMultiplier);
                     _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
                 }
 
+                if (enemy.TryGetComponent(out Collider2D enemyCollider))
+                {
+                    ApplyKnockback(enemyCollider, weapon);
+                    ApplyUpwardForce(enemyCollider, weapon);
+                }
+            }
+
             StartCoroutine(AttackCooldown(weapon.AttackDelay));
         }
+        
         
         private void BareHandedAttack()
         {
@@ -209,6 +217,32 @@ namespace Core.Controllers
                 Gizmos.color = Color.red;
                 Gizmos.DrawWireCube(center, attackBox);
             }
+        }
+        
+        
+        private void ApplyKnockback(Collider2D enemyCollider, MeleeWeaponAsset meleeWeapon)
+        {
+            if (!enemyCollider.TryGetComponent(out Rigidbody2D enemyBody))
+                return;
+            
+            var enemyCenterPos = enemyCollider.bounds.center;
+
+            var knockbackDirection = (enemyCenterPos - weaponPosition.position).normalized;
+            var knockbackStrength = meleeWeapon.ImpactProperties.KnockbackStrength;
+            var force = knockbackDirection * knockbackStrength;
+            var vector2 = enemyBody.velocity;
+            vector2.x = 0;
+            enemyBody.velocity = vector2;
+            enemyBody.velocity += (Vector2)(force / enemyBody.mass);
+        }
+
+        private void ApplyUpwardForce(Collider2D enemyCollider, MeleeWeaponAsset meleeWeapon)
+        {
+            if (!enemyCollider.TryGetComponent(out Rigidbody2D enemyBody))
+                return;
+            
+            var upwardForce = meleeWeapon.ImpactProperties.UpwardForce * Vector2.up;
+            enemyBody.velocity += upwardForce / enemyBody.mass;
         }
 
         private IEnumerator PrepareWeapon(float preparationTime)

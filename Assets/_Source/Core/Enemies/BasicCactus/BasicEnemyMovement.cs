@@ -22,6 +22,7 @@ namespace Core.Enemies.BasicCactus
         private bool _isGrounded = true;
         private bool _isTouchingWall;
         private bool _isFacingRight = true;
+        private bool _isStunned;
 
         private bool _isResting;
 
@@ -30,8 +31,10 @@ namespace Core.Enemies.BasicCactus
 
         private void Awake()
         {
-
             _body = GetComponent<Rigidbody2D>();
+            if (TryGetComponent(out EnemyHealth health))
+                health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
+
         }
         
         private void Wander()
@@ -51,6 +54,8 @@ namespace Core.Enemies.BasicCactus
 
         private void FixedUpdate()
         {
+            if(_isStunned)
+                return;
             if (!_playerDetected && CheckPlayer())
                 _playerDetected = true;
             
@@ -71,7 +76,9 @@ namespace Core.Enemies.BasicCactus
             {
                 if (_playerDetected)
                 {
-                    _body.velocity = Vector2.zero;
+                    var vector2 = _body.velocity;
+                    vector2.x = 0;
+                    _body.velocity = vector2;
                     return;
                 }
                     
@@ -174,6 +181,13 @@ namespace Core.Enemies.BasicCactus
                 return true;
 
             return Vector2.Distance(startPosition, player.transform.position) >= playerDetection.DetectionRadius;
+        }
+        
+        private IEnumerator GetStunned(float stunDuration)
+        {
+            _isStunned = true;
+            yield return new WaitForSecondsRealtime(stunDuration);
+            _isStunned = false;
         }
 
         private void OnDrawGizmos()

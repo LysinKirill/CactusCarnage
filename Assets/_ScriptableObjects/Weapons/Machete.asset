@@ -29,3 +29,4 @@ MonoBehaviour:
   <AttackDelay>k__BackingField: 0.7
   <AttackRange>k__BackingField: 4
   <Damage>k__BackingField: 2
+  <ImpactProperties>k__BackingField: {fileID: 11400000, guid: 7a474d585b0e8a64ab9d5c86b28f8dd0, type: 2}
