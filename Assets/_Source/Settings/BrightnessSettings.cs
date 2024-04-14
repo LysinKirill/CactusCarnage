@@ -20,9 +20,9 @@ namespace Settings
                 ChangeBrightness(_brightnessSlider.value);
             }
         }
-        
-    
-        public void ChangeBrightness(float brightnessValue)
+
+
+        private void ChangeBrightness(float brightnessValue)
         {
             OnBrightnessChanged?.Invoke(brightnessValue);
             PlayerPrefs.SetFloat(BrightnessKey, brightnessValue);

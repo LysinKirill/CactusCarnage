@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6600711828283495334}
   - component: {fileID: 4645167702649618150}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.037453055, y: -0.59268427}
+  m_Offset: {x: 0.01679182, y: -0.59268427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -159,7 +159,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5322194, y: 0.03192711}
+  m_Size: {x: 0.66745234, y: 0.03192711}
   m_EdgeRadius: 0
 --- !u!1 &5096398601572271102
 GameObject:
@@ -557,7 +557,7 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 1ef7dc96f350a0d4da84be19189d6b59, type: 2}
   parametersToModify: []
   currentItemState: []
-  weaponRenderer: {fileID: 0}
+  weaponRenderer: {fileID: 77763148415537819}
   activeWeaponSlot: {fileID: 0}
 --- !u!114 &1771428595641021206
 MonoBehaviour:
@@ -575,8 +575,8 @@ MonoBehaviour:
   healthPoints: 3
   ultimateSlider: {fileID: 0}
   sliderHandle: {fileID: 0}
-  ultimateGainOnReceiveDamage: 0
-  <UltimateGainOnDealDamage>k__BackingField: 0
+  ultimateGainOnReceiveDamage: 0.2
+  <UltimateGainOnDealDamage>k__BackingField: 0.2
   <MaximumHealth>k__BackingField: 3
   <UltimateDuration>k__BackingField: 5
 --- !u!114 &2423784670248680754
@@ -634,7 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303828725752185368}
   - component: {fileID: 6768582414005785061}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallsCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0017267466, y: -0.71647096}
+  m_Offset: {x: -0.013972819, y: -0.71647096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -699,7 +699,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6601379, y: 1.4351091}
+  m_Size: {x: 1.0662092, y: 1.4351091}
   m_EdgeRadius: 0
 --- !u!1 &8851144633074066452
 GameObject:
