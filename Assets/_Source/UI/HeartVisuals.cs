@@ -18,7 +18,6 @@ namespace UI
         private void Awake()
         {
             playerState.OnUpdateHealth += HandleHealthUpdate;
-            playerState.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
         }
 
 
@@ -48,12 +47,6 @@ namespace UI
                 --_currentHealth;
                 DeactivateHeart();
             }
-        }
-
-        
-        private void HandleMaxHealthUpdate(int obj)
-        {
-            // TODO 
         }
 
         private void ActivateHeart()

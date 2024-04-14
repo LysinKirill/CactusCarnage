@@ -70,7 +70,7 @@ namespace Core.Controllers
             }
 
             if (inventoryItem.item is IDestroyableItem)
-                inventoryPanel.AddAction("Drop", () => DropItem(index, inventoryItem.quantity));
+                inventoryPanel.AddAction("Выбросить", () => DropItem(index, inventoryItem.quantity));
             
         }
 
