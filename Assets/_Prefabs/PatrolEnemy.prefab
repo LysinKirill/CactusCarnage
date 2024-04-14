@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 8149526957432528305}
   - component: {fileID: 6754588269256004322}
   - component: {fileID: 6026075990987286442}
+  - component: {fileID: 7215317427325006224}
   m_Layer: 9
   m_Name: PatrolCactus
   m_TagString: Untagged
@@ -415,6 +416,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8016428, y: 0.86927724}
   m_EdgeRadius: 0
+--- !u!114 &7215317427325006224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4946079455173886801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1557272cf8314c35aa5a36f0a9490c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickups: {fileID: 0}
+  lootTable: {fileID: 11400000, guid: cbd9c1168313d164db58be16a18d95aa, type: 2}
 --- !u!1 &7107088318065698932
 GameObject:
   m_ObjectHideFlags: 0
