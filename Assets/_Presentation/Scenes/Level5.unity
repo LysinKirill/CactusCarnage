@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -409,6 +413,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -427,6 +435,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -537,6 +549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -663,6 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390ca5f2707a21f498988777b345f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuScene: {fileID: 102900000, guid: b1dfe83234a3b0d45b72c8ddce360092, type: 3}
 --- !u!4 &116928898
 Transform:
   m_ObjectHideFlags: 0
@@ -1180,6 +1197,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.77
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1286,6 +1307,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1513,6 +1538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -1711,6 +1740,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2086,6 +2119,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -2280,6 +2317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -2473,6 +2514,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22359,6 +22404,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -22628,6 +22677,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22915,6 +22968,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23677,6 +23734,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -24095,6 +24156,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 2.22
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24213,6 +24278,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -24459,6 +24528,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 6.08
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24477,6 +24550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -24582,6 +24659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -24692,6 +24773,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -24974,6 +25059,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24997,6 +25086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -25235,6 +25328,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25365,6 +25462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25476,6 +25577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25546,6 +25651,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 2.4
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25691,6 +25800,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25792,6 +25905,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25894,6 +26011,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -26048,6 +26169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26066,6 +26191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -26698,6 +26827,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -27045,7 +27178,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.706425, y: -2.5172305, z: -10}
+  m_LocalPosition: {x: 8.725693, y: -2.5173306, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27160,6 +27293,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -27290,6 +27427,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1304152284036309765, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: _defaultSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
     - target: {fileID: 1367116211822415706, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -21.99945
@@ -27467,6 +27608,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 116928897}
@@ -27477,6 +27622,14 @@ PrefabInstance:
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 102900000, guid: e707ef4746f13bb499f7958ac304a68b, type: 3}
+    - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEditor.SceneAsset, UnityEditor.CoreModule
       objectReference: {fileID: 0}
     - target: {fileID: 5039295957944621307, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -27531,12 +27684,24 @@ PrefabInstance:
       value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7116973036118005174, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116973036118005174, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 116928897}
     - target: {fileID: 7116973036118005174, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116973036118005174, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116973036118005174, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7690966841299764634, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -27567,12 +27732,16 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 8989557824479915340, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989557824479915340, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 116928897}
     - target: {fileID: 8989557824479915340, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: LoadMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28097,6 +28266,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -29987,6 +30160,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -30180,6 +30357,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30244,6 +30425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -31072,8 +31257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ee5a7265390c2488a9e9a4a72525df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  winPanel: {fileID: 0}
+  canvas: {fileID: 1516245098}
+  winPanel: {fileID: 2141101428}
   player: {fileID: 294870616}
   playerLayer:
     serializedVersion: 2
@@ -31091,6 +31276,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -31448,6 +31637,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -31755,6 +31948,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -31949,6 +32146,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -32142,6 +32343,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32337,6 +32542,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -32614,6 +32823,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294870616}
+    - target: {fileID: 6092290420186639458, guid: 705abf3990ee03844af937ee018841a0, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32763,6 +32976,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1538588263}
     m_Modifications:
+    - target: {fileID: 394416642021932987, guid: c8d75f1549713574d92f153618828fd9, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     - target: {fileID: 1095705998280961051, guid: c8d75f1549713574d92f153618828fd9, type: 3}
       propertyPath: m_Name
       value: BasicCactus
@@ -33004,6 +33221,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.92
       objectReference: {fileID: 0}
+    - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 522096988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33052,6 +33273,11 @@ Transform:
   - {fileID: 1884664775}
   m_Father: {fileID: 1373652302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2141101428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1605845578559166865, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+  m_PrefabInstance: {fileID: 1516245090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

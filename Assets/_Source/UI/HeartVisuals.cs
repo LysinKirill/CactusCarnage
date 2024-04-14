@@ -15,14 +15,11 @@ namespace UI
         private int _currentHealth;
         private List<GameObject> Hearts { get; } = new List<GameObject>();
 
-        private void Awake()
-        {
-            playerState.OnUpdateHealth += HandleHealthUpdate;
-        }
-
-
         private void Start()
         {
+            playerState.OnUpdateHealth += HandleHealthUpdate;
+            playerState.OnUpdateMaximumHealth += HandleMaxHealthUpdate;
+            
             _currentHealth = playerState.HealthPoints;
             for (int i = 0; i < playerState.MaximumHealth; ++i)
             {
@@ -47,6 +44,12 @@ namespace UI
                 --_currentHealth;
                 DeactivateHeart();
             }
+        }
+
+        
+        private void HandleMaxHealthUpdate(int obj)
+        {
+            // TODO 
         }
 
         private void ActivateHeart()

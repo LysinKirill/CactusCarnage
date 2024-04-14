@@ -600,7 +600,7 @@ MonoBehaviour:
   levelPack: {fileID: 11400000, guid: 11bdd7f8d231ad246ae03b0bc6fc31f7, type: 2}
   levelSlotPrefab: {fileID: 1511391816714649554, guid: 6477d7e596913a3458cbec31b44fc646, type: 3}
   lockedLevelIcon: {fileID: 21300000, guid: 8ba03beae87d42346bb31bf18fa0ea1b, type: 3}
-  unlockedLevelIcon: {fileID: 21300000, guid: 62af8eb095b493d48bf3fa2cea059cae, type: 3}
+  unlockedLevelIcon: {fileID: 21300000, guid: 302e1c13b218fbe44a2e63475bde0be3, type: 3}
   completedLevelIcon: {fileID: 21300000, guid: 06fc1a9662d339547975587e7cb8261b, type: 3}
 --- !u!1 &5840966633041717376
 GameObject:
