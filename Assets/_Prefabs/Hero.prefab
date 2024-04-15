@@ -39,7 +39,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025055966186210896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -559,6 +559,7 @@ MonoBehaviour:
   currentItemState: []
   weaponRenderer: {fileID: 77763148415537819}
   activeWeaponSlot: {fileID: 0}
+  animator: {fileID: 5096398601572271098}
 --- !u!114 &1771428595641021206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimBox: {fileID: 8851144633074066452}
   baseDamage: 1
-  baseReachDistance: 2
+  baseReachDistance: 1
   baseAttackCooldown: 0.3
   enemyLayerMask:
     serializedVersion: 2
@@ -625,6 +626,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   ultimateDamageBoost: 2
   weaponPosition: {fileID: 4389089768468326650}
+  animator: {fileID: 5096398601572271098}
 --- !u!1 &5966213023158938362
 GameObject:
   m_ObjectHideFlags: 0

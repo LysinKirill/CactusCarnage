@@ -15,6 +15,7 @@ namespace Core.Controllers
         [SerializeField] private List<ItemParameter> currentItemState;
         [SerializeField] private SpriteRenderer weaponRenderer;
         [SerializeField] private GameObject activeWeaponSlot;
+        public Animator animator;
         public WeaponAsset CurrentWeapon
         {
             get { return weapon; }
@@ -25,7 +26,30 @@ namespace Core.Controllers
             UpdateActiveWeaponSlot();
         }
 
-        
+        private void FixedUpdate()
+        {
+            if (weapon == null)
+            {
+                animator.SetBool("HandEquiped", true);
+                animator.SetBool("MacheteEquiped", false);
+                animator.SetBool("PistolEquiped", false);
+            } 
+            else switch (weapon.name)
+            {
+                case "Machete":
+                    animator.SetBool("HandEquiped", false);
+                    animator.SetBool("MacheteEquiped", true);
+                    animator.SetBool("PistolEquiped", false);
+                    break;
+                case "Pistol":
+                    animator.SetBool("HandEquiped", false);
+                    animator.SetBool("MacheteEquiped", false);
+                    animator.SetBool("PistolEquiped", true);
+                    break;
+            }
+        }
+
+
         public void SetWeapon(WeaponAsset weaponItemAsset, List<ItemParameter> itemState)
         {
             if (weapon != null)

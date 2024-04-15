@@ -23,7 +23,8 @@ namespace Core.Controllers
         private WeaponController _weaponController;
         private bool _rangedAttackReady;
         private Coroutine _preparationCoroutine;
-
+        public Animator animator;
+        
         private float UltimateMultiplier => _playerState.IsUltimateActive ? ultimateDamageBoost : 1;
         
         private void Awake()
@@ -102,6 +103,7 @@ namespace Core.Controllers
 
         private void Attack()
         {
+            animator.SetTrigger("Attacking");
             var currentWeapon = _weaponController.CurrentWeapon;
 
             if (currentWeapon == null)
@@ -174,7 +176,6 @@ namespace Core.Controllers
                     enemyHealth.TakeDamage(baseDamage * UltimateMultiplier);
                     _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
                 }
-
             StartCoroutine(AttackCooldown(baseAttackCooldown));
         }
 
