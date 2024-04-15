@@ -18,10 +18,10 @@ MonoBehaviour:
   <Sprite>k__BackingField: {fileID: 21300000, guid: dc759ee5a02db0d4f85f33365b3f6da6, type: 3}
   <Description>k__BackingField: "\u041E\u0440\u0443\u0436\u0438\u0435 \u0431\u043B\u0438\u0436\u043D\u0435\u0433\u043E
     \u0431\u043E\u044F\n\u0423\u0440\u043E\u043D: 2\n\u0420\u0430\u0434\u0438\u0443\u0441:
-    4\n\u041F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430: 0.7"
+    3\n\u041F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430: 0.7"
   <DefaultParameterList>k__BackingField: []
   <ActionSfx>k__BackingField: {fileID: 8300000, guid: ca1ce2d1f76bad34ba3817524dceb71e, type: 3}
   <AttackDelay>k__BackingField: 0.7
-  <AttackRange>k__BackingField: 4
+  <AttackRange>k__BackingField: 2
   <Damage>k__BackingField: 2
   <ImpactProperties>k__BackingField: {fileID: 11400000, guid: 7a474d585b0e8a64ab9d5c86b28f8dd0, type: 2}

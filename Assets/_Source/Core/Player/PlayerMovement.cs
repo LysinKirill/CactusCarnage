@@ -1,4 +1,5 @@
 using System;
+using Core.Controllers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,7 +14,7 @@ namespace Core.Player
         [SerializeField] private BoxCollider2D groundCheckCollider;
         [SerializeField] private BoxCollider2D wallCheckCollider;
         [SerializeField] private float ultimateSpeedBoost = 1f;
-        
+
         private float UltimateMultiplier => _playerState.IsUltimateActive ? ultimateSpeedBoost : 1f;
         
         private float _horizontal;
@@ -57,7 +58,6 @@ namespace Core.Player
                 Flip();
             
             animator.SetFloat("HorizontalMove", Math.Abs(_body.velocity.x));
-
             animator.SetBool("Jumping", !_isGrounded);
         }
         
