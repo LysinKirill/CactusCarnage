@@ -11,7 +11,7 @@ namespace ScriptableObjects.Items
     {
         [field: SerializeField] public AudioClip ActionSfx { get; private set; }
         [field: SerializeField] public float AttackDelay { get; private set; }
-        public string ActionName => "Equip";
+        public string ActionName => "Выбрать";
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {
             WeaponController weaponController = character.GetComponent<WeaponController>();

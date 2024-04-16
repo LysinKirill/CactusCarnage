@@ -14,22 +14,37 @@ namespace Core.Controllers
         [SerializeField] private List<StorylineTrigger> storylineTriggers;
         
         private static readonly HashSet<string> ShownStoryParts = new HashSet<string>();
+
+        private Queue<StoryInsertionAsset> _queue = new Queue<StoryInsertionAsset>();
         private GameObject _activeStoryPanel;
 
 
         private void Awake()
         {
             foreach (var storyTrigger in storylineTriggers)
-                storyTrigger.OnTriggerActivated += OpenStoryInsertion;
+                storyTrigger.OnTriggerActivated += EnqueueStoryInsertion;
+        }
+
+        private void EnqueueStoryInsertion(StoryInsertionAsset storyInsertionAsset)
+        {
+            if(_activeStoryPanel is null)
+            {
+                OpenStoryInsertion(storyInsertionAsset);
+                return;
+            }
+            
+            _queue.Enqueue(storyInsertionAsset);
         }
 
         public void OpenStoryInsertion(StoryInsertionAsset storyInsertion)
         {
             if (!storyInsertion.IsRepeatable && ShownStoryParts.Contains(storyInsertion.Name))
+            {
+                OpenNextStory();
                 return;
-            
+            }
+
             ShownStoryParts.Add(storyInsertion.Name);
-            
             
             _activeStoryPanel = Instantiate(storyInsertion.storyPanelPrefab, Vector3.zero, Quaternion.identity);
             _activeStoryPanel.transform.SetParent(canvas.transform, false);
@@ -38,11 +53,23 @@ namespace Core.Controllers
             text.SetText(storyInsertion.Text);
             StartCoroutine(FadeOut(storyInsertion.FadeOutDuration));
         }
+
+        private void OpenNextStory()
+        {
+            if (_queue.Count == 0)
+                return;
+            OpenStoryInsertion(_queue.Dequeue());
+        }
         
         private IEnumerator FadeOut(float duration)
         {
             if (!_activeStoryPanel.TryGetComponent(out Image panelImage))
+            {
+                Destroy(_activeStoryPanel);
+                _activeStoryPanel = null;
+                OpenNextStory();
                 yield break;
+            }
 
             var text = _activeStoryPanel.GetComponentInChildren<TMP_Text>();
             
@@ -66,6 +93,8 @@ namespace Core.Controllers
             
             Destroy(_activeStoryPanel);
             _activeStoryPanel = null;
+            
+            OpenNextStory();
         }
     }
 }

@@ -128,7 +128,7 @@ namespace Core.Controllers
             var itemAsset = inventoryItem.item;
             var description = PrepareDescription(inventoryItem);
             
-            inventoryPanel.UpdateItemView(index, itemAsset.Sprite, itemAsset.name, description);
+            inventoryPanel.UpdateItemView(index, itemAsset.Sprite, itemAsset.Name, description);
         }
 
         private string PrepareDescription(InventoryItemModel inventoryItem)

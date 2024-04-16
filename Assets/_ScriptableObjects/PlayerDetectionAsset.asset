@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerDetectionAsset
   m_EditorClassIdentifier: 
   <LineOfSightRequired>k__BackingField: 1
-  <DetectionRadius>k__BackingField: 10
+  <DetectionRadius>k__BackingField: 4
