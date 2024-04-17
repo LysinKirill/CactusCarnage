@@ -56,7 +56,7 @@ namespace Core.Controllers
         {
             foreach (var levelScene in levelPack.levels)
             {
-                string levelName = levelScene.name;
+                string levelName = levelScene.SceneName;
                 if (!PlayerPrefs.HasKey(levelName))
                 {
                     PlayerPrefs.SetInt(levelName, (int)LevelStatus.Locked);
@@ -85,8 +85,8 @@ namespace Core.Controllers
         {
             levelPack.levels.ForEach(level =>
             {
-                ChangeLevelStatus(level.name, LevelStatus.Locked);
-                PlayerPrefs.DeleteKey(level.name);
+                ChangeLevelStatus(level.SceneName, LevelStatus.Locked);
+                PlayerPrefs.DeleteKey(level.SceneName);
             });
             PlayerPrefs.Save();
             UpdateUnlockedLevels();

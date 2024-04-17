@@ -8,12 +8,19 @@ namespace Game
 {
     public class Scenes : MonoBehaviour
     {
-        [SerializeField] private SceneAsset mainMenuScene;
+        [SerializeField] private SceneField mainMenuScene;
         
 
-        public static void ChangeScene(SceneAsset scene)
+        public static void ChangeScene(SceneField scene)
         {
-            SceneManager.LoadScene(scene.name);
+            SceneManager.LoadScene(scene.SceneName);
+        }
+        
+
+        public void ReloadActiveScene()
+        {
+            var sceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(sceneName);
         }
 
         //public void LoadLevel(SceneAsset levelSceneAsset) => ChangeScene(levelSceneAsset);

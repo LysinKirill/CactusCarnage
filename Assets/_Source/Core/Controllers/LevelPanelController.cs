@@ -26,11 +26,11 @@ namespace Core.Controllers
         {
             for (int levelId = 0; levelId < levelPack.levels.Count; levelId++)
             {
-                SceneAsset levelScene = levelPack.levels[levelId];
+                SceneField levelScene = levelPack.levels[levelId];
                 var levelSlot = Instantiate(levelSlotPrefab, Vector3.zero, Quaternion.identity);
                 levelSlot.transform.SetParent(gameObject.transform);
                 levelSlot.transform.localScale = Vector3.one;
-                _levelSlots.Add((levelScene.name, levelSlot));
+                _levelSlots.Add((levelScene.SceneName, levelSlot));
 
                 var button = levelSlot.GetComponent<Button>();
                 if (button is null)

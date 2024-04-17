@@ -6016,7 +6016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390ca5f2707a21f498988777b345f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuScene: {fileID: 0}
+  mainMenuScene:
+    _sceneAsset: {fileID: 102900000, guid: b1dfe83234a3b0d45b72c8ddce360092, type: 3}
+    _sceneName: Menu
 --- !u!4 &1838100451
 Transform:
   m_ObjectHideFlags: 0
