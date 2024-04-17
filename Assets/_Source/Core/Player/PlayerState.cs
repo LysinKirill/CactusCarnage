@@ -16,12 +16,14 @@ namespace Core.Player
         
         [field: SerializeField] public int MaximumHealth { get; private set; }
         [field: SerializeField] public float UltimateDuration { get; private set; } = 1f;
-
+        
         public bool IsUltimateActive { get; private set; } = false;
         public bool IsUltimateReady
         {
             get { return _ultimateProgress >= 0; }
         }
+        
+        public bool IsStunned { get; private set; }
         
         private float _ultimateProgress;
         
@@ -65,6 +67,8 @@ namespace Core.Player
             ultimateSlider.value = _ultimateProgress;
         }
 
+
+
         private void ClearFollowers()
         {
             OnUpdateHealth = null;
@@ -106,6 +110,17 @@ namespace Core.Player
             StartCoroutine(AnimateTakeDamage(takeDamageAnimationDuration));
             AddHealth(-damage);
             AddUltimateProgress(ultimateGainOnReceiveDamage);
+        }
+        public void StunPlayer(float stunDuration)
+        {
+            StartCoroutine(StartStun(stunDuration));
+        }
+
+        private IEnumerator StartStun(float stunDuration)
+        {
+            IsStunned = true;
+            yield return new WaitForSecondsRealtime(stunDuration);
+            IsStunned = false;
         }
 
         private IEnumerator AnimateTakeDamage(float duration)
