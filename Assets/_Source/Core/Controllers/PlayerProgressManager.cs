@@ -1,8 +1,8 @@
-﻿using ScriptableObjects.Scenes;
+﻿using Game;
+using ScriptableObjects.Scenes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
 namespace Core.Controllers
@@ -10,7 +10,7 @@ namespace Core.Controllers
     public class PlayerProgressManager : MonoBehaviour
     {
         [SerializeField] private LevelPackAsset levelPack;
-        [SerializeField] private SceneAsset startLevel;
+        [SerializeField] private SceneField startLevel;
 
         private static PlayerProgressManager _instance;
 
@@ -19,8 +19,6 @@ namespace Core.Controllers
 
         public List<(string LevelName, LevelStatus Status)> Levels { get; private set; } = new List<(string, LevelStatus)>();
         
-        //public Dictionary<string, LevelStatus> LevelStatusMap { get; private set; }
-        //    = new Dictionary<string, LevelStatus>();
 
         public event Action<string, LevelStatus> OnLevelStatusChanged;
 
@@ -39,7 +37,6 @@ namespace Core.Controllers
         private void Awake()
         {
             _instance = this;
-            //DontDestroyOnLoad(gameObject);
             LoadProgress();
         }
 
@@ -56,7 +53,7 @@ namespace Core.Controllers
         {
             foreach (var levelScene in levelPack.levels)
             {
-                string levelName = levelScene.name;
+                string levelName = levelScene.SceneName;
                 if (!PlayerPrefs.HasKey(levelName))
                 {
                     PlayerPrefs.SetInt(levelName, (int)LevelStatus.Locked);
@@ -85,8 +82,8 @@ namespace Core.Controllers
         {
             levelPack.levels.ForEach(level =>
             {
-                ChangeLevelStatus(level.name, LevelStatus.Locked);
-                PlayerPrefs.DeleteKey(level.name);
+                ChangeLevelStatus(level.SceneName, LevelStatus.Locked);
+                PlayerPrefs.DeleteKey(level.SceneName);
             });
             PlayerPrefs.Save();
             UpdateUnlockedLevels();

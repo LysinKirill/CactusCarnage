@@ -51,6 +51,9 @@ namespace Core.Player
                 _body.velocity = velocity;
             }
 
+            if (_playerState.IsStunned)
+                return;
+            
             if (_horizontal != 0 && (!_isTouchingWall || _isGrounded))
                 _body.velocity = new Vector2(_horizontal * walkSpeed * UltimateMultiplier, _body.velocity.y);
             

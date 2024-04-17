@@ -533,7 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390ca5f2707a21f498988777b345f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuScene: {fileID: 102900000, guid: b1dfe83234a3b0d45b72c8ddce360092, type: 3}
+  mainMenuScene:
+    _sceneAsset: {fileID: 102900000, guid: b1dfe83234a3b0d45b72c8ddce360092, type: 3}
+    _sceneName: Menu
 --- !u!4 &116928898
 Transform:
   m_ObjectHideFlags: 0
@@ -27159,7 +27161,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.729961, y: -11.468033, z: -10}
+  m_LocalPosition: {x: 8.726525, y: -11.468029, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29169,7 +29171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -29177,7 +29179,7 @@ PrefabInstance:
       objectReference: {fileID: 116928897}
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: ReloadActiveScene
       objectReference: {fileID: 0}
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -29186,10 +29188,10 @@ PrefabInstance:
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 102900000, guid: 107e909317bea3a418a5cc8b07106ed5, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4960005346245053893, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEditor.SceneAsset, UnityEditor.CoreModule
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5594940396181045586, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: player

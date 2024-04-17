@@ -39,7 +39,7 @@ namespace Core.Controllers
 
         private void CheckLooseCondition(int health)
         {
-            if (health != 0)
+            if (health > 0)
                 return;
             foreach (Transform child in canvas.transform)
             {
