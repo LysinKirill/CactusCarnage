@@ -23,7 +23,7 @@ namespace Core.Enemies.PatrolCactus
             _body = GetComponent<Rigidbody2D>();
             _destination = pointA.transform;
 
-            if (TryGetComponent(out EnemyHealth health))
+            if (TryGetComponent(out EnemyState health))
                 health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
         }
 

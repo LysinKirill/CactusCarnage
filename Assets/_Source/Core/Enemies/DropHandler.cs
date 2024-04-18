@@ -15,7 +15,7 @@ namespace Core.Enemies
 
         private void Awake()
         {
-            if (!TryGetComponent(out EnemyHealth health))
+            if (!TryGetComponent(out EnemyState health))
                 return;
 
             health.OnDeath += AttemptToGenerateLoot;

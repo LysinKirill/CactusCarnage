@@ -18,6 +18,7 @@ namespace Core.Controllers
         [SerializeField] private GameObject inventory;
         [SerializeField] private float ultimateDamageBoost = 1f;
         [SerializeField] private Transform weaponPosition;
+        [SerializeField] private ImpactPropertiesAsset baseImpactProperties;
         
         private PlayerState _playerState;
         private bool _canAttack = true;
@@ -155,7 +156,7 @@ namespace Core.Controllers
         {
             if (IsEnemyInAttackBox(weapon.AttackRange, out GameObject enemy))
             {
-                if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
+                if(enemy.TryGetComponent(out EnemyState enemyHealth))
                 {
                     enemyHealth.TakeDamage(weapon.Damage * UltimateMultiplier);
                     _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
@@ -163,8 +164,8 @@ namespace Core.Controllers
 
                 if (enemy.TryGetComponent(out Collider2D enemyCollider))
                 {
-                    ApplyKnockback(enemyCollider, weapon);
-                    ApplyUpwardForce(enemyCollider, weapon);
+                    ApplyKnockback(enemyCollider, weapon.ImpactProperties.KnockbackStrength);
+                    ApplyUpwardForce(enemyCollider, weapon.ImpactProperties.UpwardForce);
                 }
             }
 
@@ -175,11 +176,20 @@ namespace Core.Controllers
         private void BareHandedAttack()
         {
             if (IsEnemyInAttackBox(baseReachDistance, out GameObject enemy))
-                if(enemy.TryGetComponent(out EnemyHealth enemyHealth))
+            {
+                if(enemy.TryGetComponent(out EnemyState enemyHealth))
                 {
                     enemyHealth.TakeDamage(baseDamage * UltimateMultiplier);
                     _playerState.AddUltimateProgress(_playerState.UltimateGainOnDealDamage);
                 }
+                
+                if (enemy.TryGetComponent(out Collider2D enemyCollider))
+                {
+                    ApplyKnockback(enemyCollider, baseImpactProperties.KnockbackStrength);
+                    ApplyUpwardForce(enemyCollider, baseImpactProperties.UpwardForce);
+                }
+            }
+
             StartCoroutine(AttackCooldown(baseAttackCooldown));
         }
 
@@ -187,15 +197,16 @@ namespace Core.Controllers
         {
             enemy = null;
             Vector3 direction = transform.localScale.x > 0 ? Vector3.right : Vector3.left;
+            
             var center = transform.position + direction * attackBoxSize / 2f;
             var attackBox = new Vector3(attackBoxSize, transform.localScale.y, attackBoxSize);
             
             RaycastHit2D[] hits =
-                Physics2D.BoxCastAll(center, attackBox, 0f, Vector2.zero, 0f, enemyLayerMask);
+                Physics2D.BoxCastAll(center, attackBox, 0f, direction, 0f, enemyLayerMask);
             
             foreach (var hit in hits)
             {
-                if (hit.collider.gameObject.TryGetComponent(out EnemyHealth _))
+                if (hit.collider.gameObject.TryGetComponent(out EnemyState _))
                 {
                     enemy = hit.collider.gameObject;
                     return true;
@@ -211,8 +222,12 @@ namespace Core.Controllers
                 return;
             var weapon = _weaponController.CurrentWeapon;
             if (weapon == null)
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawRay(transform.position, Vector3.right * 0.5f);
                 return;
-            
+            }
+
             Vector3 direction = transform.localScale.x > 0 ? Vector3.right : Vector3.left;
             if(weapon is MeleeWeaponAsset meleeWeapon)
             {
@@ -225,7 +240,7 @@ namespace Core.Controllers
         }
         
         
-        private void ApplyKnockback(Collider2D enemyCollider, MeleeWeaponAsset meleeWeapon)
+        private void ApplyKnockback(Collider2D enemyCollider, float knockbackStrength)
         {
             if (!enemyCollider.TryGetComponent(out Rigidbody2D enemyBody))
                 return;
@@ -233,7 +248,7 @@ namespace Core.Controllers
             var enemyCenterPos = enemyCollider.bounds.center;
 
             var knockbackDirection = (enemyCenterPos - weaponPosition.position).normalized;
-            var knockbackStrength = meleeWeapon.ImpactProperties.KnockbackStrength;
+            //var knockbackStrength = meleeWeapon.ImpactProperties.KnockbackStrength;
             var force = knockbackDirection * knockbackStrength;
             var vector2 = enemyBody.velocity;
             vector2.x = 0;
@@ -241,12 +256,12 @@ namespace Core.Controllers
             enemyBody.velocity += (Vector2)(force / enemyBody.mass);
         }
 
-        private void ApplyUpwardForce(Collider2D enemyCollider, MeleeWeaponAsset meleeWeapon)
+        private void ApplyUpwardForce(Collider2D enemyCollider, float upwardForceValue)
         {
             if (!enemyCollider.TryGetComponent(out Rigidbody2D enemyBody))
                 return;
             
-            var upwardForce = meleeWeapon.ImpactProperties.UpwardForce * Vector2.up;
+            var upwardForce = upwardForceValue * Vector2.up;
             enemyBody.velocity += upwardForce / enemyBody.mass;
         }
 
