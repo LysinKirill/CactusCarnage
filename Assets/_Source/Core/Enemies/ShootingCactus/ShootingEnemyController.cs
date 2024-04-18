@@ -22,7 +22,7 @@ namespace Core.Enemies.ShootingCactus
 
         private void Awake()
         {
-            if (TryGetComponent(out EnemyHealth health))
+            if (TryGetComponent(out EnemyState health))
                 health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
         }
 

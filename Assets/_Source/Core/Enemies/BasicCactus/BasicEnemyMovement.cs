@@ -32,8 +32,9 @@ namespace Core.Enemies.BasicCactus
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
-            if (TryGetComponent(out EnemyHealth health))
+            if (TryGetComponent(out EnemyState health))
                 health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
+                //health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
 
         }
         

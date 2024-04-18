@@ -20,7 +20,7 @@ namespace Core.Player
         public bool IsUltimateActive { get; private set; } = false;
         public bool IsUltimateReady
         {
-            get { return _ultimateProgress >= 0; }
+            get { return Mathf.Approximately(_ultimateProgress, 1f); }
         }
         
         public bool IsStunned { get; private set; }

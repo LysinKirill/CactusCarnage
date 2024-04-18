@@ -617,8 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimBox: {fileID: 8851144633074066452}
-  baseDamage: 1
-  baseReachDistance: 1
+  baseDamage: 0.1
+  baseReachDistance: 0.5
   baseAttackCooldown: 0.3
   enemyLayerMask:
     serializedVersion: 2
@@ -626,6 +626,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   ultimateDamageBoost: 2
   weaponPosition: {fileID: 4389089768468326650}
+  baseImpactProperties: {fileID: 11400000, guid: 7140ff07411f3e841ab40c02dfdba9a1, type: 2}
   animator: {fileID: 5096398601572271098}
 --- !u!1 &5966213023158938362
 GameObject:

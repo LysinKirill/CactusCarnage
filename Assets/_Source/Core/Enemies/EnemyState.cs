@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Core.Enemies
 {
-    public class EnemyHealth : MonoBehaviour
+    public class EnemyState : MonoBehaviour
     {
         [field: SerializeField] public float MaxHealth { get; private set; }
         [SerializeField] private SpriteRenderer healthBar;
@@ -12,7 +12,6 @@ namespace Core.Enemies
 
         private SpriteRenderer _spriteRenderer;
         public float Health { get; private set; }
-
         public event Action<GameObject> OnDeath;
         public event Action<float> OnTakeDamage;
         
@@ -50,6 +49,7 @@ namespace Core.Enemies
             }
             StartCoroutine(AnimateTakeDamage(takeDamageAnimationDuration));
         }
+        
 
         public bool IsDead() => Health <= 0;
         

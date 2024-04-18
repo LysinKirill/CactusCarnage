@@ -24,7 +24,7 @@ namespace Core
             {
                 Destroy(gameObject);
             }
-            if (other.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
+            if (other.gameObject.TryGetComponent(out EnemyState enemyHealth))
             {
                 enemyHealth.TakeDamage(Damage);
                 ApplyKnockback(other);
