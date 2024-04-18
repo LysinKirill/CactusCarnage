@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0393328e904d91b2ce4ca406607482, type: 3}
   m_Name: BaseImpactProperties
   m_EditorClassIdentifier: 
-  <KnockbackStrength>k__BackingField: 1.5
+  <KnockbackStrength>k__BackingField: 2
   <UpwardForce>k__BackingField: 2

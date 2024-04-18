@@ -22,9 +22,10 @@ namespace Core.Player
 
         private bool _isGrounded;
         private bool _isTouchingWall;
+
+
         
         private Rigidbody2D _body;
-        private PlayerInputActions _playerInputActions;
         private PlayerState _playerState;
 
         private const float DragCoefficient = 0.1f;
@@ -34,8 +35,7 @@ namespace Core.Player
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
-            _playerInputActions = new PlayerInputActions();
-            _playerInputActions.Player.Enable();
+            
             _playerState = GetComponent<PlayerState>();
         }
         
