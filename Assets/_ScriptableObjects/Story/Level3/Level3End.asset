@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85554d23d8fc4767af3c59dc9aca6131, type: 3}
   m_Name: Level3End
   m_EditorClassIdentifier: 
-  <IsRepeatable>k__BackingField: 1
+  <IsRepeatable>k__BackingField: 0
   <Name>k__BackingField: Level3End
   <storyPanelPrefab>k__BackingField: {fileID: 5293348824524949570, guid: 36684e4d51805a54fb4fba4d257acb1f, type: 3}
   <FadeOutDuration>k__BackingField: 5
