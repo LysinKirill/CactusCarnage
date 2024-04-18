@@ -1,3 +1,4 @@
+using System;
 using Core.Enemies;
 using Core.Player;
 using ScriptableObjects.Items;
@@ -51,7 +52,10 @@ namespace Core.Controllers
 
             if(Input.GetMouseButtonUp((int)MouseButton.RightMouse))
                 HandleRightMouseButtonUp();
+        }
 
+        private void LateUpdate()
+        {
             if (aimBox.activeInHierarchy)
                 AimBoxFollowMouse();
         }

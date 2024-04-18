@@ -1,3 +1,4 @@
+using System;
 using ScriptableObjects.Settings;
 using TMPro;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Settings
         public Slider sfxVolumeSlider;
         public AudioMixer mainAudioMixer;
 
-        [SerializeField] private SettingsAsset _defaultSettings;
+        [SerializeField] private SettingsAsset defaultSettings;
         
         private const string QualityLevelKey = "QualitySettins";
         private const string MasterVolumeKey = "MasterVolume";
@@ -28,6 +29,10 @@ namespace Settings
             ChangeMusicVolume();
             ChangeGraphicsQuality();
             ChangeSfxVolume();
+        }
+
+        private void Awake()
+        {
             gameObject.SetActive(false);
         }
 
@@ -41,10 +46,10 @@ namespace Settings
 
         private void InitPlayerPrefs()
         {
-            if(!PlayerPrefs.HasKey(QualityLevelKey)) PlayerPrefs.SetInt(QualityLevelKey, (int)_defaultSettings.graphicsLevel);
-            if(!PlayerPrefs.HasKey(MasterVolumeKey)) PlayerPrefs.SetFloat(MasterVolumeKey, _defaultSettings.masterVolume);
-            if(!PlayerPrefs.HasKey(MusicVolumeKey)) PlayerPrefs.SetFloat(MusicVolumeKey, _defaultSettings.musicVolume);
-            if(!PlayerPrefs.HasKey(SfxVolumeKey)) PlayerPrefs.SetFloat(SfxVolumeKey, _defaultSettings.sfxVolume);
+            if(!PlayerPrefs.HasKey(QualityLevelKey)) PlayerPrefs.SetInt(QualityLevelKey, (int)defaultSettings.graphicsLevel);
+            if(!PlayerPrefs.HasKey(MasterVolumeKey)) PlayerPrefs.SetFloat(MasterVolumeKey, defaultSettings.masterVolume);
+            if(!PlayerPrefs.HasKey(MusicVolumeKey)) PlayerPrefs.SetFloat(MusicVolumeKey, defaultSettings.musicVolume);
+            if(!PlayerPrefs.HasKey(SfxVolumeKey)) PlayerPrefs.SetFloat(SfxVolumeKey, defaultSettings.sfxVolume);
             PlayerPrefs.Save();
         }
 

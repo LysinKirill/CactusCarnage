@@ -23,12 +23,12 @@ namespace Core.Controllers
         {
             defeatPanel.SetActive(false);
             UpdateBrightness(_brightnessValue);
+            Subscribe();
         }
         private void Awake()
         {
             _playerHealth = player.GetComponent<PlayerState>();
             SetUpLevelVisuals();
-            Subscribe();
         }
 
         private void Subscribe()
