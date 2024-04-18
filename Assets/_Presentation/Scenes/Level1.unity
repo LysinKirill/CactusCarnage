@@ -880,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 560324311}
     - target: {fileID: 2500301808433338760, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4522234228098572213, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: inventoryPanel
@@ -940,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5966213023158938362, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6768582414005785061, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: m_Size.x
@@ -13492,7 +13492,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.732145, y: -2.5025063, z: -10}
+  m_LocalPosition: {x: 8.726353, y: -2.5024853, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15155,7 +15155,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.005928874, y: 0.0059437156, z: 0}
   m_MaxChunkCount: 16
