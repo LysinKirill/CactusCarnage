@@ -1,4 +1,5 @@
 using Core.Enemies;
+using Core.Player;
 using ScriptableObjects.Items;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,22 +11,28 @@ namespace Core
         [SerializeField] private LayerMask enemyLayerMask;
         [SerializeField] private LayerMask ignoreCollisionMask;
         [SerializeField] private ImpactPropertiesAsset impactProperties;
-        private float _damage = 1;
+        public float Damage { get; private set; } = 1;
 
-        public void SetDamage(float damage) => _damage = damage;
+        public void SetDamage(float damage) => Damage = damage;
         private void OnTriggerEnter2D(Collider2D other)
         {
             if ((1 << other.gameObject.layer & ignoreCollisionMask) != 0)
                 return;
+            
+            
             if ((1 << other.gameObject.layer & enemyLayerMask) == 0)
             {
                 Destroy(gameObject);
             }
-            else if (other.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
+            if (other.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
             {
-                enemyHealth.TakeDamage(_damage);
+                enemyHealth.TakeDamage(Damage);
                 ApplyKnockback(other);
                 ApplyUpwardForce(other);
+                Destroy(gameObject);
+            } else if (other.gameObject.TryGetComponent(out PlayerState playerState))
+            {
+                playerState.TakeDamage((int)Damage);
                 Destroy(gameObject);
             }
         }
