@@ -29,10 +29,6 @@ namespace Settings
             ChangeMusicVolume();
             ChangeGraphicsQuality();
             ChangeSfxVolume();
-        }
-
-        private void Awake()
-        {
             gameObject.SetActive(false);
         }
 

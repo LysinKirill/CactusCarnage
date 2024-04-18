@@ -25,3 +25,5 @@ MonoBehaviour:
     _sceneName: Level5
   - _sceneAsset: {fileID: 102900000, guid: d0a31427d77d50941942de2a4eaed579, type: 3}
     _sceneName: Level6
+  - _sceneAsset: {fileID: 102900000, guid: d713528ab8d784648ad8d519de2d6de1, type: 3}
+    _sceneName: Level7
