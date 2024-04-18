@@ -22,7 +22,9 @@ namespace Core.Controllers
         private void Awake()
         {
             foreach (var storyTrigger in storylineTriggers)
+            {
                 storyTrigger.OnTriggerActivated += EnqueueStoryInsertion;
+            }
         }
 
         private void EnqueueStoryInsertion(StoryInsertionAsset storyInsertionAsset)
@@ -47,6 +49,7 @@ namespace Core.Controllers
             ShownStoryParts.Add(storyInsertion.Name);
             
             _activeStoryPanel = Instantiate(storyInsertion.storyPanelPrefab, Vector3.zero, Quaternion.identity);
+            _activeStoryPanel.GetComponentInChildren<Button>().onClick.AddListener(CloseActiveStory);
             _activeStoryPanel.transform.SetParent(canvas.transform, false);
             
             var text = _activeStoryPanel.GetComponentInChildren<TMP_Text>();
@@ -59,6 +62,16 @@ namespace Core.Controllers
             if (_queue.Count == 0)
                 return;
             OpenStoryInsertion(_queue.Dequeue());
+        }
+
+        public void CloseActiveStory()
+        {
+            StopAllCoroutines();
+            if (_activeStoryPanel is null)
+                return;
+            Destroy(_activeStoryPanel);
+            _activeStoryPanel = null;
+            OpenNextStory();
         }
         
         private IEnumerator FadeOut(float duration)

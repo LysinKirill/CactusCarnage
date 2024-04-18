@@ -22600,7 +22600,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.733383, y: -2.4783545, z: -10}
+  m_LocalPosition: {x: 8.736819, y: -2.4783592, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24446,6 +24446,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1304152284036309765, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: defaultSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
+    - target: {fileID: 1304152284036309765, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: _defaultSettings
       value: 
       objectReference: {fileID: 11400000, guid: a5c5a223bb641d145a85e0361b170300, type: 2}
@@ -24694,6 +24698,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 116928897}
     - target: {fileID: 7116973036118005174, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130600715901936012, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 116928897}
+    - target: {fileID: 7130600715901936012, guid: 415182fb30d18d34cbf6998e566328b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMainMenu
       objectReference: {fileID: 0}

@@ -1,4 +1,5 @@
 using System;
+using ScriptableObjects.Settings;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +10,11 @@ namespace Settings
         private const string BrightnessKey = "Brightness";
         private Slider _brightnessSlider;
         public event Action<float> OnBrightnessChanged; 
+        [SerializeField] private SettingsAsset defaultSettings;
 
         private void Awake()
         {
+            if(!PlayerPrefs.HasKey(BrightnessKey)) PlayerPrefs.SetFloat(BrightnessKey, defaultSettings.brightnessLevel);
             OnBrightnessChanged = null;
             if((_brightnessSlider = GetComponentInChildren<Slider>()) is not null)
             {
