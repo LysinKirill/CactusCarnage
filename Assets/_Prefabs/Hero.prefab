@@ -617,8 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimBox: {fileID: 8851144633074066452}
-  baseDamage: 0.1
-  baseReachDistance: 0.5
+  baseDamage: 1
+  baseReachDistance: 1
   baseAttackCooldown: 0.3
   enemyLayerMask:
     serializedVersion: 2
