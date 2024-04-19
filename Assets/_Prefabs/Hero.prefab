@@ -523,9 +523,25 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2b147b50-a036-45c9-9dcd-77731c941d1f
     m_ActionName: Arrows/Movement[/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2423784670248680754}
+        m_TargetAssemblyTypeName: Core.Player.PlayerMovement, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 585b403e-b0dc-4603-b68a-4d415e022fad
+    m_ActionName: Arrows/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: ba2ca5f6-0c22-4f0c-90ba-149032626975
+  m_DefaultActionMap: Wasd
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &4522234228098572213

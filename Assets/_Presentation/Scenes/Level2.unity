@@ -2804,22 +2804,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4329486311355163971, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: Arrows
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329486311355163971, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329486311355163971, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
-      value: a690a482-4da1-442c-9a3c-5802e0d54333
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329486311355163971, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
-      value: Player/New action
-      objectReference: {fileID: 0}
     - target: {fileID: 4522234228098572213, guid: 00a1ba8a63d974842825a2dd465e5f44, type: 3}
       propertyPath: inventoryPanel
       value: 
@@ -27250,7 +27234,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.724169, y: -11.468027, z: -10}
+  m_LocalPosition: {x: 8.726525, y: -11.468029, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
