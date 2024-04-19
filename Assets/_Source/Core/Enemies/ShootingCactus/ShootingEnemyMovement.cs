@@ -1,5 +1,4 @@
-﻿using ScriptableObjects.Enemies;
-using System.Collections;
+﻿using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = System.Random;
@@ -8,10 +7,8 @@ namespace Core.Enemies.ShootingCactus
 {
     public class ShootingEnemyMovement : MonoBehaviour
     {
-        //[SerializeField] private PlayerDetectionAsset playerDetection;
         [SerializeField] private BoxCollider2D checkGroundInFront;
         [SerializeField] private BoxCollider2D checkWallInFront;
-        //[SerializeField] private LayerMask obstacleLayerMask;
         [SerializeField] private float speed;
         [SerializeField] private float maxWanderDistance;
         [SerializeField] private GameObject player;
@@ -46,7 +43,6 @@ namespace Core.Enemies.ShootingCactus
         {
             if(_controller.IsStunned)
                 return;
-            
             
             if (transform.IsDestroyed() && _isResting)
                 return;

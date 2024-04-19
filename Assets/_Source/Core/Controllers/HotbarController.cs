@@ -1,5 +1,4 @@
 ﻿using ScriptableObjects.Items;
-using System;
 using System.Collections.Generic;
 using UI;
 using UnityEngine;
@@ -118,16 +117,13 @@ namespace Core.Controllers
             var inventoryItem = inventoryAsset.GetItemAt(index);
             if (inventoryItem.IsEmpty)
                 return;
-            
-            IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
-            if (destroyableItem != null)
+
+            if (inventoryItem.item is IDestroyableItem)
                 inventoryAsset.RemoveItem(index, 1);
-            
-            IItemAction itemAction = inventoryItem.item as IItemAction;
-            if (itemAction != null)
+
+            if (inventoryItem.item is IItemAction itemAction)
             {
                 itemAction.PerformAction(player, inventoryItem.itemState);
-                //audioSource.PlayOneShot(itemAction.ActionSfx);
                 if (inventoryAsset.GetItemAt(index).IsEmpty)
                 {
                     inventoryPanel.DeselectAll();

@@ -1,4 +1,3 @@
-using System;
 using Core.Enemies;
 using Core.Player;
 using ScriptableObjects.Items;
@@ -26,7 +25,8 @@ namespace Core.Controllers
         private bool _rangedAttackReady;
         private Coroutine _preparationCoroutine;
         public Animator animator;
-        
+        private static readonly int Attacking = Animator.StringToHash("Attacking");
+
         private float UltimateMultiplier => _playerState.IsUltimateActive ? ultimateDamageBoost : 1;
         
         private void Awake()
@@ -63,7 +63,7 @@ namespace Core.Controllers
 
         private void AimBoxFollowMouse()
         {
-            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseWorldPosition = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             Vector3 newAimBoxPosition = new Vector3(mouseWorldPosition.x, mouseWorldPosition.y, aimBox.transform.position.z);
             aimBox.transform.position = newAimBoxPosition;
         }
@@ -108,7 +108,7 @@ namespace Core.Controllers
 
         private void Attack()
         {
-            animator.SetTrigger("Attacking");
+            animator.SetTrigger(Attacking);
             var currentWeapon = _weaponController.CurrentWeapon;
 
             if (currentWeapon == null)
@@ -248,7 +248,6 @@ namespace Core.Controllers
             var enemyCenterPos = enemyCollider.bounds.center;
 
             var knockbackDirection = (enemyCenterPos - weaponPosition.position).normalized;
-            //var knockbackStrength = meleeWeapon.ImpactProperties.KnockbackStrength;
             var force = knockbackDirection * knockbackStrength;
             var vector2 = enemyBody.velocity;
             vector2.x = 0;
@@ -256,7 +255,7 @@ namespace Core.Controllers
             enemyBody.velocity += (Vector2)(force / enemyBody.mass);
         }
 
-        private void ApplyUpwardForce(Collider2D enemyCollider, float upwardForceValue)
+        private static void ApplyUpwardForce(Collider2D enemyCollider, float upwardForceValue)
         {
             if (!enemyCollider.TryGetComponent(out Rigidbody2D enemyBody))
                 return;
@@ -269,7 +268,6 @@ namespace Core.Controllers
         {
             _rangedAttackReady = false;
             yield return new WaitForSecondsRealtime(preparationTime);
-            // Play preparation animation
             _rangedAttackReady = true;
         }
 

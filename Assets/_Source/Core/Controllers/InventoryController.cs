@@ -80,13 +80,11 @@ namespace Core.Controllers
             var inventoryItem = inventoryData.GetItemAt(index);
             if (inventoryItem.IsEmpty)
                 return;
-            
-            IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
-            if (destroyableItem != null)
+
+            if (inventoryItem.item is IDestroyableItem)
                 inventoryData.RemoveItem(index, 1);
-            
-            IItemAction itemAction = inventoryItem.item as IItemAction;
-            if (itemAction != null)
+
+            if (inventoryItem.item is IItemAction itemAction)
             {
                 itemAction.PerformAction(gameObject, inventoryItem.itemState);
                 audioSource.PlayOneShot(itemAction.ActionSfx);

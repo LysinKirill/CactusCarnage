@@ -44,8 +44,7 @@ namespace Core.Enemies.RollingCactus
                 }
             }
         }
-
-
+        
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
