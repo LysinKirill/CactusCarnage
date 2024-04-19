@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a8559045f2404e9c5b7d1d56578502, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <StackSize>k__BackingField: 1
+  <Name>k__BackingField: "\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
+  <Sprite>k__BackingField: {fileID: 21300000, guid: f3ff43da98752cc47b97ce23820d70da, type: 3}
+  <Description>k__BackingField: "\u041E\u0440\u0443\u0436\u0438\u0435 \u0434\u0430\u043B\u044C\u043D\u0435\u0433\u043E
+    \u0431\u043E\u044F\n\u0423\u0440\u043E\u043D: 1\n\u0420\u0430\u0434\u0438\u0443\u0441:
+    \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u044B\u0439\n\u041F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430:
+    0.5"
+  <DefaultParameterList>k__BackingField: []
+  <ActionSfx>k__BackingField: {fileID: 8300000, guid: ca1ce2d1f76bad34ba3817524dceb71e, type: 3}
+  <AttackDelay>k__BackingField: 0.5
+  <PreparationTime>k__BackingField: 1
+  <ProjectileSpeed>k__BackingField: 30
+  <ProjectilePrefab>k__BackingField: {fileID: 2241763447062389922, guid: 00acb620a04f2874aac9d25ef91d3a24, type: 3}
+  <ProjectileDamage>k__BackingField: 1

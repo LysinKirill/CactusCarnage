@@ -1,5 +1,6 @@
-using ScriptableObjects;
+using ScriptableObjects.Items;
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {
@@ -8,6 +9,7 @@ namespace Model
     {
         public int quantity;
         public ItemAsset item;
+        public List<ItemParameter> itemState;
 
         public bool IsEmpty
         {
@@ -18,6 +20,7 @@ namespace Model
         {
             quantity = 0,
             item = null,
+            itemState = new List<ItemParameter>(),
         };
     }
 }

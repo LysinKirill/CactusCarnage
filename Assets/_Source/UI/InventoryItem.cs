@@ -1,6 +1,5 @@
 ﻿using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,9 +14,9 @@ namespace UI
         IDropHandler,
         IDragHandler
     {
-        [SerializeField] private Image image;
-        [SerializeField] private TMP_Text quantity;
-        [SerializeField] private Image frame;
+        [field: SerializeField] public Image Image { get; private set; }
+        [field: SerializeField] public TMP_Text Quantity { get; private set; }
+        [field: SerializeField] public Image Frame { get; private set; }
 
         public event Action<InventoryItem> OnItemClicked;
         public event Action<InventoryItem> OnItemDroppedOn;
@@ -30,33 +29,60 @@ namespace UI
 
         private void Awake()
         {
+            ClearFollowers();
             Reset();
             Deselect();
         }
 
-        public void Select()
+        public void HideImage()
         {
-            frame.enabled = true;
+            if (Image.IsDestroyed())
+                return;
+            Image.gameObject.SetActive(false);
         }
-        
+
+        public void ShowImage()
+        {
+            if (Image.IsDestroyed())
+                return;
+            Image.gameObject.SetActive(true);
+        }
+
+        private void ClearFollowers()
+        {
+            OnItemClicked = null;
+            OnItemBeginDrag = null;
+            OnItemEndDrag = null;
+            OnItemDroppedOn = null;
+            OnRightMouseBtnClick = null;
+        }
+
+        private void OnDestroy() => ClearFollowers();
+        public void Select() => Frame.enabled = true;
 
         public void Deselect()
         {
-            frame.enabled = false;
+            if(Frame.IsDestroyed())
+                return;
+            Frame.enabled = false;
         }
 
         public void Reset()
         {
-            image.gameObject.SetActive(false);
+            if(Image.IsDestroyed())
+                return;
+            Image.gameObject.SetActive(false);
             _isEmpty = true;
         }
 
         
         public void SetData(Sprite sprite, int itemQuantity = 1)
         {
-            image.gameObject.SetActive(true);
-            image.sprite = sprite;
-            quantity.text = itemQuantity.ToString();
+            if (Image.IsDestroyed())
+                return;
+            Image.gameObject.SetActive(true);
+            Image.sprite = sprite;
+            Quantity.text = itemQuantity.ToString();
             _isEmpty = false;
         }
 

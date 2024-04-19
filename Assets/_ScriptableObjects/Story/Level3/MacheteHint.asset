@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85554d23d8fc4767af3c59dc9aca6131, type: 3}
+  m_Name: MacheteHint
+  m_EditorClassIdentifier: 
+  <IsRepeatable>k__BackingField: 0
+  <Name>k__BackingField: MacheteHint
+  <storyPanelPrefab>k__BackingField: {fileID: 5293348824524949570, guid: 36684e4d51805a54fb4fba4d257acb1f, type: 3}
+  <FadeOutDuration>k__BackingField: 8
+  <Text>k__BackingField: "\u0422\u044B \u0442\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u043E
+    \u043D\u0430\u0448\u0435\u043B \u043D\u043E\u0432\u044B\u0439 \u0442\u0438\u043F
+    \u043E\u0440\u0443\u0436\u0438\u044F - \u041C\u0430\u0447\u0435\u0442\u0435.
+    \u041E\u0442\u043A\u0440\u043E\u0439 \u0438\u0432\u0435\u043D\u0442\u0430\u0440\u044C
+    (E). \u041F\u0440\u0438 \u0432\u044B\u0431\u043E\u0440\u0435 \u041C\u0430\u0447\u0435\u0442\u0435
+    (\u041F\u041A\u041C) \u0442\u044B \u0441\u0442\u0430\u043D\u0435\u0448\u044C
+    \u0441\u0438\u043B\u044C\u043D\u0435\u0435!"
