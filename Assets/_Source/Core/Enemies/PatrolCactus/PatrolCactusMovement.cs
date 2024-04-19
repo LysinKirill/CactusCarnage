@@ -71,52 +71,16 @@ namespace Core.Enemies.PatrolCactus
                 _destination = pointA.transform;
         }
         
-        // private void CheckGround()
-        // {
-        //     var bounds = groundCheck.bounds;
-        //     _isGrounded = Physics2D.OverlapAreaAll(bounds.min, bounds.max, obstacleLayerMask).Length > 0;
-        // }
-        
-        // private void CheckGround()
-        // {
-        //     Vector2 center = groundCheck.bounds.center; // Center of the groundCheck collider
-        //     Vector2 size = groundCheck.bounds.size; // Size of the groundCheck collider
-        //
-        //     float distance = 0.1f; // Distance to cast the box (adjust as needed)
-        //     Vector2 direction = Vector2.down; // Direction to cast the box (downward for ground check)
-        //
-        //     RaycastHit2D hit = Physics2D.BoxCast(center, size, 0f, direction, distance, obstacleLayerMask);
-        //
-        //     _isGrounded = hit.collider != null; // Check if the box cast hit any colliders
-        // }
-        
-        // private void CheckGround()
-        // {
-        //     Vector2 origin = groundCheck.bounds.center; // Start position of the raycast
-        //     float distance = 0.1f; // Distance to cast the ray (adjust as needed)
-        //     Vector2 direction = Vector2.down; // Direction to cast the ray (downward for ground check)
-        //
-        //     // Perform the raycast
-        //     RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance, obstacleLayerMask);
-        //
-        //     // Check if the raycast hit anything
-        //     _isGrounded = hit.collider != null;
-        // }
-        
         private void CheckGround()
         {
-            Vector2 originLeft = groundCheck.bounds.min; // Start position of the left raycast
-            Vector2 originRight = groundCheck.bounds.max; // Start position of the right raycast
-            float distance = 0.1f; // Distance to cast the ray (adjust as needed)
-            Vector2 direction = Vector2.down; // Direction to cast the ray (downward for ground check)
-
-            // Perform the left raycast
+            Vector2 originLeft = groundCheck.bounds.min;
+            Vector2 originRight = groundCheck.bounds.max;
+            float distance = 0.1f;
+            Vector2 direction = Vector2.down;
+            
             RaycastHit2D hitLeft = Physics2D.Raycast(originLeft, direction, distance, obstacleLayerMask);
-
-            // Perform the right raycast
             RaycastHit2D hitRight = Physics2D.Raycast(originRight, direction, distance, obstacleLayerMask);
-
-            // Check if both rays hit something
+            
             _isGrounded = hitLeft.collider != null && hitRight.collider != null;
         }
 
