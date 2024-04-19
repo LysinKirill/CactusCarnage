@@ -45,7 +45,6 @@ namespace Core.Enemies.PatrolCactus
             UpdateFacingDirection();
             var directionMultiplier = _destination.transform.position.x > transform.position.x ? 1 : -1;
             var velocity = _body.velocity;
-            //float y = velocity.y;
             float y = 0;
             velocity = Vector2.right * (speed * directionMultiplier);
             velocity = new Vector2(velocity.x, y);

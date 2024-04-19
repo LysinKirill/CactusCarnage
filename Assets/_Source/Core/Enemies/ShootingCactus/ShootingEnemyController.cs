@@ -1,5 +1,4 @@
 ﻿using ScriptableObjects.Enemies;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -86,7 +85,6 @@ namespace Core.Enemies.ShootingCactus
 
             return Vector2.Distance(startPosition, player.transform.position) >= playerDetection.DetectionRadius;
         }
-        
         
         private IEnumerator AttackCooldown(float delay)
         {

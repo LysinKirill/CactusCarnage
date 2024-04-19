@@ -4,9 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Core.Controllers
@@ -20,7 +18,7 @@ namespace Core.Controllers
         [SerializeField] private Sprite unlockedLevelIcon;
         [SerializeField] private Sprite completedLevelIcon;
         
-        private List<(string LevelName, GameObject Slot)> _levelSlots = new List<(string, GameObject)>();
+        private readonly List<(string LevelName, GameObject Slot)> _levelSlots = new List<(string, GameObject)>();
 
         private void Awake()
         {

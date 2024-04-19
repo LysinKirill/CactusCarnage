@@ -8,8 +8,6 @@ namespace Core.Player
     public class PlayerInputSettings : MonoBehaviour
     {
         private PlayerInput _playerInput;
-        //private const string InputSettingsKey = "InputSettings";
-        
         private const string WasdBindingKey = "Wasd";
         private const string ArrowsBindingKey = "Arrows";
 

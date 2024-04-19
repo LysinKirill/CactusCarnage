@@ -23,8 +23,6 @@ namespace Core.Enemies
 
         private void AttemptToGenerateLoot(GameObject enemy)
         {
-            //if (lootTable == null)
-            //    return;
             List<GameObject> prefabsToInstantiate = new List<GameObject>();
             foreach (var lootDescription in lootTable.lootDescriptions)
             {

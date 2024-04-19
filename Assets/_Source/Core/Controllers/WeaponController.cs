@@ -1,8 +1,6 @@
 ﻿using ScriptableObjects.Items;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Core.Controllers
@@ -16,6 +14,9 @@ namespace Core.Controllers
         [SerializeField] private SpriteRenderer weaponRenderer;
         [SerializeField] private GameObject activeWeaponSlot;
         public Animator animator;
+        private static readonly int HandEquiped = Animator.StringToHash("HandEquiped");
+        private static readonly int MacheteEquiped = Animator.StringToHash("MacheteEquiped");
+        private static readonly int PistolEquiped = Animator.StringToHash("PistolEquiped");
         public WeaponAsset CurrentWeapon
         {
             get { return weapon; }
@@ -30,21 +31,21 @@ namespace Core.Controllers
         {
             if (weapon == null)
             {
-                animator.SetBool("HandEquiped", true);
-                animator.SetBool("MacheteEquiped", false);
-                animator.SetBool("PistolEquiped", false);
+                animator.SetBool(HandEquiped, true);
+                animator.SetBool(MacheteEquiped, false);
+                animator.SetBool(PistolEquiped, false);
             } 
             else switch (weapon.name)
             {
                 case "Machete":
-                    animator.SetBool("HandEquiped", false);
-                    animator.SetBool("MacheteEquiped", true);
-                    animator.SetBool("PistolEquiped", false);
+                    animator.SetBool(HandEquiped, false);
+                    animator.SetBool(MacheteEquiped, true);
+                    animator.SetBool(PistolEquiped, false);
                     break;
                 case "Pistol":
-                    animator.SetBool("HandEquiped", false);
-                    animator.SetBool("MacheteEquiped", false);
-                    animator.SetBool("PistolEquiped", true);
+                    animator.SetBool(HandEquiped, false);
+                    animator.SetBool(MacheteEquiped, false);
+                    animator.SetBool(PistolEquiped, true);
                     break;
             }
         }

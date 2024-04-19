@@ -1,5 +1,4 @@
 ﻿using Core.Player;
-using System;
 using UnityEngine;
 
 namespace Core.Environment
@@ -9,8 +8,7 @@ namespace Core.Environment
         [SerializeField] private float bounceForce = 1f;
         [SerializeField] private LayerMask playerLayer;
         [SerializeField] private float stunDuration;
-
-        private BoxCollider2D _boxCollider;
+        
         private bool _isActive = true;
         
         private Vector2 BounceDirection
@@ -24,11 +22,7 @@ namespace Core.Environment
                 return new Vector2(x, y);
             }
         }
-
-        private void Awake()
-        {
-            _boxCollider = GetComponent<BoxCollider2D>();
-        }
+        
 
         private void OnTriggerEnter2D(Collider2D other)
         {

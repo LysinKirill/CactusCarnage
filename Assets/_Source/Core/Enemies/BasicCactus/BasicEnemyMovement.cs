@@ -34,8 +34,6 @@ namespace Core.Enemies.BasicCactus
             _body = GetComponent<Rigidbody2D>();
             if (TryGetComponent(out EnemyState health))
                 health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
-                //health.OnTakeDamage += _ => StartCoroutine(GetStunned(0.5f));
-
         }
         
         private void Wander()
@@ -198,12 +196,6 @@ namespace Core.Enemies.BasicCactus
             var direction = (Vector2)(player.transform.position - startPosition);
             
             Gizmos.DrawRay(startPosition, direction);
-            RaycastHit2D hit = Physics2D.Raycast(
-                startPosition,
-                direction,
-                direction.magnitude,
-                obstacleLayerMask
-            );
         }
     }
 }
