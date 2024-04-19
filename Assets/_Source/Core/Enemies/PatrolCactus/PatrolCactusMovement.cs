@@ -14,7 +14,7 @@ namespace Core.Enemies.PatrolCactus
         private Rigidbody2D _body;
         private Transform _destination;
         private bool _isFacingRight;
-        private bool _isGrounded = true;
+        public bool _isGrounded = true;
         private bool _isStunned;
         
         private const float ReachRadius = 0.2f;
@@ -38,11 +38,20 @@ namespace Core.Enemies.PatrolCactus
         private void FixedUpdate()
         {
             CheckGround();
+            if (_isGrounded)
+            {
+                var vector2 = _body.velocity;
+                vector2.y = 0;
+                _body.velocity = vector2;
+            }
+
             if (!_isGrounded || _isStunned)
                 return;
             
             CheckDestinationReached();
             UpdateFacingDirection();
+                
+            
             var directionMultiplier = _destination.transform.position.x > transform.position.x ? 1 : -1;
             var velocity = _body.velocity;
             float y = 0;
@@ -54,18 +63,61 @@ namespace Core.Enemies.PatrolCactus
         private void CheckDestinationReached()
         {
             if (_destination == pointA.transform
-                && Vector2.Distance(transform.position, pointA.transform.position) < ReachRadius)
+                && Mathf.Abs(transform.position.x - pointA.transform.position.x) < ReachRadius)
                 _destination = pointB.transform;
 
             if (_destination == pointB.transform
-                && Vector2.Distance(transform.position, pointB.transform.position) < ReachRadius)
+                && Mathf.Abs(transform.position.x - pointB.transform.position.x) < ReachRadius)
                 _destination = pointA.transform;
         }
         
+        // private void CheckGround()
+        // {
+        //     var bounds = groundCheck.bounds;
+        //     _isGrounded = Physics2D.OverlapAreaAll(bounds.min, bounds.max, obstacleLayerMask).Length > 0;
+        // }
+        
+        // private void CheckGround()
+        // {
+        //     Vector2 center = groundCheck.bounds.center; // Center of the groundCheck collider
+        //     Vector2 size = groundCheck.bounds.size; // Size of the groundCheck collider
+        //
+        //     float distance = 0.1f; // Distance to cast the box (adjust as needed)
+        //     Vector2 direction = Vector2.down; // Direction to cast the box (downward for ground check)
+        //
+        //     RaycastHit2D hit = Physics2D.BoxCast(center, size, 0f, direction, distance, obstacleLayerMask);
+        //
+        //     _isGrounded = hit.collider != null; // Check if the box cast hit any colliders
+        // }
+        
+        // private void CheckGround()
+        // {
+        //     Vector2 origin = groundCheck.bounds.center; // Start position of the raycast
+        //     float distance = 0.1f; // Distance to cast the ray (adjust as needed)
+        //     Vector2 direction = Vector2.down; // Direction to cast the ray (downward for ground check)
+        //
+        //     // Perform the raycast
+        //     RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance, obstacleLayerMask);
+        //
+        //     // Check if the raycast hit anything
+        //     _isGrounded = hit.collider != null;
+        // }
+        
         private void CheckGround()
         {
-            var bounds = groundCheck.bounds;
-            _isGrounded = Physics2D.OverlapAreaAll(bounds.min, bounds.max, obstacleLayerMask).Length > 0;
+            Vector2 originLeft = groundCheck.bounds.min; // Start position of the left raycast
+            Vector2 originRight = groundCheck.bounds.max; // Start position of the right raycast
+            float distance = 0.1f; // Distance to cast the ray (adjust as needed)
+            Vector2 direction = Vector2.down; // Direction to cast the ray (downward for ground check)
+
+            // Perform the left raycast
+            RaycastHit2D hitLeft = Physics2D.Raycast(originLeft, direction, distance, obstacleLayerMask);
+
+            // Perform the right raycast
+            RaycastHit2D hitRight = Physics2D.Raycast(originRight, direction, distance, obstacleLayerMask);
+
+            // Check if both rays hit something
+            _isGrounded = hitLeft.collider != null && hitRight.collider != null;
         }
 
         private void OnDrawGizmos()
