@@ -517,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.63
+      value: -3.94
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -561,7 +561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.73
+      value: 3.45
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
@@ -696,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.06
+      value: -2.53
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,7 +740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.23
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
@@ -2724,7 +2724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.71
+      value: -2.129
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2768,7 +2768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.64
+      value: 1.972
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
@@ -2874,6 +2874,10 @@ PrefabInstance:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
       value: PatrolEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.19
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3765,7 +3769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.91
+      value: 2.26
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
@@ -4620,6 +4624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PatrolEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.41
+      objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
       value: 217.87
@@ -4800,6 +4808,10 @@ PrefabInstance:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
       value: PatrolEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.36
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19999,7 +20011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.58
+      value: -1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20043,7 +20055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.78
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
@@ -21444,6 +21456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PatrolEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.62
+      objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.388687
@@ -21685,7 +21701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.68
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21729,7 +21745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.6
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
@@ -21859,6 +21875,10 @@ PrefabInstance:
     - target: {fileID: 572941649476047107, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_Name
       value: PatrolEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.24
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22621,7 +22641,7 @@ Transform:
   m_GameObject: {fileID: 1476471797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.731027, y: -2.4783533, z: -10}
+  m_LocalPosition: {x: 8.729699, y: -2.4783506, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22737,7 +22757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887452314870402548, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.65
+      value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: 4228197426666689835, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22781,7 +22801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035026939533548809, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.65
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 7215317427325006224, guid: 7332ae45fd121f0478d2e8cbc5d3e165, type: 3}
       propertyPath: pickups
